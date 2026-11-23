@@ -5,12 +5,12 @@ competencies: [flaeche-umfang-quadrat-rechteck]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
           Nach dieser Seite berechnest du Flächeninhalt und Umfang von Rechteck und Quadrat. Auf der Seite davor hast du
-          Einheitsquadrate gezählt. Jetzt zählst du ohne Auslegen.
+          Einheitsquadrate gezählt. Jetzt zählst du ohne Auslegen. Das Modell dahinter: Ein Rechteck legst du in Reihen aus. Die Zahl der Quadrate ist die Zahl der Reihen mal die Zahl der Quadrate je Reihe.
       - type: number
         id: reihen-zaehlen
         text: "Ein Rechteck ist 5 cm breit und 3 cm hoch. Die oberste Reihe ist mit Einheitsquadraten ausgelegt. Wie viele Einheitsquadrate passen insgesamt hinein?"
@@ -30,21 +30,18 @@ blocks:
             message: "So viele liegen schon in der obersten Reihe. Es gibt aber mehr Reihen."
         hint: "Wie viele Reihen gibt es? In jeder Reihe liegen gleich viele Quadrate."
         explanation: "Es gibt 3 Reihen mit je 5 Quadraten: $3 \\cdot 5 = 15$ Einheitsquadrate."
-        links:
-          - title: "Karte: Fläche und Umfang: Rechteck, Quadrat"
-            url: "https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/"
   - type: section
     id: idee
     title: Reihen mal Spalten
     blocks:
       - type: text
         text: |
-          Im **Rechteckmodell** liegen Einheitsquadrate in Reihen. Jede Reihe hat so viele Quadrate, wie die Seite a
-          lang ist, und es gibt so viele Reihen, wie die Seite b lang ist. Das Auslegen kürzt du mit Mal ab.
+          Im **Rechteckmodell** liegen Einheitsquadrate in Reihen. Jede Reihe hat so viele Quadrate, wie die Seite $a$
+          lang ist, und es gibt so viele Reihen, wie die Seite $b$ lang ist. Das Auslegen kürzt du mit Mal ab.
       - type: figure
         image: images/rechteckmodell.svg
         alt: Ein Rechteck aus Einheitsquadraten, 6 Quadrate in jeder Reihe und 4 Reihen. Die waagerechte Seite heißt a, die senkrechte Seite heißt b.
-        caption: Seite a sagt, wie viele Quadrate in einer Reihe liegen. Seite b sagt, wie viele Reihen es sind.
+        caption: Seite $a$ sagt, wie viele Quadrate in einer Reihe liegen. Seite $b$ sagt, wie viele Reihen es sind.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
@@ -90,9 +87,6 @@ blocks:
             correct: true
             info: "Der Zaun geht einmal um das Rechteck herum. Das ist der Umfang."
         explanation: Der Zaun läuft am Rand entlang, also brauchst du den Umfang.
-        links:
-          - title: "Karte: Fläche und Umfang: Rechteck, Quadrat"
-            url: "https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-quadrat-rechteck/"
       - type: generated
         id: rechteck-flaeche
         given:
@@ -134,13 +128,13 @@ blocks:
           a: { int: [3, 14] }
         where: ["a != 4"]
         task:
-          text: "Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne Flächeninhalt und Umfang. Gib zuerst nur den Flächeninhalt in cm² ein."
+          text: "Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne den Flächeninhalt in cm²."
         answer: { value: "a * a", compare: { number: { format: integer, unit: cm² } } }
         mistakes:
           - { value: "4 * a", message: "Das ist der Umfang. Gefragt ist der Flächeninhalt." }
           - {
               value: "2 * a",
-              message: "Du hast die Seitenlänge verdoppelt. Beim Quadrat sind a Reihen mit je a Quadraten.",
+              message: "Du hast die Seitenlänge verdoppelt. Beim Quadrat gibt es so viele Reihen wie Quadrate je Reihe.",
             }
         hint: "Beim Quadrat sind beide Seiten gleich lang. Wie viele Reihen mit wie vielen Quadraten?"
         steps:
@@ -167,4 +161,19 @@ blocks:
         hint: "Der Flächeninhalt ist Seite mal Seite. Mit welcher Zahl mal {{a}} kommst du auf {{A}}?"
         steps:
           - '$A = a \cdot b$, also $b = A : a$.'
-          - '$b = {{A}}\ \text{cm} : {{a}}\ \text{cm} = {{answer}}\ \text{cm}$.'
+          - '$b = {{A}}\ \text{cm}^2 : {{a}}\ \text{cm} = {{answer}}\ \text{cm}$.'
+      - type: generated
+        id: quadrat-umfang
+        given:
+          a: { int: [3, 15] }
+        where: ["a != 4", "a != 2"]
+        task:
+          text: "Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne den Umfang in cm."
+        answer: { value: "4 * a", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - { value: "a * a", message: "Das ist der Flächeninhalt. Gefragt ist der Weg um das Quadrat." }
+          - { value: "2 * a", message: "Du hast nur zwei Seiten gezählt. Ein Quadrat hat vier Seiten." }
+        hint: "Der Weg um das Quadrat führt an vier gleich langen Seiten entlang."
+        steps:
+          - 'Ein Quadrat hat vier gleich lange Seiten: $u = 4 \cdot a$.'
+          - '$u = 4 \cdot {{a}}\ \text{cm} = {{answer}}\ \text{cm}$.'

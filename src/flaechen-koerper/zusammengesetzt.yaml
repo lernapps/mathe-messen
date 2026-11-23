@@ -5,7 +5,7 @@ competencies: [zusammengesetzte-figuren]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
@@ -13,20 +13,17 @@ blocks:
           bestehen. Du nutzt, was du über Rechtecke weißt.
       - type: number
         id: schrank-flaeche
-        text: "Ein Zimmer ist 8 m lang und 6 m breit. In einer Ecke steht ein Schrank mit der Grundfläche 4 m mal 3 m. Wie viele m² Boden bleiben frei?"
+        text: "Ein Zimmer ist 8 m lang und 6 m breit. In einer Ecke liegt ein Teppich mit den Maßen 4 m mal 3 m. Wie viele m² Boden sind nicht vom Teppich bedeckt?"
         answer: 36
         tolerance: 0
         unit: m²
         mistakes:
           - answer: 48
-            message: "Das ist der Boden des ganzen Zimmers. Der Schrank nimmt einen Teil davon weg."
+            message: "Das ist der Boden des ganzen Zimmers. Ein Teil davon ist vom Teppich bedeckt."
           - answer: 60
-            message: "Du hast die Fläche des Schranks zum Zimmer addiert. Der Schrank nimmt Platz weg."
-        hint: "Berechne die Fläche des Zimmers und die Fläche des Schranks. Was passiert mit dem Schrank?"
-        explanation: "Das Zimmer hat $8 \\cdot 6 = 48$ m², der Schrank $4 \\cdot 3 = 12$ m². Frei bleiben $48 - 12 = 36$ m²."
-        links:
-          - title: "Karte: Zusammengesetzte Figuren"
-            url: "https://lernapps.net/apps/map/mathematik/c/zusammengesetzte-figuren/"
+            message: "Du hast die Fläche des Teppichs zum Zimmer addiert. Der Teppich liegt auf dem Boden des Zimmers und gehört nicht dazu."
+        hint: "Berechne die Fläche des Zimmers und die Fläche des Teppichs. Was machst du mit dem Teppich?"
+        explanation: "Das Zimmer hat $8 \\cdot 6 = 48$ m², der Teppich $4 \\cdot 3 = 12$ m². Frei bleiben $48 - 12 = 36$ m²."
   - type: section
     id: idee
     title: Zerlegen oder ergänzen
@@ -40,6 +37,12 @@ blocks:
         image: images/l-figur-zerlegt.svg
         alt: "Eine L-förmige Figur: unten 8 m breit, links 6 m hoch, oben nur 4 m breit, der rechte Teil ist 3 m hoch. Eine gestrichelte Linie teilt sie in Teil 1 oben links und Teil 2 unten."
         caption: "Die gestrichelte Linie zerlegt die Figur in Teil 1 (4 m mal 3 m) und Teil 2 (8 m mal 3 m)."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: figure
+        image: images/l-figur-ergaenzt.svg
+        alt: Die L-förmige Figur. Das fehlende Rechteck oben rechts, 4 m mal 3 m, ist gestrichelt eingezeichnet. Figur und Ergänzung bilden zusammen ein Rechteck von 8 m mal 6 m.
+        caption: Die gestrichelte Ergänzung macht aus der Figur ein Rechteck. Von dessen Fläche ziehst du die Ergänzung ab.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
@@ -100,7 +103,7 @@ blocks:
           H: { int: [6, 10] }
           w: { int: [2, 6] }
           h: { int: [2, 4] }
-        where: ["w < W", "h < H", "W * H - w * h != 2 * (W + H)"]
+        where: ["w < W", "h < H", "W * H - w * h != 2 * (W + H)", "2 * (2 * W + H - w) != W * H - w * h"]
         task:
           text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Umfang in m."
         answer: { value: "2 * (W + H)", compare: { number: { format: integer, unit: m } } }
@@ -123,7 +126,7 @@ blocks:
           d: { int: [2, 5] }
         where: ["a != c", "b != d", "(a + c) * (b + d) != a * b + c * d"]
         task:
-          text: "Ein Grundstück besteht aus zwei Rechtecken. Das erste ist {{a}} m mal {{b}} m groß, das zweite {{c}} m mal {{d}} m. Berechne die gesamte Fläche in m²."
+          text: "Eine Terrasse besteht aus zwei Rechtecken. Das erste ist {{a}} m mal {{b}} m groß, das zweite {{c}} m mal {{d}} m. Berechne die gesamte Fläche in m²."
         answer: { value: "a * b + c * d", compare: { number: { format: integer, unit: m² } } }
         mistakes:
           - {
@@ -143,6 +146,3 @@ blocks:
         text: "Stimmt das? Beim Umfang einer zerlegten Figur zählt auch die Schnittlinie mit."
         answer: false
         explanation: "Die Schnittlinie liegt im Inneren der Figur. Der Umfang ist nur der Weg um die ganze Figur."
-        links:
-          - title: "Karte: Zusammengesetzte Figuren"
-            url: "https://lernapps.net/apps/map/mathematik/c/zusammengesetzte-figuren/"

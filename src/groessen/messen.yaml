@@ -5,7 +5,7 @@ competencies: [messen-laenge-masse-geld-zeit]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
@@ -31,9 +31,6 @@ blocks:
             message: "Du hast die beiden Zahlen addiert. Die Länge ist der Abstand zwischen den Enden."
         hint: "Zähle, wie viele Zentimeter zwischen dem linken Ende und der Spitze liegen."
         explanation: "Du zählst die Zentimeter zwischen den Enden: von 2 cm bis 17 cm sind das 15 cm."
-        links:
-          - title: "Karte: Länge, Masse, Geld und Zeit"
-            url: "https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/"
   - type: section
     id: idee
     title: Messen heißt zählen, wie oft die Einheit passt
@@ -49,13 +46,13 @@ blocks:
         term: Einheit
         explanation: "Eine Einheit ist die Größe, die beim Messen gezählt wird, zum Beispiel 1 cm, 1 g oder 1 min. Das Ergebnis besteht aus Zahl und Einheit: 15 cm."
       - type: table
-        caption: Größen, ihre Einheiten und Messgeräte
-        header: [Größe, Einheiten, Messgerät]
+        caption: Größen, ihre Einheiten und wie du sie misst
+        header: [Größe, Einheiten, Womit du misst oder zählst]
         rowHeaders: true
         rows:
           - [Länge, "mm, cm, m, km", Lineal oder Maßband]
-          - [Masse, "g, kg, t", Waage]
-          - [Geld, "ct, €", Preisschild und Kasse]
+          - [Masse, "mg, g, kg, t", Waage]
+          - [Geld, "ct, €", Münzen und Scheine]
           - [Zeit, "s, min, h", Uhr]
       - type: text
         text: |
@@ -93,9 +90,6 @@ blocks:
           - { left: Zeit, right: Uhr }
         distractors: [Thermometer]
         explanation: Mit dem Lineal misst du Länge, mit der Waage Masse und mit der Uhr Zeit. Ein Thermometer misst die Temperatur, die hier nicht gefragt ist.
-        links:
-          - title: "Karte: Länge, Masse, Geld und Zeit"
-            url: "https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/"
       - type: generated
         id: mehl-wiegen
         given:
@@ -120,10 +114,10 @@ blocks:
       - type: generated
         id: rueckgeld
         given:
-          p: { oneOf: [0.8, 1.2, 1.5, 2.4, 3.5] }
+          p: { oneOf: [0.85, 1.25, 1.75, 2.45, 3.95] }
           n: { int: [2, 5] }
           pay: { oneOf: [10, 20] }
-        where: ["n * p < pay"]
+        where: ["n * p < pay", "n * p * 2 != pay"]
         task:
           text: "Ein Heft kostet {{p}} €. Du kaufst {{n}} Hefte und bezahlst mit einem {{pay}}-€-Schein. Wie viel Rückgeld bekommst du?"
         answer: { value: "pay - n * p", compare: { number: { format: money } } }

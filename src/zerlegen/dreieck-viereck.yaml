@@ -5,7 +5,7 @@ competencies: [flaeche-umfang-dreieck-viereck]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
@@ -24,9 +24,6 @@ blocks:
             message: "Du hast die Seiten addiert. Die Einheitsquadrate liegen in Reihen, also mal."
         hint: "Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?"
         explanation: "Der Flächeninhalt des Rechtecks ist $6 \\cdot 4 = 24$ cm²."
-        links:
-          - title: "Karte: Fläche und Umfang: Dreieck, Viereck"
-            url: "https://lernapps.net/apps/map/mathematik/c/flaeche-umfang-dreieck-viereck/"
   - type: section
     id: idee
     title: Das Parallelogramm wird zum Rechteck

@@ -5,12 +5,12 @@ competencies: [einheiten-flaeche-volumen]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
           Nach dieser Seite rechnest du Flächen- und Volumeneinheiten um und schätzt ihre Größe. Auf der Seite davor hast
-          du Längen umgerechnet. Hier kommt eine Richtung dazu.
+          du Längen umgerechnet. Hier kommt eine Richtung dazu. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine Fläche passen, ist ihr Maß.
       - type: number
         id: quadrate-zaehlen
         text: "Ein Quadrat ist 10 cm lang und 10 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
@@ -23,9 +23,6 @@ blocks:
             message: "Das ist der Umfang, die Länge um das Quadrat. Gefragt ist, wie viele Quadrate hineinpassen."
         hint: "Lege in Gedanken eine Reihe aus. Wie viele Reihen passen übereinander?"
         explanation: "In jeder Reihe liegen 10 Quadrate, und es gibt 10 Reihen: $10 \\cdot 10 = 100$."
-        links:
-          - title: "Karte: Flächen- und Volumeneinheiten"
-            url: "https://lernapps.net/apps/map/mathematik/c/einheiten-flaeche-volumen/"
   - type: section
     id: idee
     title: Einheitsquadrat und Einheitswürfel
@@ -65,8 +62,8 @@ blocks:
         blocks:
           - type: text
             text: |
-              Bei Flächen rechnest du mit 100, bei Volumen mit 1000. Das kommt von den Richtungen: Eine Fläche
-              hat zwei, ein Körper drei. Mit 10 rechnest du nur bei Längen.
+              Bei Längen rechnest du mit 10. Bei Flächen kommt eine Richtung dazu: 10 · 10 = 100. Bei Volumen
+              sind es drei Richtungen: 10 · 10 · 10 = 1000.
   - type: section
     id: beispiel
     title: Beispiel
@@ -91,17 +88,11 @@ blocks:
           - { left: Inhalt eines Schwimmbeckens, right: m³ }
         distractors: [cm³]
         explanation: Eine Fläche misst du in Quadratzentimetern oder Quadratmetern. Ein Schwimmbecken füllst du mit Wasser, das ist ein Volumen in Kubikmetern.
-        links:
-          - title: "Karte: Flächen- und Volumeneinheiten"
-            url: "https://lernapps.net/apps/map/mathematik/c/einheiten-flaeche-volumen/"
       - type: true-false
         id: m2-in-cm2
         text: "Stimmt das? 1 m² sind 100 cm²."
         answer: false
         explanation: "1 m² sind 100 dm², und 1 dm² sind 100 cm². Zusammen sind das 100 · 100 = 10 000 cm²."
-        links:
-          - title: "Karte: Flächen- und Volumeneinheiten"
-            url: "https://lernapps.net/apps/map/mathematik/c/einheiten-flaeche-volumen/"
       - type: generated
         id: dm2-in-cm2
         given:
@@ -147,3 +138,37 @@ blocks:
         steps:
           - "Eine Stufe nach oben bei Flächen: durch 100."
           - '${{a}}\ \text{cm}^2 : 100 = {{answer}}\ \text{dm}^2$.'
+      - type: generated
+        id: m2-umrechnen
+        given:
+          a: { oneOf: [2, 3, 5, 0.5, 1.5] }
+        task:
+          text: "Rechne in cm² um: {{a}} m²."
+        answer: { value: "a * 10000", compare: { number: { format: decimal, unit: cm² } } }
+        mistakes:
+          - {
+              value: "a * 100",
+              message: "Das ist erst dm². Von m² nach cm² sind es zwei Stufen, jede mit dem Faktor 100.",
+            }
+          - { value: "a * 1000", message: "Der Faktor 1000 gilt für Volumen. Bei Flächen ist jede Stufe mal 100." }
+        hint: "Von m² nach dm² mal 100, von dm² nach cm² noch einmal mal 100."
+        steps:
+          - 'Erste Stufe: ${{a}}\ \text{m}^2 \cdot 100$ in dm².'
+          - 'Zweite Stufe: noch einmal mal 100. Zusammen ${{a}}\ \text{m}^2 \cdot 10000 = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: liter-in-dm3
+        given:
+          a: { oneOf: [3, 8, 12, 25, 40] }
+        task:
+          text: "Ein Aquarium fasst {{a}} Liter. Wie viele dm³ sind das?"
+        answer: { value: "a", compare: { number: { format: integer, unit: dm³ } } }
+        mistakes:
+          - {
+              value: "a * 1000",
+              message: "Du hast mit 1000 gerechnet, wie bei der Umrechnung von dm³ in cm³. Hier musst du nichts umrechnen.",
+            }
+          - { value: "a / 10", message: "Ein Liter und ein Kubikdezimeter sind gleich groß." }
+        hint: "Ein Liter ist ein Würfel von 10 cm Kantenlänge. Wie groß ist er in dm³?"
+        steps:
+          - "1 l = 1 dm³."
+          - '${{a}}\ \text{l} = {{answer}}\ \text{dm}^3$.'

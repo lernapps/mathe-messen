@@ -5,12 +5,12 @@ competencies: [volumen-oberflaeche-quader-wuerfel]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
           Nach dieser Seite berechnest du Volumen und Oberfläche von Quader und Würfel. Du nutzt Einheitswürfel und die
-          Fläche von Rechtecken.
+          Fläche von Rechtecken. Das Modell dahinter: Du stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der Schichten.
       - type: number
         id: schachtel-wuerfel
         text: "Eine Schachtel ist innen 4 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
@@ -23,9 +23,6 @@ blocks:
             message: "So viele Würfel passen in eine Schicht auf den Boden. Die Schachtel ist aber höher."
         hint: "Wie viele Würfel liegen auf dem Boden? Wie viele Schichten passen übereinander?"
         explanation: "Auf dem Boden liegen $4 \\cdot 3 = 12$ Würfel. Es passen 2 Schichten hinein: $12 \\cdot 2 = 24$ Würfel."
-        links:
-          - title: "Karte: Volumen und Oberfläche: Quader, Würfel"
-            url: "https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-quader-wuerfel/"
   - type: section
     id: idee
     title: Schichten stapeln, Netz auslegen
@@ -33,7 +30,13 @@ blocks:
       - type: text
         text: |
           Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
-          Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe.
+          Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
+      - type: figure
+        image: images/quader-schicht.svg
+        alt: Eine Schicht aus Einheitswürfeln, 4 Würfel breit und 3 Würfel tief, nur 1 Würfel hoch.
+        caption: "Eine Schicht: 4 mal 3 Würfel. Das ist die Grundfläche, mit Würfeln belegt."
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
       - type: figure
         image: images/quader-aus-wuerfeln.svg
         alt: Ein Quader aus Einheitswürfeln, 4 Würfel breit, 3 Würfel tief und 2 Schichten hoch.
@@ -47,7 +50,7 @@ blocks:
         term: Volumen
         explanation: "Das Volumen sagt, wie viele Einheitswürfel in einen Körper passen. Es hat Einheiten wie cm³ oder m³."
       - type: formula
-        formula: 'V = a \cdot b \cdot c'
+        formula: 'V = a \cdot b \cdot c = G \cdot h'
       - type: text
         text: |
           Die **Oberfläche** ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
@@ -60,7 +63,7 @@ blocks:
         licence: CC-BY-4.0
       - type: definition
         term: Netz
-        explanation: "Ein Netz ist ein Körper, an den Kanten aufgeklappt und flach hingelegt. Das Netz eines Quaders besteht aus sechs Rechtecken."
+        explanation: "Ein Netz entsteht, wenn du einen Körper an Kanten aufschneidest und flach hinlegst. Das Netz eines Quaders besteht aus sechs Rechtecken."
       - type: definition
         term: Oberfläche
         explanation: "Die Oberfläche ist die Summe der Flächen aller Seitenflächen eines Körpers. Sie hat Einheiten wie cm² oder m²."
@@ -123,7 +126,7 @@ blocks:
           a: { int: [3, 9] }
           b: { int: [2, 8] }
           c: { int: [2, 6] }
-        where: ["a != b", "b != c", "a * b * c != 2 * (a * b + a * c + b * c)"]
+        where: ["a != b", "b != c", "a * b * c != 2 * (a * b + a * c + b * c)", "a * b + a * c + b * c != a * b * c"]
         task:
           text: "Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne die Oberfläche in cm²."
         answer: { value: "2 * (a * b + a * c + b * c)", compare: { number: { format: integer, unit: cm² } } }
@@ -142,6 +145,7 @@ blocks:
         id: wuerfel-volumen
         given:
           a: { int: [2, 9] }
+        where: ["a != 3"]
         task:
           text: "Ein Würfel hat die Kantenlänge {{a}} cm. Berechne das Volumen in cm³."
         answer: { value: "a * a * a", compare: { number: { format: integer, unit: cm³ } } }
@@ -162,7 +166,7 @@ blocks:
           V: { oneOf: [48, 60, 72, 80, 96, 120, 144, 160, 180] }
         where: ["decimals(V / G) == 0", "V / G >= 2", "V / G <= 9", "V / G != G"]
         task:
-          text: "Eine Kiste hat eine Grundfläche von {{G}} cm². Ihr Volumen ist {{V}} cm³. Wie hoch ist die Kiste in cm?"
+          text: "Eine Schachtel hat eine Grundfläche von {{G}} cm². Ihr Volumen ist {{V}} cm³. Wie hoch ist die Schachtel in cm?"
         answer: { value: "V / G", compare: { number: { format: integer, unit: cm } } }
         mistakes:
           - { value: "V - G", message: "Du hast abgezogen. Das Volumen ist Grundfläche mal Höhe, also teilst du." }
@@ -180,3 +184,21 @@ blocks:
           - Flächen- und Volumeneinheiten mit 100 und 1000 umrechnen,
           - Fläche und Umfang von Rechteck, Quadrat und zusammengesetzten Figuren berechnen,
           - Volumen und Oberfläche von Quader und Würfel berechnen.
+      - type: generated
+        id: wuerfel-oberflaeche
+        given:
+          a: { int: [2, 9] }
+        where: ["a != 6"]
+        task:
+          text: "Ein Würfel hat die Kantenlänge {{a}} cm. Berechne die Oberfläche in cm²."
+        answer: { value: "6 * a * a", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "a * a",
+              message: "Das ist die Fläche einer einzigen Seite. Ein Würfel hat sechs gleich große Seitenflächen.",
+            }
+          - { value: "a * a * a", message: "Das ist das Volumen. Gefragt ist die Fläche aller Seiten." }
+        hint: "Alle sechs Seitenflächen sind gleich große Quadrate. Wie groß ist eines?"
+        steps:
+          - 'Eine Seitenfläche: $a \cdot a$. Es gibt sechs.'
+          - '$O = 6 \cdot {{a}} \cdot {{a}} = {{answer}}\ \text{cm}^2$.'

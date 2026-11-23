@@ -5,7 +5,7 @@ competencies: [volumen-oberflaeche-prisma]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
@@ -24,9 +24,6 @@ blocks:
             message: "Das ist nur eine Schicht. Der Quader hat mehrere Schichten übereinander."
         hint: "Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?"
         explanation: "Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \\cdot 4 = 60$ cm³."
-        links:
-          - title: "Karte: Volumen und Oberfläche: Prisma"
-            url: "https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/"
   - type: section
     id: idee
     title: Ein Prisma ist ein Stapel gleicher Grundflächen

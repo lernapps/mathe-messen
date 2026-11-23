@@ -5,12 +5,12 @@ competencies: [umrechnung-groessen]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
           Nach dieser Seite rechnest du Größen in andere Einheiten um und wählst die passende Einheit. Du
-          kennst das schon von den Stellen unserer Zahlen.
+          kennst das schon von den Stellen unserer Zahlen. Gleich benutzt du dafür eine Treppe aus Einheiten: Jede Stufe ist eine Einheit, und zwischen zwei Stufen steht, wie oft die kleinere Einheit in die größere passt.
       - type: single-choice
         id: km-in-m
         text: Wie viele Meter sind 3 km?
@@ -28,9 +28,6 @@ blocks:
             correct: false
             info: "30 000 m wären 30 km. Das ist zehnmal zu viel."
         explanation: Ein Kilometer hat 1000 Meter. Drei Kilometer sind dreimal so lang.
-        links:
-          - title: "Karte: Einheiten umrechnen"
-            url: "https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/"
   - type: section
     id: idee
     title: Die Einheitentreppe zeigt den Faktor
@@ -55,6 +52,7 @@ blocks:
         rowHeaders: true
         rows:
           - [Masse, "1 kg = 1000 g, 1 t = 1000 kg"]
+          - [Geld, "1 € = 100 ct"]
           - [Zeit, "1 h = 60 min, 1 min = 60 s"]
       - type: note
         title: Merke
@@ -72,8 +70,14 @@ blocks:
         blocks:
           - type: text
             text: |
-              Wie viele Zentimeter sind 2,5 m? Du gehst auf der Treppe von m nach cm: zwei Stufen nach unten, also
-              zweimal mal 10, das ist mal 100. Es gilt $2{,}5\ \text{m} \cdot 100 = 250\ \text{cm}$.
+              Wie viele Zentimeter sind 2,5 m? Du startest auf der Stufe m und gehst zwei Stufen nach unten bis cm. Bei
+              jeder Stufe nimmst du mal 10, siehe die Pfeile im Bild. So kommst du von 2,5 m über 25 dm zu 250 cm.
+          - type: figure
+            image: images/einheitentreppe-weg.svg
+            alt: "Die Einheitentreppe mit den Stufen mm, cm, dm, m und km. Ein Pfeil führt von m nach dm, ein zweiter von dm nach cm. An jedem Pfeil steht mal 10. In den markierten Stufen stehen die Werte 2,5 m, 25 dm und 250 cm."
+            caption: Der Weg von m nach cm. Jeder Pfeil bedeutet eine Stufe nach unten und mal 10.
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
   - type: section
     id: uebung
     title: Übung
@@ -92,9 +96,6 @@ blocks:
             correct: false
             info: "Ein Kilometer sind 1000 m, zehn Fußballfelder hintereinander. Für ein Feld wäre die Zahl sehr klein."
         explanation: Wähle die Einheit so, dass die Zahl handlich ist. Ein Fußballfeld misst du in Metern.
-        links:
-          - title: "Karte: Einheiten umrechnen"
-            url: "https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/"
       - type: generated
         id: m-in-cm
         given:
@@ -150,3 +151,37 @@ blocks:
           - Größen mit Stützpunkten schätzen und prüfen, ob ein Ergebnis zur Sache passt,
           - Länge, Masse, Geld und Zeit messen und damit rechnen,
           - Einheiten mit der Einheitentreppe umrechnen und bei der Zeit den Faktor 60 nutzen.
+      - type: generated
+        id: cm-in-m
+        given:
+          a: { oneOf: [250, 40, 175, 1200, 85] }
+        task:
+          text: "Rechne in Meter um: {{a}} cm."
+        answer: { value: "a / 100", compare: { number: { format: decimal, unit: m } } }
+        mistakes:
+          - {
+              value: "a * 100",
+              message: "Du hast mal gerechnet. Von der kleineren Einheit cm zur größeren Einheit m gehst du die Treppe nach oben, also teilst du.",
+            }
+          - { value: "a / 10", message: "Das wäre dm. Von cm nach m sind es zwei Stufen nach oben." }
+        hint: "Von cm nach m gehst du zwei Stufen nach oben. Jede Stufe ist durch 10."
+        steps:
+          - "Zwei Stufen nach oben: durch 100."
+          - '${{a}}\ \text{cm} : 100 = {{answer}}\ \text{m}$.'
+      - type: generated
+        id: ct-in-euro
+        given:
+          a: { oneOf: [250, 305, 1275, 90, 4050] }
+        task:
+          text: "Rechne in Euro um: {{a}} ct."
+        answer: { value: "a / 100", compare: { number: { format: money } } }
+        mistakes:
+          - {
+              value: "a * 100",
+              message: "Du hast mal gerechnet. Ein Euro hat 100 Cent, aus Cent werden also weniger Euro.",
+            }
+          - { value: "a / 10", message: "Bei Geld ist der Faktor 100, nicht 10." }
+        hint: "1 € sind 100 ct. Wie viele Euro sind {{a}} ct?"
+        steps:
+          - "1 € sind 100 ct."
+          - '${{a}}\ \text{ct} : 100 = {{answer}}\ \text{€}$.'

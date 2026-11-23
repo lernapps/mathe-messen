@@ -5,7 +5,7 @@ competencies: [groessenvorstellungen-schaetzen]
 blocks:
   - type: section
     id: einstieg
-    title: Probier es zuerst
+    title: Was du hier lernst
     blocks:
       - type: text
         text: |
@@ -27,10 +27,7 @@ blocks:
           - text: etwa 20 m
             correct: false
             info: "20 m ist so hoch wie ein Haus mit sechs Stockwerken."
-        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt. Mit ihr kannst du andere Höhen vergleichen.
-        links:
-          - title: "Karte: Größen schätzen"
-            url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
+        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt, auch Bezugsgröße. Mit ihr kannst du andere Höhen vergleichen.
   - type: section
     id: idee
     title: Mit einem Stützpunkt schätzt du
@@ -90,9 +87,6 @@ blocks:
           - Höhe einer Tür
           - Länge eines Schulbusses
         explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 18 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang. Rechne alles in dieselbe Einheit um, dann siehst du die Reihenfolge."
-        links:
-          - title: "Karte: Größen schätzen"
-            url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: single-choice
         id: einheit-schokolade
         text: Welche Einheit passt zur Masse einer Tafel Schokolade?
@@ -110,20 +104,14 @@ blocks:
             correct: false
             info: "1 t ist so schwer wie ein kleines Auto."
         explanation: Eine Tafel Schokolade hat etwa 100 g. Mit Gramm schreibst du eine ganze Zahl, bei Kilogramm wäre es ein Bruchteil.
-        links:
-          - title: "Karte: Größen schätzen"
-            url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: true-false
         id: hand-passt
         text: "Lena schätzt: Eine Hand ist etwa 1 m breit. Der Stützpunkt für die Breite einer Hand ist 10 cm. Passt Lenas Schätzung?"
         answer: false
         explanation: 1 m sind 100 cm. Das wären 10 Hände nebeneinander. Eine Hand ist etwa 10 cm breit.
-        links:
-          - title: "Karte: Größen schätzen"
-            url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: number
         id: ranzen-masse
-        text: "Ein Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
+        text: "Ein leerer Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
         answer: 1500
         tolerance: 100
         unit: g
@@ -134,9 +122,6 @@ blocks:
             message: "Du hast addiert. 15 Tafeln sind fünfzehnmal so schwer wie eine Tafel."
         hint: "Eine Tafel wiegt 100 g. Du brauchst 15 davon."
         explanation: "15 Tafeln wiegen $15 \\cdot 100\\ \\text{g} = 1500\\ \\text{g}$. Das sind $1{,}5\\ \\text{kg}$."
-        links:
-          - title: "Karte: Größen schätzen"
-            url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: generated
         id: baumhoehe-schaetzen
         given:
@@ -151,3 +136,8 @@ blocks:
         steps:
           - 'Eine Tür ist $2\ \text{m}$ hoch.'
           - 'Der Baum ist so hoch wie {{n}} Türen: ${{n}} \cdot 2\ \text{m} = {{answer}}\ \text{m}$.'
+      - type: true-false
+        id: kind-passt
+        text: "Nele misst ihre Körpergröße mit einem Maßband und schreibt 15 m auf. Eine Tür ist 2 m hoch. Kann das stimmen?"
+        answer: false
+        explanation: "15 m wären mehr als sieben Türen übereinander. Nele hat sich verschätzt oder die Einheit verwechselt: Gemeint sind etwa 150 cm."
