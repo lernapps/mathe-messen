@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: code
+phase: commit
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -81,9 +81,19 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
 
 **Offene Fragen an den Orchestrator:** (1) Recap als Block oder als Seite, siehe oben. (2) Sollen Volumen- und Hohlmaß-Verknüpfung (1 l = 1 dm³) als Hinweis stehen? Karte nennt es nicht; Vorschlag: ja, als eine Zeile in `einheiten-flaeche-volumen`. (guess)
 
-### Review (Musterseite, Lernenden-Prüfer Klasse 5, unabhängiger Unteragent)
+### Review
 
-Umgesetzt auf `groessen/schaetzen`: „Maßstab im Kopf“ und „Zehnerpotenz“ entfernt; doppelte Definition bereinigt; Bild vor die Erklärung „Wie oft passt …“, unbeschriftete Zeichen (Linie, Klinke) entfernt; Tabelle enthält jetzt alle Größen, nach denen gefragt wird (Finger, Bleistift, Bus), Einheit l entfernt; „Merke“ verrät die Aufgabe nicht mehr (Aufgabe jetzt zur Hand 10 cm); Zahlenaufgabe als echte Schätzung (Ranzen, Toleranz 100 g, Einheit in der Aufgabe genannt); Rückmeldungen nennen nicht mehr die Lösung; Platz 1 = kleinste Länge. Nicht geändert (Laufzeit, Funde): Standardrückmeldung „Lies dazu noch einmal den Text“ bei Reihenfolge, wahr/falsch und Zahl; „Antworte zuerst: Wähle, tippe oder ordne alles zu“ ohne Hinweis auf fehlende Einträge; Symbol „Neue Aufgabe“ ohne sichtbaren Text; Link „Mehr dazu“ führt auf lernapps.net, „Karte“ unerklärt; Fachbegriff-Link springt auf dieselbe Seite; KI-Tutor-Block nicht verständlich für Klasse 5. Offen: fachlicher Prüfer, Lernenden-Prüfer über alle Seiten.
+**Lernenden-Prüfer (unabhängige Unteragenten, nicht die Autorin):**
+- Musterseite `schaetzen` (Klasse 5): Befunde umgesetzt (Fachwörter, Bild, Tabelle, „Merke“, Rückmeldungen, Schätzaufgabe). Danach nicht allein erneut geprüft, aber im Gesamtlauf Klasse 5/6 enthalten.
+- Gesamtlauf Klasse 5/6 (Kapitel 1 und 2) und Klasse 7/8 (Kapitel 3), zwei Runden: Befunde zu Fachwörtern vor Gebrauch, Höhe (Dreieck, Prisma), Diagonale, Netz, Kurztests (zu leicht, Lösung in der Rückmeldung), Schere (Fokus, doppelte Ansage, Labels), unmögliche Zufallswerte (Raute-Umfang, Terrasse), Einstiegsaufgaben, deren Zahlen schon im Bild stehen, Umfang-Aufgaben ohne Rückmeldung, fehlendes Bild für Drachen und Rechteck um die Raute, Treppe für Fläche und Volumen nur als Tabelle, „Weg“ statt Rand. Alle in der Sache umgesetzt.
+- Nach dem letzten Prüferlauf (Stand f61957b, Port 5174) geändert und nicht erneut von Lernenden geprüft: Einstiegszahlen auf `einheiten`, `zusammengesetzt`, `quader`, Einstiegsfrage auf `umrechnen` (3 m in cm), `where` der Terrassenaufgaben, Kurztest-Neufassungen sind schon geprüft, neu: Bild `drachen-diagonalen`, gepunktetes Rechteck in `raute-diagonalen`, Labels der Schere in Schritt 1, zusätzliche Fehlerwerte bei Umfangaufgaben, Texte „lang/breit“ im Quaderbild, Lineal-Beschriftung 17, `dm` in der Messen-Tabelle, Definition „Größe“. Inhaltlich sind das Aufgaben und Bilder: Diese Stellen sollen vor dem Veröffentlichen noch einmal geprüft werden (offen).
+
+**Fachlicher Prüfer (Unteragent):**
+- Runde 1: 28 `generated`-Aufgaben vollständig nachgerechnet, alle Musterlösungen und Beispiele richtig. Befunde: unmögliche Zufallswerte (`prisma-oberflaeche`), falsche Einheit im Lösungsweg (`seite-gesucht`), Kurztest zum Trapez falsch, Definition „Netz“, Bildlinie in `prisma-stapel`, fehlende NBSP in SVG, Variablen nicht kursiv, Lücken beim Üben (Umrechnen nach oben, Geld, Quadrat-Umfang, Drachen, Würfel-Oberfläche, Umfang beim Dreieck). Alle umgesetzt.
+- Runde 2 und 3: 38 `generated`-Aufgaben über alle Kombinationen, keine Antwort ≤ 0, kein Fehlerwert gleich Antwort oder gleich einem anderen. Neu behoben: `dreieck-umfang` (Höhe passte nicht zu den Seiten, jetzt Datensatz rechtwinkliger Dreiecke), `raute-umfang` (unmögliche Diagonalen), Aquarium mit 3 l, Höhen über 20 cm. Bestätigt: Definitionen (Trapez, Höhe, Prisma, Netz, Mantel, Diagonale, Drachen), `1 l = 1 dm³`, `1 m² = 10 000 cm²`, Beispiele.
+- Offen: Stichprobe auf wörtliche Übernahmen nur durch Lektüre (kein Textvergleich mit Quellen); Karten-Ids nicht gegen die Karte geprüft (das macht `lernapps check`); Kerncurriculum Hessen nicht geprüft; ein Fehlerwert `a·h/2` im Trapez ist bei manchen Ziehungen halbzahlig (niedrig).
+
+**Funde für alle (Laufzeit, nicht von mir behoben):** Standardrückmeldung „Lies dazu noch einmal den Text über der Aufgabe“ bei Reihenfolge, Wahr/Falsch und Zahl ohne `mistakes`; „Antworte zuerst: Wähle, tippe oder ordne alles zu“ bei falschen Eingaben; Symbol „Neue Aufgabe“ ohne Text; Rückmeldungen mit Zahlen formatieren ohne Tausendergruppe (`10000`); Kurztest-Komponente urteilt sofort beim Anwählen mit den Pfeiltasten (raten möglich); Fachbegriff-Link springt auf dieselbe Seite; `explainer-text-load`-Hinweise bei Recap-Seiten.
 
 ## Explore
 
@@ -277,7 +287,7 @@ page, which a link. -->
 - [x] Run `npx --no -- lernapps check` until it passes.
 - [x] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
-- [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
+- [x] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
       fixed.
 
 ## Commit
@@ -290,7 +300,7 @@ page, which a link. -->
 
 ### Tasks
 
-- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+- [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
 - [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.

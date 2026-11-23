@@ -2,3 +2,12 @@
 title: Zerlegen und ergänzen
 summary: Du schneidest Figuren in Stücke und legst sie neu, bis Dreieck und Viereck zum Rechteck werden. Ein Prisma ist ein Stapel gleicher Grundflächen.
 pages: [voraussetzungen, dreieck-viereck, prisma]
+selfAssessment:
+  pages:
+    - exercises:
+        - /zerlegen/dreieck-viereck/#parallelogramm-flaeche
+        - /zerlegen/dreieck-viereck/#dreieck-flaeche
+        - /zerlegen/dreieck-viereck/#trapez-flaeche
+    - exercises:
+        - /zerlegen/prisma/#prisma-volumen
+        - /zerlegen/prisma/#prisma-oberflaeche

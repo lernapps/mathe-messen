@@ -62,7 +62,8 @@ Karte und Issue. Eigene Herleitungen und eigene Aufgaben. Nachschlagen ist keine
 1. Baustein-Id und „Ich kann“ aus der Karte; Voraussetzungen von außen als Recap-Seite (`recap:`) mit Komponente `Kurztest` vor die Seiten stellen.
 2. Seite `src/<kapitel>/<seite>.yaml` mit `competencies: [<id>]`, Abschnitte wie oben, Muster aus der Liste, mindestens drei Aufgaben steigender Schwierigkeit.
 3. Seite in `chapter.yaml` unter `pages`, Kapitel in `src/app.yaml` unter `chapters` eintragen; Glossarbegriffe als `definition`.
-4. `npx vp build`, `npx vp check --fix`, `npx --no -- lernapps check`, Commit.
+4. 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt (jede Seite mit mindestens zwei Aufgaben, bevorzugt `generated`).
+5. `npx vp build`, `npx vp check --fix`, `npx --no -- lernapps check`, Commit.
 
 ## Rules learned from mistakes
 

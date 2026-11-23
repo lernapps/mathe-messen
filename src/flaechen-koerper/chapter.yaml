@@ -2,3 +2,16 @@
 title: Flächen auslegen, Körper füllen
 summary: Du legst Flächen mit Einheitsquadraten aus, füllst Körper mit Einheitswürfeln und findest daraus die Formeln.
 pages: [voraussetzungen, einheiten, rechteck, zusammengesetzt, quader]
+selfAssessment:
+  pages:
+    - exercises:
+        - /flaechen-koerper/einheiten/#dm2-in-cm2
+        - /flaechen-koerper/einheiten/#dm3-in-cm3
+        - /flaechen-koerper/rechteck/#rechteck-flaeche
+    - exercises:
+        - /flaechen-koerper/rechteck/#seite-gesucht
+        - /flaechen-koerper/zusammengesetzt/#l-flaeche
+        - /flaechen-koerper/zusammengesetzt/#zwei-rechtecke
+    - exercises:
+        - /flaechen-koerper/quader/#quader-volumen
+        - /flaechen-koerper/quader/#quader-oberflaeche
