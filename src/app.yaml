@@ -4,4 +4,4 @@ strand: mathematik/groessen-und-messen
 title: "Messen: Längen, Flächen, Volumen"
 intro: Messen heißt zählen, wie oft eine Einheit hineinpasst. Du schätzt Größen, rechnest sie um und bestimmst Flächen und Volumen durch Auslegen, Zerlegen und Ergänzen.
 languages: [de]
-chapters: [groessen]
+chapters: [groessen, flaechen-koerper]
