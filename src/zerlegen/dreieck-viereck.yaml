@@ -35,6 +35,9 @@ blocks:
           Ein Parallelogramm hat schräge Seiten. Du nimmst eine seiner Seiten als **Grundseite** $g$. Die
           **Höhe** $h$ steht senkrecht darauf. Im Bild schneidest du an der Höhe ein Dreieck ab und legst es auf der
           anderen Seite wieder an. Die Knöpfe heißen „Dreieck abschneiden“, „Dreieck umlegen“ und „Zurück“.
+      - type: definition
+        term: Grundseite
+        explanation: "Die Grundseite ist die Seite, auf der die Höhe senkrecht steht. Beim Parallelogramm mit 6 cm Grundseite und 4 cm Höhe ist die Fläche $6 \\cdot 4 = 24$ cm²."
       - type: vue-component
         id: schere-parallelogramm
         component: Schere
@@ -55,9 +58,6 @@ blocks:
           Schere: Ein Parallelogramm mit Grundseite 6 cm und Höhe 4 cm wird an der Höhe von der oberen linken Ecke senkrecht zur
           Grundseite zerschnitten. Das abgeschnittene Dreieck wird auf der rechten Seite wieder angelegt. Es entsteht ein Rechteck
           mit 6 cm Länge und 4 cm Höhe.
-      - type: definition
-        term: Grundseite
-        explanation: "Die Grundseite ist die Seite, auf der die Höhe senkrecht steht. Beim Parallelogramm mit 6 cm Grundseite und 4 cm Höhe ist die Fläche $6 \\cdot 4 = 24$ cm²."
       - type: formula
         formula: 'A = g \cdot h'
       - type: note
@@ -109,8 +109,8 @@ blocks:
           Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Lege dazu ein Rechteck mit den Seiten $e$ und $f$ um die Raute: Es besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
       - type: figure
         image: images/raute-diagonalen.svg
-        alt: Eine Raute mit zwei gestrichelten Diagonalen e und f, die sich in der Mitte im rechten Winkel schneiden.
-        caption: Die Diagonalen $e$ und $f$ teilen die Raute in vier gleiche Dreiecke. Zusammen sind sie ein halbes Rechteck mit den Seiten $e$ und $f$.
+        alt: Eine Raute mit zwei gestrichelten Diagonalen e und f, die sich in der Mitte im rechten Winkel schneiden. Um die Raute liegt ein gepunktetes Rechteck mit den Seiten e und f.
+        caption: Das gepunktete Rechteck hat die Seiten $e$ und $f$. Die Raute füllt davon vier der acht gleichen Dreiecke, also die Hälfte.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: formula
@@ -118,6 +118,12 @@ blocks:
       - type: text
         text: |
           Dieselbe Formel gilt für den Drachen mit seinen beiden Diagonalen: Auch sie teilen ihn in Dreiecke, die zusammen die Hälfte des Rechtecks mit den Seiten $e$ und $f$ füllen.
+      - type: figure
+        image: images/drachen-diagonalen.svg
+        alt: Ein Drachen mit zwei gestrichelten Diagonalen e und f, die im rechten Winkel aufeinander stehen. Um den Drachen liegt ein gepunktetes Rechteck mit den Seiten e und f. Der Drachen füllt davon die Hälfte.
+        caption: Auch der Drachen füllt die Hälfte des gepunkteten Rechtecks mit den Seiten $e$ und $f$.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
   - type: section
     id: beispiel
     title: Beispiel
@@ -239,7 +245,16 @@ blocks:
           g: { int: [4, 12] }
           s: { int: [5, 12] }
           h: { int: [2, 4] }
-        where: ["g != s", "g * h != 2 * (g + s)", "2 * (g + h) != g * h"]
+        where:
+          [
+            "g != s",
+            "g * h != 2 * (g + s)",
+            "2 * (g + h) != g * h",
+            "g + s != g * h",
+            "g + s != 2 * (g + h)",
+            "2 * g + s != g * h",
+            "2 * g + s != 2 * (g + h)",
+          ]
         task:
           text: "Ein Parallelogramm hat die Grundseite {{g}} cm, die schräge Seite {{s}} cm und die Höhe {{h}} cm. Berechne den Umfang in cm."
         answer: { value: "2 * (g + s)", compare: { number: { format: integer, unit: cm } } }
@@ -249,6 +264,11 @@ blocks:
               message: "Du hast die Höhe statt der schrägen Seite genommen. Die Höhe liegt im Inneren und gehört nicht zum Rand.",
             }
           - { value: "g * h", message: "Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand der Figur." }
+          - {
+              value: "g + s",
+              message: "Das ist erst die Hälfte des Randes. Gegenüberliegende Seiten sind gleich lang und kommen zweimal vor.",
+            }
+          - { value: "2 * g + s", message: "Du hast eine schräge Seite vergessen. Es gibt zwei schräge Seiten." }
         hint: "Gegenüberliegende Seiten sind gleich lang. Wie viele Seiten hat der Weg um die Figur?"
         steps:
           - "Der Rand hat zwei Seiten der Länge {{g}} cm und zwei der Länge {{s}} cm."
@@ -275,13 +295,14 @@ blocks:
         given:
           a: { int: [3, 12] }
           e: { int: [4, 14] }
-        where: ["e < 2 * a", "a != 2 * e", "a != e"]
+        where: ["e < 2 * a", "a != 2 * e", "a != e", "4 * e != 3 * a"]
         task:
           text: "Eine Raute hat die Seitenlänge {{a}} cm und eine Diagonale von {{e}} cm. Berechne den Umfang in cm."
         answer: { value: "4 * a", compare: { number: { format: integer, unit: cm } } }
         mistakes:
           - { value: "2 * a", message: "Du hast nur zwei Seiten gezählt. Eine Raute hat vier gleich lange Seiten." }
           - { value: "4 * e", message: "Du hast mit der Diagonale gerechnet. Der Rand besteht aus den vier Seiten." }
+          - { value: "3 * a", message: "Du hast nur drei Seiten gezählt. Eine Raute hat vier gleich lange Seiten." }
         hint: "Alle vier Seiten der Raute sind gleich lang. Die Diagonale liegt im Inneren."
         steps:
           - "Eine Raute hat vier gleich lange Seiten."
@@ -292,5 +313,5 @@ blocks:
     blocks:
       - type: text
         text: |
-          Du hast Figuren auf Rechtecke zurückgeführt. Auf der nächsten Seite stapelst du eine solche Fläche zum
-          Prisma, zum Beispiel ein Dreieck.
+          Du hast Figuren auf Rechtecke zurückgeführt. Auf der nächsten Seite stapelst du Flächen zu Körpern, den
+          Prismen: erst ein Rechteck, dann ein Dreieck.

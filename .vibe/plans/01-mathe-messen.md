@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { checks-pass: 1, usable-at-360px: 3 }
+failedChecks: { checks-pass: 2, usable-at-360px: 3 }
 ---
 
 # Plan: mathe-messen, first version

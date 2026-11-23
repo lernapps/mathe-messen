@@ -87,7 +87,7 @@ async function reset() {
       >
         {{ rectLabel }}
       </text>
-      <text v-if="step === 0" class="schere-label" :x="shift * unit + 6" :y="(height / 2) * unit">
+      <text v-if="step < 2" class="schere-label" :x="shift * unit + 6" :y="(height / 2) * unit">
         {{ heightLabel }}
       </text>
     </svg>

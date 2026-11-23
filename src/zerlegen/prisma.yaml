@@ -35,7 +35,7 @@ blocks:
           oder ein Dreieck ist.
       - type: figure
         image: images/prisma-stapel.svg
-        alt: Vier gleich große Dreiecksscheiben liegen übereinander. Jede hat die Grundfläche $G$. Zusammen sind sie ein Prisma mit der Höhe h.
+        alt: Vier gleich große Dreiecksscheiben liegen übereinander. Jede hat die Grundfläche G. Zusammen sind sie ein Prisma mit der Höhe h.
         caption: Vier gleiche Dreiecksscheiben bilden ein Prisma. Die Höhe $h$ ist die Höhe des Stapels, nicht die Höhe des Dreiecks.
         source: eigene Zeichnung
         licence: CC-BY-4.0
@@ -127,6 +127,7 @@ blocks:
               message: "Du hast den Mantel ohne die Höhe gerechnet. Der Mantel ist so lang wie der Umfang und so hoch wie das Prisma.",
             }
           - { value: "e.fl * H", message: "Das ist das Volumen. Gefragt ist die Fläche aller Seiten." }
+          - { value: "e.u * H", message: "Du hast nur den Mantel gerechnet. Grundfläche und Deckfläche fehlen noch." }
         hint: "Berechne die Fläche des Dreiecks und seinen Umfang. Der Mantel ist ein Rechteck aus Umfang und Höhe des Prismas."
         steps:
           - 'Grundfläche: $G = \frac{ {{e.a}} \cdot {{e.b}} }{2} = {{e.fl}}\ \text{cm}^2$, Umfang $u = {{e.a}} + {{e.b}} + {{e.c}} = {{e.u}}\ \text{cm}$.'

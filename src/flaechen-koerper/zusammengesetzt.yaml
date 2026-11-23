@@ -13,17 +13,17 @@ blocks:
           bestehen. Du nutzt, was du über Rechtecke weißt.
       - type: number
         id: schrank-flaeche
-        text: "Ein Zimmer ist 8 m lang und 6 m breit. In einer Ecke liegt ein Teppich mit den Maßen 4 m mal 3 m. Wie viele m² Boden sind nicht vom Teppich bedeckt?"
-        answer: 36
+        text: "Ein Zimmer ist 10 m lang und 6 m breit. In einer Ecke liegt ein Teppich mit den Maßen 4 m mal 2 m. Wie viele m² Boden sind nicht vom Teppich bedeckt?"
+        answer: 52
         tolerance: 0
         unit: m²
         mistakes:
-          - answer: 48
-            message: "Das ist der Boden des ganzen Zimmers. Ein Teil davon ist vom Teppich bedeckt."
           - answer: 60
+            message: "Das ist der Boden des ganzen Zimmers. Ein Teil davon ist vom Teppich bedeckt."
+          - answer: 68
             message: "Du hast die Fläche des Teppichs zum Zimmer addiert. Der Teppich liegt auf dem Boden des Zimmers und gehört nicht dazu."
         hint: "Berechne die Fläche des Zimmers und die Fläche des Teppichs. Was machst du mit dem Teppich?"
-        explanation: "Das Zimmer hat $8 \\cdot 6 = 48$ m², der Teppich $4 \\cdot 3 = 12$ m². Frei bleiben $48 - 12 = 36$ m²."
+        explanation: "Das Zimmer hat $10 \\cdot 6 = 60$ m², der Teppich $4 \\cdot 2 = 8$ m². Frei bleiben $60 - 8 = 52$ m²."
   - type: section
     id: idee
     title: Zerlegen oder ergänzen
@@ -78,7 +78,7 @@ blocks:
           H: { int: [6, 10] }
           w: { int: [2, 6] }
           h: { int: [2, 4] }
-        where: ["w < W", "h < H", "w * h != W * H - w * h"]
+        where: ["w < H", "h < H", "w * h != W * H - w * h"]
         task:
           text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Flächeninhalt in m²."
         answer: { value: "W * H - w * h", compare: { number: { format: integer, unit: m² } } }
@@ -103,7 +103,7 @@ blocks:
           H: { int: [6, 10] }
           w: { int: [2, 6] }
           h: { int: [2, 4] }
-        where: ["w < W", "h < H", "W * H - w * h != 2 * (W + H)", "2 * (2 * W + H - w) != W * H - w * h"]
+        where: ["w < H", "h < H", "W * H - w * h != 2 * (W + H)", "2 * (2 * W + H - w) != W * H - w * h"]
         task:
           text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Umfang in m."
         answer: { value: "2 * (W + H)", compare: { number: { format: integer, unit: m } } }

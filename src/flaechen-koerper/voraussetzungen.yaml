@@ -57,32 +57,32 @@ blocks:
                 correct: true,
                 info: "Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.",
               }
-            - { text: "Nur Jan", correct: false, info: "Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat." }
+            - { text: "Nur Jan", correct: false, info: "Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat." }
             - {
                 text: "Beide",
                 correct: false,
-                info: "Jan irrt sich: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.",
+                info: "Jan irrt sich: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
           Kurztest: Maria sagt, jedes Quadrat ist ein Rechteck. Jan sagt, jedes Rechteck ist ein Quadrat. Wer hat recht? Antwort: nur
-          Maria. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+          Maria. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
       - type: vue-component
         id: test-seiten
         component: Kurztest
         props:
-          question: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm, in dieser Reihenfolge um die Figur. Welche Seiten sind parallel?
+          question: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm, in dieser Reihenfolge um die Figur. Welche Seiten sind parallel?
           options:
             - {
-                text: "Nur die beiden 9 cm langen Seiten",
+                text: "Nur die beiden 9 cm langen Seiten",
                 correct: false,
-                info: "Auch die beiden 2 cm langen Seiten liegen einander gegenüber und sind parallel.",
+                info: "Auch die beiden 2 cm langen Seiten liegen einander gegenüber und sind parallel.",
               }
             - {
                 text: "Je zwei gegenüberliegende Seiten",
                 correct: true,
-                info: "Die beiden 9 cm langen Seiten sind parallel und die beiden 2 cm langen Seiten auch.",
+                info: "Die beiden 9 cm langen Seiten sind parallel und die beiden 2 cm langen Seiten auch.",
               }
             - {
                 text: "Je zwei benachbarte Seiten",
@@ -92,7 +92,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm. Welche Seiten sind parallel? Antwort: je
+          Kurztest: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm. Welche Seiten sind parallel? Antwort: je
           zwei gegenüberliegende Seiten. Benachbarte Seiten stoßen im rechten Winkel aufeinander.
       - type: text
         text: |
@@ -165,20 +165,20 @@ blocks:
         id: test-flaechen
         component: Kurztest
         props:
-          question: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
+          question: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
           options:
-            - { text: "16 cm", correct: false, info: "Das sind nur vier Kanten. Ein Würfel hat zwölf." }
+            - { text: "16 cm", correct: false, info: "Das sind nur vier Kanten. Ein Würfel hat zwölf." }
             - {
-                text: "32 cm",
+                text: "32 cm",
                 correct: false,
                 info: "Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.",
               }
-            - { text: "48 cm", correct: true, info: "Ein Würfel hat 12 Kanten, jede 4 cm lang: 12 · 4 cm = 48 cm." }
+            - { text: "48 cm", correct: true, info: "Ein Würfel hat 12 Kanten, jede 4 cm lang: 12 · 4 cm = 48 cm." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen? Antwort: 48 cm, denn der Würfel hat
-          12 Kanten mit je 4 cm.
+          Kurztest: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen? Antwort: 48 cm, denn der Würfel hat
+          12 Kanten mit je 4 cm.
       - type: text
         text: |
           Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartenseite findest du hier:

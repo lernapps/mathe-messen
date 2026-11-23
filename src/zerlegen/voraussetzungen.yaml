@@ -50,10 +50,10 @@ blocks:
         term: Höhe
         explanation: "Die Höhe ist ein senkrechter Abstand. Beim Parallelogramm und beim Trapez ist es der Abstand zwischen den parallelen Seiten. Beim Dreieck ist es der Abstand von der Spitze zur Grundseite. Sie ist nie länger als eine schräge Seite."
       - type: example
-        title: Welche Höhe hat das Parallelogramm?
+        title: Die Höhe eines Dreiecks
         blocks:
           - type: text
-            text: Ein Parallelogramm hat die Grundseite 8 cm und eine schräge Seite von 5 cm. Die Höhe steht senkrecht auf der Grundseite. Sie ist höchstens so lang wie die schräge Seite, also höchstens 5 cm.
+            text: Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten.
       - type: vue-component
         id: test-drachen
         component: Kurztest
@@ -73,7 +73,7 @@ blocks:
             - {
                 text: "Jeder Drachen ist ein Parallelogramm.",
                 correct: false,
-                info: "Im Drachen sind nur Nachbarseiten gleich lang, parallele Seiten gibt es im Allgemeinen nicht.",
+                info: "Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.",
               }
           right: Richtig.
           wrong: Nicht richtig.

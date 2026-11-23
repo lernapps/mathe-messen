@@ -50,7 +50,7 @@ blocks:
         header: [Größe, Einheiten, Womit du misst oder zählst]
         rowHeaders: true
         rows:
-          - [Länge, "mm, cm, m, km", Lineal oder Maßband]
+          - [Länge, "mm, cm, dm, m, km", Lineal oder Maßband]
           - [Masse, "mg, g, kg, t", Waage]
           - [Geld, "ct, €", Münzen und Scheine]
           - [Zeit, "s, min, h", Uhr]

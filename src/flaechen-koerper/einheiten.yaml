@@ -13,16 +13,16 @@ blocks:
           du Längen umgerechnet. Hier kommt eine Richtung dazu. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine Fläche passen, ist ihr Maß.
       - type: number
         id: quadrate-zaehlen
-        text: "Ein Quadrat ist 10 cm lang und 10 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
-        answer: 100
+        text: "Ein Rechteck ist 8 cm lang und 5 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
+        answer: 40
         tolerance: 0
         mistakes:
-          - answer: 20
-            message: "Du hast 10 und 10 addiert. Die Quadrate füllen eine Fläche, nicht nur eine Linie."
-          - answer: 40
-            message: "Das ist der Umfang, die Länge um das Quadrat. Gefragt ist, wie viele Quadrate hineinpassen."
+          - answer: 13
+            message: "Du hast 8 und 5 addiert. Die Quadrate füllen eine Fläche, nicht nur eine Linie."
+          - answer: 26
+            message: "Das ist der Umfang, die Länge um das Rechteck. Gefragt ist, wie viele Quadrate hineinpassen."
         hint: "Lege in Gedanken eine Reihe aus. Wie viele Reihen passen übereinander?"
-        explanation: "In jeder Reihe liegen 10 Quadrate, und es gibt 10 Reihen: $10 \\cdot 10 = 100$."
+        explanation: "In jeder Reihe liegen 8 Quadrate, und es gibt 5 Reihen: $8 \\cdot 5 = 40$."
   - type: section
     id: idee
     title: Einheitsquadrat und Einheitswürfel

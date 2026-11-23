@@ -13,16 +13,16 @@ blocks:
           Fläche von Rechtecken. Das Modell dahinter: Du stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der Schichten.
       - type: number
         id: schachtel-wuerfel
-        text: "Eine Schachtel ist innen 4 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
-        answer: 24
+        text: "Eine Schachtel ist innen 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
+        answer: 30
         tolerance: 0
         mistakes:
-          - answer: 9
+          - answer: 10
             message: "Du hast die drei Maße addiert. Die Würfel füllen die Schachtel in Schichten."
-          - answer: 12
+          - answer: 15
             message: "So viele Würfel passen in eine Schicht auf den Boden. Die Schachtel ist aber höher."
         hint: "Wie viele Würfel liegen auf dem Boden? Wie viele Schichten passen übereinander?"
-        explanation: "Auf dem Boden liegen $4 \\cdot 3 = 12$ Würfel. Es passen 2 Schichten hinein: $12 \\cdot 2 = 24$ Würfel."
+        explanation: "Auf dem Boden liegen $5 \\cdot 3 = 15$ Würfel. Es passen 2 Schichten hinein: $15 \\cdot 2 = 30$ Würfel."
   - type: section
     id: idee
     title: Schichten stapeln, Netz auslegen
@@ -33,13 +33,13 @@ blocks:
           Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
       - type: figure
         image: images/quader-schicht.svg
-        alt: Eine Schicht aus Einheitswürfeln, 4 Würfel breit und 3 Würfel tief, nur 1 Würfel hoch.
+        alt: Eine Schicht aus Einheitswürfeln, 4 Würfel lang und 3 Würfel breit, nur 1 Würfel hoch.
         caption: "Eine Schicht: 4 mal 3 Würfel. Das ist die Grundfläche, mit Würfeln belegt."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: figure
         image: images/quader-aus-wuerfeln.svg
-        alt: Ein Quader aus Einheitswürfeln, 4 Würfel breit, 3 Würfel tief und 2 Schichten hoch.
+        alt: Ein Quader aus Einheitswürfeln, 4 Würfel lang, 3 Würfel breit und 2 Schichten hoch.
         caption: "Eine Schicht hat 4 mal 3 Würfel. Es gibt 2 Schichten."
         source: eigene Zeichnung
         licence: CC-BY-4.0
@@ -88,7 +88,7 @@ blocks:
           - type: formula
             formula: 'V = 4 \cdot 3 \cdot 2 = 24\ \text{cm}^3'
           - type: text
-            text: Für die Oberfläche addierst du die drei Paare des Netzes.
+            text: "Für die Oberfläche addierst du die drei Paare des Netzes: Boden und Deckel je 4 · 3 = 12, vorne und hinten je 4 · 2 = 8, links und rechts je 2 · 3 = 6."
           - type: formula
             formula: 'O = 2 \cdot 12 + 2 \cdot 8 + 2 \cdot 6'
           - type: formula

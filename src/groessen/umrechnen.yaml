@@ -13,21 +13,21 @@ blocks:
           kennst das schon von den Stellen unserer Zahlen. Gleich benutzt du dafür eine Treppe aus Einheiten: Jede Stufe ist eine Einheit, und zwischen zwei Stufen steht, wie oft die kleinere Einheit in die größere passt.
       - type: single-choice
         id: km-in-m
-        text: Wie viele Meter sind 3 km?
+        text: Wie viele Zentimeter sind 3 m?
         options:
-          - text: 30 m
+          - text: 30 cm
             correct: false
-            info: "30 m sind nur ein Hundertstel von 3 km. Ein Kilometer ist viel länger als 10 m."
-          - text: 300 m
-            correct: false
-            info: "300 m sind nur ein Zehntel von 3 km. In einen Kilometer passen mehr als 100 Meter."
-          - text: 3000 m
+            info: "30 cm sind nur ein Zehntel von 3 m. In einen Meter passen mehr als 10 Zentimeter."
+          - text: 300 cm
             correct: true
-            info: "1 km sind 1000 m, also sind 3 km dreimal so viel: 3000 m."
-          - text: 30 000 m
+            info: "1 m sind 100 cm, also sind 3 m dreimal so viel: 300 cm."
+          - text: 3000 cm
             correct: false
-            info: "30 000 m wären 30 km. Das ist zehnmal zu viel."
-        explanation: Ein Kilometer hat 1000 Meter. Drei Kilometer sind dreimal so lang.
+            info: "3000 cm wären 30 m. Das ist zehnmal zu viel."
+          - text: 30 000 cm
+            correct: false
+            info: "30 000 cm wären 300 m. Das ist hundertmal zu viel."
+        explanation: Ein Meter hat 100 Zentimeter. Drei Meter sind dreimal so lang.
   - type: section
     id: idee
     title: Die Einheitentreppe zeigt den Faktor
@@ -39,8 +39,8 @@ blocks:
           teilst du. Das ist wie bei der Stellenwerttafel: Das Komma wandert.
       - type: figure
         image: images/einheitentreppe-laenge.svg
-        alt: "Eine Treppe mit den Stufen mm, cm, dm, m und km von links unten nach rechts oben. Auf jeder Stufe steht, wie viele Einheiten der Stufe davor hineinpassen: 1 cm sind 10 mm, 1 dm sind 10 cm, 1 m sind 10 dm, 1 km sind 1000 m."
-        caption: Auf jeder Stufe steht, wie viele Einheiten der Stufe davor hineinpassen.
+        alt: "Eine Treppe mit den Stufen mm, cm, dm, m und km von links unten nach rechts oben. Auf jeder Stufe steht, wie viele Einheiten der Stufe links daneben hineinpassen: 1 cm sind 10 mm, 1 dm sind 10 cm, 1 m sind 10 dm, 1 km sind 1000 m."
+        caption: Auf jeder Stufe steht, wie viele Einheiten der Stufe links daneben hineinpassen.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition

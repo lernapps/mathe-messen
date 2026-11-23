@@ -16,8 +16,8 @@ Hessen (Annahme der Regeln), Stufen 5-6 und 7-8, Gymnasium. Orientierung ist all
 Alle aus dem Strang `groessen-und-messen`; Satz „Ich kann …“ steht in der Karte und wird nicht umformuliert.
 
 - Kapitel `groessen` (5-6): `groessenvorstellungen-schaetzen` (Seite `schaetzen`), `messen-laenge-masse-geld-zeit` (`messen`), `umrechnung-groessen` (`umrechnen`).
-- Kapitel `flaechen-koerper` (5-6): Recap `voraussetzungen` (`recap: geometrie/grundfiguren-eben`, `geometrie/grundkoerper-quader-wuerfel`, enthält die Komponente `Kurztest`), `einheiten-flaeche-volumen` (`einheiten`), `flaeche-umfang-quadrat-rechteck` (`rechteck`), `zusammengesetzte-figuren` (`zusammengesetzt`), `volumen-oberflaeche-quader-wuerfel` (`quader`).
-- Kapitel `zerlegen` (7-8): Recap `voraussetzungen` (`recap: geometrie/vierecke-grundfiguren`, `geometrie/grundkoerper-prisma-zylinder`, `Kurztest`), `flaeche-umfang-dreieck-viereck` (`dreieck-viereck`), `volumen-oberflaeche-prisma` (`prisma`).
+- Kapitel `flaechen-koerper` (5-6): Recap `voraussetzungen` (`recap: mathematik/grundfiguren-eben`, `mathematik/grundkoerper-quader-wuerfel`, enthält die Komponente `Kurztest`), `einheiten-flaeche-volumen` (`einheiten`), `flaeche-umfang-quadrat-rechteck` (`rechteck`), `zusammengesetzte-figuren` (`zusammengesetzt`), `volumen-oberflaeche-quader-wuerfel` (`quader`).
+- Kapitel `zerlegen` (7-8): Recap `voraussetzungen` (`recap: mathematik/vierecke-grundfiguren`, `mathematik/grundkoerper-prisma-zylinder`, `Kurztest`), `flaeche-umfang-dreieck-viereck` (`dreieck-viereck`), `volumen-oberflaeche-prisma` (`prisma`).
 
 Je Baustein mindestens drei Aufgaben, Ids `<seite>-<nr>` oder sprechend (`schaetzen-tuer`); die Liste „Baustein → Seite“ steht im Plan. Alle neun Seiten und beide Recap-Seiten sind gebaut; jede Seite hat 4 bis 6 Aufgaben (Ids siehe die Seitendateien).
 

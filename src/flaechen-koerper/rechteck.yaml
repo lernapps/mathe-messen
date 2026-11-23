@@ -32,7 +32,7 @@ blocks:
         explanation: "Es gibt 3 Reihen mit je 5 Quadraten: $3 \\cdot 5 = 15$ Einheitsquadrate."
   - type: section
     id: idee
-    title: Reihen mal Spalten
+    title: Reihen mal Quadrate je Reihe
     blocks:
       - type: text
         text: |
