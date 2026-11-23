@@ -13,7 +13,7 @@ blocks:
           Fläche von Rechtecken.
       - type: number
         id: schachtel-wuerfel
-        text: "Eine Schachtel ist innen 4 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
+        text: "Eine Schachtel ist innen 4 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
         answer: 24
         tolerance: 0
         mistakes:
@@ -41,6 +41,9 @@ blocks:
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
+        term: Grundfläche
+        explanation: "Die Grundfläche ist die Fläche, auf der ein Körper steht. Beim Quader mit 4 cm Länge und 3 cm Breite ist sie 12 cm² groß."
+      - type: definition
         term: Volumen
         explanation: "Das Volumen sagt, wie viele Einheitswürfel in einen Körper passen. Es hat Einheiten wie cm³ oder m³."
       - type: formula
@@ -51,10 +54,13 @@ blocks:
           immer zwei gleich große.
       - type: figure
         image: images/quader-netz.svg
-        alt: "Das Netz eines Quaders mit 4 cm Länge, 3 cm Breite und 2 cm Höhe: sechs Rechtecke in Kreuzform. Maße in cm."
+        alt: "Das Netz eines Quaders mit 4 cm Länge, 3 cm Breite und 2 cm Höhe: sechs Rechtecke in Kreuzform. Maße in cm."
         caption: "Das Netz hat drei Paare gleich großer Rechtecke: Boden und Deckel, vorne und hinten, links und rechts."
         source: eigene Zeichnung
         licence: CC-BY-4.0
+      - type: definition
+        term: Netz
+        explanation: "Ein Netz ist ein Körper, an den Kanten aufgeklappt und flach hingelegt. Das Netz eines Quaders besteht aus sechs Rechtecken."
       - type: definition
         term: Oberfläche
         explanation: "Die Oberfläche ist die Summe der Flächen aller Seitenflächen eines Körpers. Sie hat Einheiten wie cm² oder m²."
@@ -75,7 +81,7 @@ blocks:
         title: Der Quader aus dem Netz
         blocks:
           - type: text
-            text: Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Das Volumen berechnest du so.
+            text: Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Das Volumen berechnest du so.
           - type: formula
             formula: 'V = 4 \cdot 3 \cdot 2 = 24\ \text{cm}^3'
           - type: text
@@ -96,7 +102,7 @@ blocks:
           c: { int: [2, 6] }
         where: ["a != b", "b != c", "a * b * c != 2 * (a * b + a * c + b * c)"]
         task:
-          text: "Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne das Volumen in cm³."
+          text: "Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne das Volumen in cm³."
         answer: { value: "a * b * c", compare: { number: { format: integer, unit: cm³ } } }
         mistakes:
           - {
@@ -119,7 +125,7 @@ blocks:
           c: { int: [2, 6] }
         where: ["a != b", "b != c", "a * b * c != 2 * (a * b + a * c + b * c)"]
         task:
-          text: "Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne die Oberfläche in cm²."
+          text: "Ein Quader ist {{a}} cm lang, {{b}} cm breit und {{c}} cm hoch. Berechne die Oberfläche in cm²."
         answer: { value: "2 * (a * b + a * c + b * c)", compare: { number: { format: integer, unit: cm² } } }
         mistakes:
           - {
@@ -137,7 +143,7 @@ blocks:
         given:
           a: { int: [2, 9] }
         task:
-          text: "Ein Würfel hat die Kantenlänge {{a}} cm. Berechne das Volumen in cm³."
+          text: "Ein Würfel hat die Kantenlänge {{a}} cm. Berechne das Volumen in cm³."
         answer: { value: "a * a * a", compare: { number: { format: integer, unit: cm³ } } }
         mistakes:
           - { value: "a * a", message: "Das ist die Fläche einer Seite. Für das Volumen brauchst du noch die Höhe." }
@@ -156,7 +162,7 @@ blocks:
           V: { oneOf: [48, 60, 72, 80, 96, 120, 144, 160, 180] }
         where: ["decimals(V / G) == 0", "V / G >= 2", "V / G <= 9", "V / G != G"]
         task:
-          text: "Eine Kiste hat eine Grundfläche von {{G}} cm². Ihr Volumen ist {{V}} cm³. Wie hoch ist die Kiste in cm?"
+          text: "Eine Kiste hat eine Grundfläche von {{G}} cm². Ihr Volumen ist {{V}} cm³. Wie hoch ist die Kiste in cm?"
         answer: { value: "V / G", compare: { number: { format: integer, unit: cm } } }
         mistakes:
           - { value: "V - G", message: "Du hast abgezogen. Das Volumen ist Grundfläche mal Höhe, also teilst du." }
@@ -164,4 +170,13 @@ blocks:
         hint: "Das Volumen ist Grundfläche mal Höhe. Mit welcher Zahl mal {{G}} kommst du auf {{V}}?"
         steps:
           - '$V = G \cdot h$, also $h = V : G$.'
-          - "$h = {{V}} : {{G}} = {{answer}}$, also {{answer}} cm."
+          - "$h = {{V}} : {{G}} = {{answer}}$, also {{answer}} cm."
+  - type: section
+    id: rueckblick
+    title: Das kannst du jetzt
+    blocks:
+      - type: text
+        text: |
+          - Flächen- und Volumeneinheiten mit 100 und 1000 umrechnen,
+          - Fläche und Umfang von Rechteck, Quadrat und zusammengesetzten Figuren berechnen,
+          - Volumen und Oberfläche von Quader und Würfel berechnen.

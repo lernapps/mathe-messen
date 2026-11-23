@@ -8,7 +8,7 @@ phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
-failedChecks: { usable-at-360px: 3 }
+failedChecks: { checks-pass: 1, usable-at-360px: 3 }
 ---
 
 # Plan: mathe-messen, first version
@@ -269,9 +269,9 @@ page, which a link. -->
 - [x] Kapitel flaechen-koerper, Recap: Seite voraussetzungen (recap grundfiguren-eben, grundkoerper-quader-wuerfel) mit Kopf, Fachbegriffen fett mit Beispiel, Checkliste, und Seite voraussetzungen-kurztest mit Kurzaufgaben und Verweis auf die Kartenseiten
 - [x] Seiten einheiten und rechteck: Einheitsquadrat auslegen, Treppe cm², m², cm³ (inkl. 1 l = 1 dm³ als eine Zeile), Rechteckmodell, Fläche und Umfang, generated mit Fehlertypen
 - [x] Seiten zusammengesetzt und quader: Zerlegen und Ergänzen (SVG), Umfang ohne gemeinsame Kante; Schichten und Netz (SVG), Volumen und Oberfläche, generated mit Rechenprobe
-- [ ] Kapitel zerlegen, Recap: Seite voraussetzungen (recap vierecke-grundfiguren, grundkoerper-prisma-zylinder) und voraussetzungen-kurztest wie in Kapitel 2
-- [ ] Komponente schere (Logikmodul, Test, nojs, Tastatur, aria-live) und Seite dreieck-viereck: Parallelogramm, Dreieck, Trapez, Raute, Drachen; generated mit Höhe-Fehlern
-- [ ] Seite prisma: Stapel aus Grundflächen, G · h, Oberfläche 2G + Mantel, generated; Kapitel- und App-Abschluss, Glossar vollständig, intro und sources in app.yaml
+- [x] Kapitel zerlegen, Recap: Seite voraussetzungen (recap vierecke-grundfiguren, grundkoerper-prisma-zylinder) und voraussetzungen-kurztest wie in Kapitel 2
+- [x] Komponente schere (Logikmodul, Test, nojs, Tastatur, aria-live) und Seite dreieck-viereck: Parallelogramm, Dreieck, Trapez, Raute, Drachen; generated mit Höhe-Fehlern
+- [x] Seite prisma: Stapel aus Grundflächen, G · h, Oberfläche 2G + Mantel, generated; Kapitel- und App-Abschluss, Glossar vollständig, intro und sources in app.yaml
 <!-- tasks: pages (7 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.

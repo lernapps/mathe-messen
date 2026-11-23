@@ -13,7 +13,7 @@ blocks:
           du Längen umgerechnet. Hier kommt eine Richtung dazu.
       - type: number
         id: quadrate-zaehlen
-        text: "Ein Quadrat ist 10 cm lang und 10 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
+        text: "Ein Quadrat ist 10 cm lang und 10 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
         answer: 100
         tolerance: 0
         mistakes:
@@ -32,24 +32,24 @@ blocks:
     blocks:
       - type: text
         text: |
-          Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
-          misst du mit **Einheitswürfeln**: Ein Würfel mit 1 cm Kantenlänge hat das Volumen 1 cm³.
+          Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
+          misst du mit **Einheitswürfeln**: Ein Würfel mit 1 cm Kantenlänge hat das Volumen 1 cm³.
       - type: figure
         image: images/quadratdezimeter.svg
-        alt: Ein Quadrat von 10 cm mal 10 cm, aufgeteilt in 100 kleine Quadrate von 1 cm mal 1 cm. Ein kleines Quadrat oben links ist markiert und mit 1 cm² beschriftet.
-        caption: "Ein Quadrat mit 10 cm Seitenlänge ist 1 dm² groß. Das markierte Einheitsquadrat ist 1 cm²."
+        alt: Ein Quadrat von 10 cm mal 10 cm, aufgeteilt in 100 kleine Quadrate von 1 cm mal 1 cm. Ein kleines Quadrat oben links ist markiert und mit 1 cm² beschriftet.
+        caption: "Ein Quadrat mit 10 cm Seitenlänge ist 1 dm² groß. Das markierte Einheitsquadrat ist 1 cm²."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
         term: Einheitsquadrat
-        explanation: "Ein Einheitsquadrat ist ein Quadrat mit der Seitenlänge 1 Einheit, zum Beispiel 1 cm. Seine Fläche ist 1 cm²."
+        explanation: "Ein Einheitsquadrat ist ein Quadrat mit der Seitenlänge 1 Einheit, zum Beispiel 1 cm. Seine Fläche ist 1 cm²."
       - type: definition
         term: Einheitswürfel
-        explanation: "Ein Einheitswürfel ist ein Würfel mit der Kantenlänge 1 Einheit, zum Beispiel 1 cm. Sein Volumen ist 1 cm³."
+        explanation: "Ein Einheitswürfel ist ein Würfel mit der Kantenlänge 1 Einheit, zum Beispiel 1 cm. Sein Volumen ist 1 cm³."
       - type: figure
         image: images/kubikdezimeter.svg
-        alt: Ein Würfel mit 10 cm Kantenlänge. Die Vorderseite ist in 10 mal 10 Quadrate geteilt. Ein Würfel von 1 cm Kantenlänge unten links ist markiert. Der Würfel besteht aus 10 Schichten mit je 100 solchen Würfeln.
-        caption: "Ein Würfel mit 10 cm Kantenlänge ist 1 dm³ groß. In jeder Schicht liegen 100 Einheitswürfel."
+        alt: Ein Würfel mit 10 cm Kantenlänge. Die Vorderseite ist in 10 mal 10 Quadrate geteilt. Ein Würfel von 1 cm Kantenlänge unten links ist markiert. Der Würfel besteht aus 10 Schichten mit je 100 solchen Würfeln.
+        caption: "Ein Würfel mit 10 cm Kantenlänge ist 1 dm³ groß. In jeder Schicht liegen 100 Einheitswürfel."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: table
@@ -57,9 +57,9 @@ blocks:
         header: [Größe, Umrechnung]
         rowHeaders: true
         rows:
-          - [Fläche, "1 dm² = 100 cm² und 1 m² = 100 dm²"]
-          - [Volumen, "1 dm³ = 1000 cm³ und 1 m³ = 1000 dm³"]
-          - [Hohlmaß, "1 l = 1 dm³"]
+          - [Fläche, "1 dm² = 100 cm² und 1 m² = 100 dm²"]
+          - [Volumen, "1 dm³ = 1000 cm³ und 1 m³ = 1000 dm³"]
+          - [Hohlmaß, "1 l = 1 dm³"]
       - type: note
         title: Merke
         blocks:
@@ -76,7 +76,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Wie viele dm² sind 3 m²? Auf der Treppe geht es eine Stufe nach unten, also mal 100. Es gilt
+              Wie viele dm² sind 3 m²? Auf der Treppe geht es eine Stufe nach unten, also mal 100. Es gilt
               $3\ \text{m}^2 \cdot 100 = 300\ \text{dm}^2$.
   - type: section
     id: uebung
@@ -96,9 +96,9 @@ blocks:
             url: "https://lernapps.net/apps/map/mathematik/c/einheiten-flaeche-volumen/"
       - type: true-false
         id: m2-in-cm2
-        text: "Stimmt das? 1 m² sind 100 cm²."
+        text: "Stimmt das? 1 m² sind 100 cm²."
         answer: false
-        explanation: "1 m² sind 100 dm², und 1 dm² sind 100 cm². Zusammen sind das 100 · 100 = 10 000 cm²."
+        explanation: "1 m² sind 100 dm², und 1 dm² sind 100 cm². Zusammen sind das 100 · 100 = 10 000 cm²."
         links:
           - title: "Karte: Flächen- und Volumeneinheiten"
             url: "https://lernapps.net/apps/map/mathematik/c/einheiten-flaeche-volumen/"
@@ -107,7 +107,7 @@ blocks:
         given:
           a: { oneOf: [2, 5, 12, 3.5, 0.4] }
         task:
-          text: "Rechne in cm² um: {{a}} dm²."
+          text: "Rechne in cm² um: {{a}} dm²."
         answer: { value: "a * 100", compare: { number: { format: decimal, unit: cm² } } }
         mistakes:
           - { value: "a * 10", message: "Das ist der Faktor für eine Länge. Bei Flächen ist der Faktor 100." }
@@ -121,7 +121,7 @@ blocks:
         given:
           a: { oneOf: [2, 4, 7, 1.5, 0.3] }
         task:
-          text: "Rechne in cm³ um: {{a}} dm³."
+          text: "Rechne in cm³ um: {{a}} dm³."
         answer: { value: "a * 1000", compare: { number: { format: decimal, unit: cm³ } } }
         mistakes:
           - { value: "a * 100", message: "Der Faktor 100 gilt für Flächen. Bei Volumen ist er 1000." }
@@ -135,7 +135,7 @@ blocks:
         given:
           a: { oneOf: [300, 500, 1200, 850, 2000] }
         task:
-          text: "Rechne in dm² um: {{a}} cm²."
+          text: "Rechne in dm² um: {{a}} cm²."
         answer: { value: "a / 100", compare: { number: { format: decimal, unit: dm² } } }
         mistakes:
           - {

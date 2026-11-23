@@ -22,22 +22,22 @@ blocks:
           brauchst du Rechteck und Quadrat.
       - type: figure
         image: images/rechteck-merkmale.svg
-        alt: Ein Rechteck mit 5 cm Breite und 3 cm Höhe. An allen vier Ecken ist ein rechter Winkel eingezeichnet.
+        alt: Ein Rechteck mit 5 cm Breite und 3 cm Höhe. An allen vier Ecken ist ein rechter Winkel eingezeichnet.
         caption: Ein Rechteck mit zwei Seitenlängen. Die kleinen Winkelzeichen markieren rechte Winkel.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
         term: Seite
-        explanation: "Eine Seite ist eine der Strecken, die eine Figur begrenzen. Ein Rechteck hat vier Seiten, zum Beispiel 5 cm, 3 cm, 5 cm und 3 cm."
+        explanation: "Eine Seite ist eine der Strecken, die eine Figur begrenzen. Ein Rechteck hat vier Seiten, zum Beispiel 5 cm, 3 cm, 5 cm und 3 cm."
       - type: definition
         term: Rechter Winkel
         explanation: "Ein rechter Winkel ist eine Ecke wie die Ecke eines Blattes Papier. Er hat 90 Grad."
       - type: definition
         term: Rechteck
-        explanation: "Ein Rechteck hat vier Seiten und vier rechte Winkel. Gegenüberliegende Seiten sind gleich lang, zum Beispiel 5 cm und 3 cm."
+        explanation: "Ein Rechteck hat vier Seiten und vier rechte Winkel. Gegenüberliegende Seiten sind gleich lang, zum Beispiel 5 cm und 3 cm."
       - type: definition
         term: Quadrat
-        explanation: "Ein Quadrat ist ein Rechteck, bei dem alle vier Seiten gleich lang sind, zum Beispiel 4 cm."
+        explanation: "Ein Quadrat ist ein Rechteck, bei dem alle vier Seiten gleich lang sind, zum Beispiel 4 cm."
       - type: definition
         term: Parallel
         explanation: "Zwei Seiten sind parallel, wenn sie überall denselben Abstand haben. Im Rechteck sind gegenüberliegende Seiten parallel."
@@ -45,7 +45,7 @@ blocks:
         id: test-rechteck
         component: Kurztest
         props:
-          question: Ein Viereck hat vier rechte Winkel. Zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Welche Figur ist das?
+          question: Ein Viereck hat vier rechte Winkel. Zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Welche Figur ist das?
           options:
             - {
                 text: "Quadrat",
@@ -61,7 +61,7 @@ blocks:
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Viereck hat vier rechte Winkel, zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Antwort: ein Rechteck.
+          Kurztest: Ein Viereck hat vier rechte Winkel, zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Antwort: ein Rechteck.
           Ein Quadrat hätte vier gleich lange Seiten, ein Dreieck nur drei Seiten.
       - type: vue-component
         id: test-parallel
@@ -103,7 +103,7 @@ blocks:
         explanation: "Ein Quader ist ein Körper aus sechs Rechtecken, wie eine Schachtel. Er hat 6 Seitenflächen, 12 Kanten und 8 Ecken."
       - type: definition
         term: Würfel
-        explanation: "Ein Würfel ist ein Quader, dessen Seitenflächen alle gleich große Quadrate sind. Bei einem Würfel mit 3 cm Kantenlänge sind alle 12 Kanten 3 cm lang."
+        explanation: "Ein Würfel ist ein Quader, dessen Seitenflächen alle gleich große Quadrate sind. Bei einem Würfel mit 3 cm Kantenlänge sind alle 12 Kanten 3 cm lang."
       - type: definition
         term: Kante
         explanation: "Eine Kante ist eine Linie, an der zwei Seitenflächen zusammenstoßen."
@@ -135,15 +135,15 @@ blocks:
         id: test-kanten
         component: Kurztest
         props:
-          question: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er?
+          question: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er?
           options:
             - { text: "6", correct: false, info: "Sechs ist die Zahl der Seitenflächen." }
             - { text: "8", correct: false, info: "Acht ist die Zahl der Ecken." }
-            - { text: "12", correct: true, info: "Vier Kanten oben, vier unten und vier senkrechte, alle 3 cm lang." }
+            - { text: "12", correct: true, info: "Vier Kanten oben, vier unten und vier senkrechte, alle 3 cm lang." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er? 6, 8 oder 12. Antwort: 12. Vier oben, vier
+          Kurztest: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er? 6, 8 oder 12. Antwort: 12. Vier oben, vier
           unten und vier senkrechte. Sechs ist die Zahl der Seitenflächen, acht die der Ecken.
       - type: text
         text: |

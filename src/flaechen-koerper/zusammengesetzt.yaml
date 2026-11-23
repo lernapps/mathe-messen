@@ -13,7 +13,7 @@ blocks:
           bestehen. Du nutzt, was du über Rechtecke weißt.
       - type: number
         id: schrank-flaeche
-        text: "Ein Zimmer ist 8 m lang und 6 m breit. In einer Ecke steht ein Schrank mit der Grundfläche 4 m mal 3 m. Wie viele m² Boden bleiben frei?"
+        text: "Ein Zimmer ist 8 m lang und 6 m breit. In einer Ecke steht ein Schrank mit der Grundfläche 4 m mal 3 m. Wie viele m² Boden bleiben frei?"
         answer: 36
         tolerance: 0
         unit: m²
@@ -38,8 +38,8 @@ blocks:
           Ergänzte ab.
       - type: figure
         image: images/l-figur-zerlegt.svg
-        alt: "Eine L-förmige Figur: unten 8 m breit, links 6 m hoch, oben nur 4 m breit, der rechte Teil ist 3 m hoch. Eine gestrichelte Linie teilt sie in Teil 1 oben links und Teil 2 unten."
-        caption: "Die gestrichelte Linie zerlegt die Figur in Teil 1 (4 m mal 3 m) und Teil 2 (8 m mal 3 m)."
+        alt: "Eine L-förmige Figur: unten 8 m breit, links 6 m hoch, oben nur 4 m breit, der rechte Teil ist 3 m hoch. Eine gestrichelte Linie teilt sie in Teil 1 oben links und Teil 2 unten."
+        caption: "Die gestrichelte Linie zerlegt die Figur in Teil 1 (4 m mal 3 m) und Teil 2 (8 m mal 3 m)."
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
@@ -61,8 +61,8 @@ blocks:
         blocks:
           - type: text
             text: |
-              Zerlegen: Teil 1 hat $4 \cdot 3 = 12$ m², Teil 2 hat $8 \cdot 3 = 24$ m². Zusammen sind es 36 m².
-              Ergänzen: Das große Rechteck hat $8 \cdot 6 = 48$ m². Das fehlende Stück hat $4 \cdot 3 = 12$ m². Es bleiben 36 m². Beide Wege geben dieselbe Zahl.
+              Zerlegen: Teil 1 hat $4 \cdot 3 = 12$ m², Teil 2 hat $8 \cdot 3 = 24$ m². Zusammen sind es 36 m².
+              Ergänzen: Das große Rechteck hat $8 \cdot 6 = 48$ m². Das fehlende Stück hat $4 \cdot 3 = 12$ m². Es bleiben 36 m². Beide Wege geben dieselbe Zahl.
               Der Umfang ist $4 + 3 + 4 + 3 + 8 + 6 = 28$ m.
   - type: section
     id: uebung
@@ -77,7 +77,7 @@ blocks:
           h: { int: [2, 4] }
         where: ["w < W", "h < H", "w * h != W * H - w * h"]
         task:
-          text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Flächeninhalt in m²."
+          text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Flächeninhalt in m²."
         answer: { value: "W * H - w * h", compare: { number: { format: integer, unit: m² } } }
         mistakes:
           - {
@@ -102,7 +102,7 @@ blocks:
           h: { int: [2, 4] }
         where: ["w < W", "h < H", "W * H - w * h != 2 * (W + H)"]
         task:
-          text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Umfang in m."
+          text: "Eine L-förmige Terrasse entsteht aus einem Rechteck von {{W}} m mal {{H}} m. Aus einer Ecke ist ein Rechteck von {{w}} m mal {{h}} m herausgeschnitten. Berechne den Umfang in m."
         answer: { value: "2 * (W + H)", compare: { number: { format: integer, unit: m } } }
         mistakes:
           - {
@@ -123,7 +123,7 @@ blocks:
           d: { int: [2, 5] }
         where: ["a != c", "b != d", "(a + c) * (b + d) != a * b + c * d"]
         task:
-          text: "Ein Grundstück besteht aus zwei Rechtecken. Das erste ist {{a}} m mal {{b}} m groß, das zweite {{c}} m mal {{d}} m. Berechne die gesamte Fläche in m²."
+          text: "Ein Grundstück besteht aus zwei Rechtecken. Das erste ist {{a}} m mal {{b}} m groß, das zweite {{c}} m mal {{d}} m. Berechne die gesamte Fläche in m²."
         answer: { value: "a * b + c * d", compare: { number: { format: integer, unit: m² } } }
         mistakes:
           - {

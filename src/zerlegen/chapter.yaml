@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zerlegen und ergänzen
+summary: Du schneidest Figuren in Stücke und legst sie neu, bis Dreieck und Viereck zum Rechteck werden. Ein Prisma ist ein Stapel gleicher Grundflächen.
+pages: [voraussetzungen, dreieck-viereck, prisma]

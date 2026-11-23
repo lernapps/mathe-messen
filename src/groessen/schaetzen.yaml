@@ -15,19 +15,19 @@ blocks:
         id: tuer-hoehe
         text: Wie hoch ist eine Zimmertür ungefähr?
         options:
-          - text: etwa 1 m
+          - text: etwa 1 m
             correct: false
-            info: "1 m reicht vielen Kindern der Klasse 5 etwa bis zur Hüfte. Eine Tür ist deutlich höher."
-          - text: etwa 2 m
+            info: "1 m reicht vielen Kindern der Klasse 5 etwa bis zur Hüfte. Eine Tür ist deutlich höher."
+          - text: etwa 2 m
             correct: true
-            info: "Eine Tür ist etwas höher als ein Erwachsener, also etwa 2 m."
-          - text: etwa 5 m
+            info: "Eine Tür ist etwas höher als ein Erwachsener, also etwa 2 m."
+          - text: etwa 5 m
             correct: false
-            info: "5 m wären zwei Türen übereinander und noch ein Stück mehr, so hoch ist ein Haus mit einem Stockwerk."
-          - text: etwa 20 m
+            info: "5 m wären zwei Türen übereinander und noch ein Stück mehr, so hoch ist ein Haus mit einem Stockwerk."
+          - text: etwa 20 m
             correct: false
-            info: "20 m ist so hoch wie ein Haus mit sechs Stockwerken."
-        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt. Mit ihr kannst du andere Höhen vergleichen.
+            info: "20 m ist so hoch wie ein Haus mit sechs Stockwerken."
+        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt. Mit ihr kannst du andere Höhen vergleichen.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
@@ -41,24 +41,24 @@ blocks:
           Tür und eine Wand. Schau, wie oft die Türhöhe an der Wand Platz hat.
       - type: figure
         image: images/stuetzpunkt-tuer.svg
-        alt: Links eine Tür mit der Höhe 2 m. Rechts eine Wand, die so hoch ist wie anderthalb Türen.
+        alt: Links eine Tür mit der Höhe 2 m. Rechts eine Wand, die so hoch ist wie anderthalb Türen.
         caption: Die gestrichelte Linie zeigt eine Türhöhe an der Wand. Darüber passt noch eine halbe Türhöhe.
         source: eigene Zeichnung
         licence: CC-BY-4.0
       - type: definition
         term: Stützpunkt
-        explanation: "Ein Stützpunkt ist eine Größe, die du sicher kennst, zum Beispiel eine Tür mit 2 m Höhe. Du vergleichst eine unbekannte Größe mit ihr: Wie oft passt der Stützpunkt hinein?"
+        explanation: "Ein Stützpunkt ist eine Größe, die du sicher kennst, zum Beispiel eine Tür mit 2 m Höhe. Du vergleichst eine unbekannte Größe mit ihr: Wie oft passt der Stützpunkt hinein?"
       - type: table
         caption: Stützpunkte, die du dir merken kannst
         header: [Sache, Größe]
         rowHeaders: true
         rows:
-          - [Breite eines Fingers, etwa 1 cm]
-          - [Breite einer Hand, etwa 10 cm]
-          - [Länge eines Bleistifts, etwa 18 cm]
-          - [Höhe einer Tür, etwa 2 m]
-          - [Länge eines Schulbusses, etwa 12 m]
-          - [Masse einer Tafel Schokolade, etwa 100 g]
+          - [Breite eines Fingers, etwa 1 cm]
+          - [Breite einer Hand, etwa 10 cm]
+          - [Länge eines Bleistifts, etwa 18 cm]
+          - [Höhe einer Tür, etwa 2 m]
+          - [Länge eines Schulbusses, etwa 12 m]
+          - [Masse einer Tafel Schokolade, etwa 100 g]
   - type: section
     id: beispiel
     title: Beispiel
@@ -68,7 +68,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Die Wand ist so hoch wie eine Tür und noch die Hälfte davon. Die Tür ist 2 m hoch, die Hälfte davon 1 m.
+              Die Wand ist so hoch wie eine Tür und noch die Hälfte davon. Die Tür ist 2 m hoch, die Hälfte davon 1 m.
               Die Wand ist also etwa $2\ \text{m} + 1\ \text{m} = 3\ \text{m}$ hoch.
       - type: note
         title: Merke
@@ -89,7 +89,7 @@ blocks:
           - Länge eines Bleistifts
           - Höhe einer Tür
           - Länge eines Schulbusses
-        explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 18 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang. Rechne alles in dieselbe Einheit um, dann siehst du die Reihenfolge."
+        explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 18 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang. Rechne alles in dieselbe Einheit um, dann siehst du die Reihenfolge."
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
@@ -102,28 +102,28 @@ blocks:
             info: "1 mg ist so leicht wie ein Staubkorn. Eine Tafel wiegt viel mehr."
           - text: Gramm (g)
             correct: true
-            info: "Eine Tafel wiegt etwa 100 g."
+            info: "Eine Tafel wiegt etwa 100 g."
           - text: Kilogramm (kg)
             correct: false
-            info: "1 kg ist so schwer wie zehn Tafeln. Für eine einzelne Tafel ist kg zu groß."
+            info: "1 kg ist so schwer wie zehn Tafeln. Für eine einzelne Tafel ist kg zu groß."
           - text: Tonne (t)
             correct: false
-            info: "1 t ist so schwer wie ein kleines Auto."
-        explanation: Eine Tafel Schokolade hat etwa 100 g. Mit Gramm schreibst du eine ganze Zahl, bei Kilogramm wäre es ein Bruchteil.
+            info: "1 t ist so schwer wie ein kleines Auto."
+        explanation: Eine Tafel Schokolade hat etwa 100 g. Mit Gramm schreibst du eine ganze Zahl, bei Kilogramm wäre es ein Bruchteil.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: true-false
         id: hand-passt
-        text: "Lena schätzt: Eine Hand ist etwa 1 m breit. Der Stützpunkt für die Breite einer Hand ist 10 cm. Passt Lenas Schätzung?"
+        text: "Lena schätzt: Eine Hand ist etwa 1 m breit. Der Stützpunkt für die Breite einer Hand ist 10 cm. Passt Lenas Schätzung?"
         answer: false
-        explanation: 1 m sind 100 cm. Das wären 10 Hände nebeneinander. Eine Hand ist etwa 10 cm breit.
+        explanation: 1 m sind 100 cm. Das wären 10 Hände nebeneinander. Eine Hand ist etwa 10 cm breit.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: number
         id: ranzen-masse
-        text: "Ein Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
+        text: "Ein Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
         answer: 1500
         tolerance: 100
         unit: g
@@ -132,7 +132,7 @@ blocks:
             message: "Das ist zehnmal zu wenig. Prüfe, wie viele Nullen du brauchst."
           - answer: 115
             message: "Du hast addiert. 15 Tafeln sind fünfzehnmal so schwer wie eine Tafel."
-        hint: "Eine Tafel wiegt 100 g. Du brauchst 15 davon."
+        hint: "Eine Tafel wiegt 100 g. Du brauchst 15 davon."
         explanation: "15 Tafeln wiegen $15 \\cdot 100\\ \\text{g} = 1500\\ \\text{g}$. Das sind $1{,}5\\ \\text{kg}$."
         links:
           - title: "Karte: Größen schätzen"
@@ -142,10 +142,10 @@ blocks:
         given:
           n: { int: [3, 9] }
         task:
-          text: "Eine Tür ist 2 m hoch. Ein Baum ist ungefähr so hoch wie {{n}} Türen übereinander. Wie hoch ist der Baum etwa? Gib die Höhe in m an."
+          text: "Eine Tür ist 2 m hoch. Ein Baum ist ungefähr so hoch wie {{n}} Türen übereinander. Wie hoch ist der Baum etwa? Gib die Höhe in m an."
         answer: { value: "n * 2", compare: { number: { format: integer, unit: m } } }
         mistakes:
-          - { value: "n", message: "Du hast nur die Türen gezählt. Jede Tür ist 2 m hoch." }
+          - { value: "n", message: "Du hast nur die Türen gezählt. Jede Tür ist 2 m hoch." }
           - { value: "n * 20", message: "Das ist zehnmal zu viel. Prüfe die Höhe mit dem Stützpunkt Tür." }
         hint: "Der Baum ist {{n}} Türen hoch. Rechne {{n}} mal die Höhe einer Tür."
         steps:

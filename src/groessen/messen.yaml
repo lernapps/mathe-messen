@@ -13,11 +13,11 @@ blocks:
           hast du geschätzt. Jetzt misst du genau.
       - type: number
         id: bleistift-laenge
-        text: "Ein Bleistift liegt am Lineal. Sein linkes Ende steht bei 2 cm, die Spitze bei 17 cm. Wie lang ist der Bleistift?"
+        text: "Ein Bleistift liegt am Lineal. Sein linkes Ende steht bei 2 cm, die Spitze bei 17 cm. Wie lang ist der Bleistift?"
         material:
           - type: figure
             image: images/lineal-bleistift.svg
-            alt: Ein Lineal von 0 bis 20 cm. Ein Bleistift liegt darüber. Sein linkes Ende steht bei 2 cm, seine Spitze bei 17 cm.
+            alt: Ein Lineal von 0 bis 20 cm. Ein Bleistift liegt darüber. Sein linkes Ende steht bei 2 cm, seine Spitze bei 17 cm.
             caption: Der Bleistift liegt am Lineal, aber nicht bei 0.
             source: eigene Zeichnung
             licence: CC-BY-4.0
@@ -30,7 +30,7 @@ blocks:
           - answer: 19
             message: "Du hast die beiden Zahlen addiert. Die Länge ist der Abstand zwischen den Enden."
         hint: "Zähle, wie viele Zentimeter zwischen dem linken Ende und der Spitze liegen."
-        explanation: "Du zählst die Zentimeter zwischen den Enden: von 2 cm bis 17 cm sind das 15 cm."
+        explanation: "Du zählst die Zentimeter zwischen den Enden: von 2 cm bis 17 cm sind das 15 cm."
         links:
           - title: "Karte: Länge, Masse, Geld und Zeit"
             url: "https://lernapps.net/apps/map/mathematik/c/messen-laenge-masse-geld-zeit/"
@@ -40,11 +40,14 @@ blocks:
     blocks:
       - type: text
         text: |
-          Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
+          Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
           fünfzehnmal hinein. Für jede Größe gibt es eigene Einheiten und ein Messgerät.
       - type: definition
+        term: Messen
+        explanation: "Messen heißt zählen, wie oft eine Einheit in eine Größe hineinpasst. Der Bleistift ist 15 cm lang: 1 cm passt fünfzehnmal hinein."
+      - type: definition
         term: Einheit
-        explanation: "Eine Einheit ist die Größe, die beim Messen gezählt wird, zum Beispiel 1 cm, 1 g oder 1 min. Das Ergebnis besteht aus Zahl und Einheit: 15 cm."
+        explanation: "Eine Einheit ist die Größe, die beim Messen gezählt wird, zum Beispiel 1 cm, 1 g oder 1 min. Das Ergebnis besteht aus Zahl und Einheit: 15 cm."
       - type: table
         caption: Größen, ihre Einheiten und Messgeräte
         header: [Größe, Einheiten, Messgerät]
@@ -56,8 +59,8 @@ blocks:
           - [Zeit, "s, min, h", Uhr]
       - type: text
         text: |
-          Bei **Geld** schreibst du zwei Stellen nach dem Komma: 3,60 €. Bei der **Zeit** zählst du nicht in Zehnern:
-          1 h hat 60 min.
+          Bei **Geld** schreibst du zwei Stellen nach dem Komma: 3,60 €. Bei der **Zeit** zählst du nicht in Zehnern:
+          1 h hat 60 min.
   - type: section
     id: beispiel
     title: Beispiel
@@ -68,8 +71,8 @@ blocks:
           - type: text
             text: |
               Ein Film beginnt um 14:35 Uhr und endet um 16:10 Uhr. Rechne in Schritten bis zur nächsten vollen Stunde:
-              Von 14:35 Uhr bis 15:00 Uhr sind es 25 min. Bis 16:00 Uhr kommt 1 h dazu, bis 16:10 Uhr weitere 10 min.
-              Zusammen: $25\ \text{min} + 60\ \text{min} + 10\ \text{min} = 95\ \text{min}$, das sind 1 h 35 min.
+              Von 14:35 Uhr bis 15:00 Uhr sind es 25 min. Bis 16:00 Uhr kommt 1 h dazu, bis 16:10 Uhr weitere 10 min.
+              Zusammen: $25\ \text{min} + 60\ \text{min} + 10\ \text{min} = 95\ \text{min}$, das sind 1 h 35 min.
       - type: note
         title: Merke
         blocks:
@@ -99,7 +102,7 @@ blocks:
           a: { int: [120, 400], step: 10 }
           b: { int: [450, 900], step: 10 }
         task:
-          text: "Eine Waage zeigt für einen leeren Becher {{a}} g. Mit Mehl zeigt sie {{b}} g. Wie viel Gramm Mehl sind im Becher?"
+          text: "Eine Waage zeigt für einen leeren Becher {{a}} g. Mit Mehl zeigt sie {{b}} g. Wie viel Gramm Mehl sind im Becher?"
         answer: { value: "b - a", compare: { number: { format: integer, unit: g } } }
         mistakes:
           - {
@@ -112,8 +115,8 @@ blocks:
             }
         hint: "Die Waage zeigt Becher und Mehl zusammen. Was musst du abziehen?"
         steps:
-          - "Die Waage zeigt {{b}} g für Becher und Mehl."
-          - 'Der Becher wiegt {{a}} g. Mehl: ${{b}}\ \text{g} - {{a}}\ \text{g} = {{answer}}\ \text{g}$.'
+          - "Die Waage zeigt {{b}} g für Becher und Mehl."
+          - 'Der Becher wiegt {{a}} g. Mehl: ${{b}}\ \text{g} - {{a}}\ \text{g} = {{answer}}\ \text{g}$.'
       - type: generated
         id: rueckgeld
         given:
@@ -122,7 +125,7 @@ blocks:
           pay: { oneOf: [10, 20] }
         where: ["n * p < pay"]
         task:
-          text: "Ein Heft kostet {{p}} €. Du kaufst {{n}} Hefte und bezahlst mit einem {{pay}}-€-Schein. Wie viel Rückgeld bekommst du?"
+          text: "Ein Heft kostet {{p}} €. Du kaufst {{n}} Hefte und bezahlst mit einem {{pay}}-€-Schein. Wie viel Rückgeld bekommst du?"
         answer: { value: "pay - n * p", compare: { number: { format: money } } }
         mistakes:
           - { value: "n * p", message: "Das ist der Preis der Hefte. Gefragt ist, was vom Schein übrig bleibt." }

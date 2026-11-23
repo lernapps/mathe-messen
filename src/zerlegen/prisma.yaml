@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Volumen und Oberfläche: Prisma"
+description: "Volumen und Oberfläche von Prismen berechnen: ein Prisma ist ein Stapel gleicher Grundflächen, sein Mantel ein Rechteck."
+competencies: [volumen-oberflaeche-prisma]
+blocks:
+  - type: section
+    id: einstieg
+    title: Probier es zuerst
+    blocks:
+      - type: text
+        text: |
+          Nach dieser Seite berechnest du Volumen und Oberfläche von Prismen. Du kennst schon den Quader: Auch er ist
+          ein Prisma. Aus seiner Formel wird die Formel für jedes Prisma.
+      - type: number
+        id: quader-stapel
+        text: "Ein Quader hat eine Grundfläche von 15 cm² und ist 4 cm hoch. Wie groß ist sein Volumen?"
+        answer: 60
+        tolerance: 0
+        unit: cm³
+        mistakes:
+          - answer: 19
+            message: "Du hast addiert. Die Schichten liegen übereinander: Jede Schicht hat dieselbe Zahl Würfel."
+          - answer: 15
+            message: "Das ist nur eine Schicht. Der Quader hat mehrere Schichten übereinander."
+        hint: "Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?"
+        explanation: "Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \\cdot 4 = 60$ cm³."
+        links:
+          - title: "Karte: Volumen und Oberfläche: Prisma"
+            url: "https://lernapps.net/apps/map/mathematik/c/volumen-oberflaeche-prisma/"
+  - type: section
+    id: idee
+    title: Ein Prisma ist ein Stapel gleicher Grundflächen
+    blocks:
+      - type: text
+        text: |
+          Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
+          G, und die Höhe h sagt, wie viele Schichten es sind. Es kommt nicht darauf an, ob die Grundfläche ein Rechteck
+          oder ein Dreieck ist.
+      - type: figure
+        image: images/prisma-stapel.svg
+        alt: Vier gleich große Dreiecksscheiben liegen übereinander. Jede hat die Grundfläche G. Zusammen sind sie ein Prisma mit der Höhe h.
+        caption: Vier gleiche Dreiecksscheiben bilden ein Prisma. Die Höhe h ist die Höhe des Stapels, nicht die Höhe des Dreiecks.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: formula
+        formula: 'V = G \cdot h'
+      - type: text
+        text: |
+          Für die Oberfläche legst du das Netz aus. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
+          ein langes Rechteck. Seine Länge ist der Umfang u der Grundfläche, seine Höhe ist die Höhe h des Prismas.
+      - type: figure
+        image: images/prisma-netz.svg
+        alt: "Das Netz eines Prismas mit rechtwinkliger Dreiecksgrundfläche: der Mantel ist ein langes Rechteck aus drei Rechtecken mit den Breiten 3 cm, 4 cm und 5 cm. Über dem mittleren Rechteck liegt die Grundfläche, darunter die Deckfläche."
+        caption: Der Mantel ist so lang wie der Umfang der Grundfläche. Die Grundfläche kommt zweimal vor.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: formula
+        formula: 'M = u \cdot h'
+      - type: formula
+        formula: 'O = 2 \cdot G + M'
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Das Prisma hat zwei Höhen im Spiel: die Höhe des Dreiecks in der Grundfläche und die Höhe h des
+              Prismas. Für das Volumen mal G die Höhe des Prismas.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ein Prisma mit Dreieck
+        blocks:
+          - type: text
+            text: Die Grundfläche ist ein Dreieck mit den Seiten 3 cm, 4 cm und 5 cm. Das Dreieck hat die Höhe 3 cm zur Grundseite 4 cm. Das Prisma ist 10 cm hoch.
+          - type: formula
+            formula: 'G = \frac{4 \cdot 3}{2} = 6\ \text{cm}^2'
+          - type: formula
+            formula: 'V = 6 \cdot 10 = 60\ \text{cm}^3'
+          - type: formula
+            formula: 'u = 3 + 4 + 5 = 12\ \text{cm}'
+          - type: formula
+            formula: 'M = 12 \cdot 10 = 120\ \text{cm}^2'
+          - type: formula
+            formula: 'O = 2 \cdot 6 + 120 = 132\ \text{cm}^2'
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: prisma-volumen
+        given:
+          g: { int: [4, 10] }
+          d: { int: [3, 8] }
+          H: { int: [5, 12] }
+        where: ["decimals(g * d / 2) == 0", "d != H", "g * d / 2 * d != g * d / 2 * H"]
+        task:
+          text: "Die Grundfläche eines Prismas ist ein Dreieck mit der Grundseite {{g}} cm und der Höhe {{d}} cm. Das Prisma ist {{H}} cm hoch. Berechne das Volumen in cm³."
+        answer: { value: "g * d / 2 * H", compare: { number: { format: integer, unit: cm³ } } }
+        mistakes:
+          - {
+              value: "g * d / 2 * d",
+              message: "Du hast die Höhe des Dreiecks genommen. Für das Volumen brauchst du die Höhe des Prismas.",
+            }
+          - {
+              value: "g * d * H",
+              message: "Du hast die Fläche des Dreiecks nicht halbiert. Rechne erst G, dann mal Höhe des Prismas.",
+            }
+        hint: "Berechne zuerst die Grundfläche, das Dreieck. Dann stapelst du sie so hoch wie das Prisma."
+        steps:
+          - '$G = \frac{ {{g}} \cdot {{d}} }{2}$'
+          - '$V = G \cdot h = {{answer}}\ \text{cm}^3$.'
+      - type: generated
+        id: prisma-oberflaeche
+        given:
+          G: { oneOf: [6, 10, 12, 15, 20] }
+          u: { oneOf: [10, 12, 14, 16] }
+          H: { int: [4, 9] }
+        where: ["G * H != 2 * G + u * H", "u * H != 2 * G + u * H - G"]
+        task:
+          text: "Ein Prisma hat die Grundfläche {{G}} cm², den Umfang der Grundfläche {{u}} cm und die Höhe {{H}} cm. Berechne die Oberfläche in cm²."
+        answer: { value: "2 * G + u * H", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "G + u * H",
+              message: "Du hast die Grundfläche nur einmal gezählt. Auch die Deckfläche gehört zur Oberfläche.",
+            }
+          - {
+              value: "2 * G + u",
+              message: "Du hast den Mantel ohne die Höhe gerechnet. Der Mantel ist so lang wie der Umfang und so hoch wie das Prisma.",
+            }
+          - { value: "G * H", message: "Das ist das Volumen. Gefragt ist die Fläche aller Seiten." }
+        hint: "Das Netz hat zwei Grundflächen und den Mantel. Der Mantel ist ein Rechteck aus Umfang und Höhe."
+        steps:
+          - 'Mantel: $M = u \cdot h = {{u}} \cdot {{H}}$.'
+          - 'Oberfläche: $O = 2 \cdot {{G}} + M = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: prisma-hoehe-gesucht
+        given:
+          G: { oneOf: [6, 8, 12, 15] }
+          V: { oneOf: [24, 36, 48, 60, 72, 90, 120] }
+        where: ["decimals(V / G) == 0", "V / G >= 2", "V / G != G"]
+        task:
+          text: "Ein Prisma hat die Grundfläche {{G}} cm² und das Volumen {{V}} cm³. Wie hoch ist das Prisma in cm?"
+        answer: { value: "V / G", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - { value: "V - G", message: "Du hast abgezogen. Das Volumen ist Grundfläche mal Höhe, also teilst du." }
+          - { value: "V * G", message: "Du hast mal gerechnet. Das Volumen ist schon Grundfläche mal Höhe." }
+        hint: "Mit welcher Zahl mal {{G}} kommst du auf {{V}}?"
+        steps:
+          - '$V = G \cdot h$, also $h = V : G$.'
+          - "$h = {{V}} : {{G}} = {{answer}}$, also {{answer}} cm."
+  - type: section
+    id: rueckblick
+    title: Das kannst du jetzt
+    blocks:
+      - type: text
+        text: |
+          - Parallelogramm, Dreieck, Trapez und Raute auf Rechtecke zurückführen und ihre Fläche berechnen,
+          - das Volumen eines Prismas als Stapel gleicher Grundflächen berechnen,
+          - die Oberfläche eines Prismas aus zwei Grundflächen und dem Mantel berechnen.
