@@ -286,6 +286,7 @@ blocks:
               value: "e.c * 3",
               message: "Du hast die längste Seite dreimal gerechnet. Die drei Seiten sind verschieden lang.",
             }
+          - { value: "e.u * 2", message: "Du hast alle Seiten doppelt gezählt. Jede Seite gehört nur einmal zum Rand." }
         hint: "Der Umfang ist der Weg einmal um das Dreieck. Welche Strecken gehören dazu?"
         steps:
           - "Die drei Seiten bilden den Rand: {{e.a}} cm, {{e.b}} cm und {{e.c}} cm."

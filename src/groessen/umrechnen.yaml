@@ -24,9 +24,9 @@ blocks:
           - text: 3000 cm
             correct: false
             info: "3000 cm wären 30 m. Das ist zehnmal zu viel."
-          - text: 30 000 cm
+          - text: 30 000 cm
             correct: false
-            info: "30 000 cm wären 300 m. Das ist hundertmal zu viel."
+            info: "30 000 cm wären 300 m. Das ist hundertmal zu viel."
         explanation: Ein Meter hat 100 Zentimeter. Drei Meter sind dreimal so lang.
   - type: section
     id: idee

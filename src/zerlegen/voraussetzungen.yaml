@@ -53,7 +53,7 @@ blocks:
         title: Die Höhe eines Dreiecks
         blocks:
           - type: text
-            text: Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten.
+            text: Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten. Bei einem Parallelogramm ist sie nie länger als die schräge Seite, denn der senkrechte Weg ist der kürzeste.
       - type: vue-component
         id: test-drachen
         component: Kurztest

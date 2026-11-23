@@ -113,7 +113,16 @@ blocks:
         given:
           e: { pick: 1, from: { data: dreiecke } }
           H: { int: [4, 12] }
-        where: ["H != e.b", "H != e.a", "e.fl * H != 2 * e.fl + e.u * H", "e.a != 3 or H != 10"]
+        where:
+          [
+            "H != e.b",
+            "H != e.a",
+            "e.fl * H != 2 * e.fl + e.u * H",
+            "e.a != 3 or H != 10",
+            "e.fl != e.u",
+            "2 * e.fl + e.u != e.u * H",
+            "e.fl * H != e.u * H",
+          ]
         task:
           text: "Die Grundfläche eines Prismas ist ein rechtwinkliges Dreieck mit den Seiten {{e.a}} cm, {{e.b}} cm und {{e.c}} cm. Die Seiten {{e.a}} cm und {{e.b}} cm stehen im rechten Winkel zueinander. Das Prisma ist {{H}} cm hoch. Berechne die Oberfläche in cm²."
         answer: { value: "2 * e.fl + e.u * H", compare: { number: { format: integer, unit: cm² } } }
