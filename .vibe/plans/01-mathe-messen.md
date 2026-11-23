@@ -81,6 +81,10 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
 
 **Offene Fragen an den Orchestrator:** (1) Recap als Block oder als Seite, siehe oben. (2) Sollen Volumen- und Hohlmaß-Verknüpfung (1 l = 1 dm³) als Hinweis stehen? Karte nennt es nicht; Vorschlag: ja, als eine Zeile in `einheiten-flaeche-volumen`. (guess)
 
+### Review (Musterseite, Lernenden-Prüfer Klasse 5, unabhängiger Unteragent)
+
+Umgesetzt auf `groessen/schaetzen`: „Maßstab im Kopf“ und „Zehnerpotenz“ entfernt; doppelte Definition bereinigt; Bild vor die Erklärung „Wie oft passt …“, unbeschriftete Zeichen (Linie, Klinke) entfernt; Tabelle enthält jetzt alle Größen, nach denen gefragt wird (Finger, Bleistift, Bus), Einheit l entfernt; „Merke“ verrät die Aufgabe nicht mehr (Aufgabe jetzt zur Hand 10 cm); Zahlenaufgabe als echte Schätzung (Ranzen, Toleranz 100 g, Einheit in der Aufgabe genannt); Rückmeldungen nennen nicht mehr die Lösung; Platz 1 = kleinste Länge. Nicht geändert (Laufzeit, Funde): Standardrückmeldung „Lies dazu noch einmal den Text“ bei Reihenfolge, wahr/falsch und Zahl; „Antworte zuerst: Wähle, tippe oder ordne alles zu“ ohne Hinweis auf fehlende Einträge; Symbol „Neue Aufgabe“ ohne sichtbaren Text; Link „Mehr dazu“ führt auf lernapps.net, „Karte“ unerklärt; Fachbegriff-Link springt auf dieselbe Seite; KI-Tutor-Block nicht verständlich für Klasse 5. Offen: fachlicher Prüfer, Lernenden-Prüfer über alle Seiten.
+
 ## Explore
 
 <!--

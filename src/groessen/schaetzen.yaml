@@ -27,36 +27,38 @@ blocks:
           - text: etwa 20 m
             correct: false
             info: "20 m ist so hoch wie ein Haus mit sechs Stockwerken."
-        explanation: Eine Tür ist etwa 2 m hoch. Mit dieser Größe kannst du andere Höhen vergleichen.
+        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt. Mit ihr kannst du andere Höhen vergleichen.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
   - type: section
     id: idee
-    title: Ein Stützpunkt ist ein Maßstab im Kopf
+    title: Mit einem Stützpunkt schätzt du
     blocks:
       - type: text
         text: |
-          Eine Größe, die du sicher kennst, heißt hier **Stützpunkt**. Du vergleichst: Wie oft passt der Stützpunkt in
-          die Sache, die du schätzen willst? Das ist Messen ohne Lineal.
-      - type: definition
-        term: Stützpunkt
-        explanation: "Ein Stützpunkt ist eine Größe, die du sicher kennst, zum Beispiel eine Tür mit 2 m Höhe. Mit ihm schätzt du andere Größen."
+          Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
+          Tür und eine Wand. Schau, wie oft die Türhöhe an der Wand Platz hat.
       - type: figure
         image: images/stuetzpunkt-tuer.svg
         alt: Links eine Tür mit der Höhe 2 m. Rechts eine Wand, die so hoch ist wie anderthalb Türen.
         caption: Die gestrichelte Linie zeigt eine Türhöhe an der Wand. Darüber passt noch eine halbe Türhöhe.
         source: eigene Zeichnung
         licence: CC-BY-4.0
+      - type: definition
+        term: Stützpunkt
+        explanation: "Ein Stützpunkt ist eine Größe, die du sicher kennst, zum Beispiel eine Tür mit 2 m Höhe. Du vergleichst eine unbekannte Größe mit ihr: Wie oft passt der Stützpunkt hinein?"
       - type: table
         caption: Stützpunkte, die du dir merken kannst
-        header: [Größe, Stützpunkt]
+        header: [Sache, Größe]
         rowHeaders: true
         rows:
-          - [Höhe einer Tür, etwa 2 m]
+          - [Breite eines Fingers, etwa 1 cm]
           - [Breite einer Hand, etwa 10 cm]
+          - [Länge eines Bleistifts, etwa 18 cm]
+          - [Höhe einer Tür, etwa 2 m]
+          - [Länge eines Schulbusses, etwa 12 m]
           - [Masse einer Tafel Schokolade, etwa 100 g]
-          - [Inhalt einer Wasserflasche, etwa 1 l]
   - type: section
     id: beispiel
     title: Beispiel
@@ -73,21 +75,21 @@ blocks:
         blocks:
           - type: text
             text: |
-              Prüfe jedes Ergebnis mit einem Stützpunkt. Passt der Wert zur Sache? Eine Wand mit 30 m Höhe wäre 15 Türen
-              hoch. Das ist zu viel: Die Zehnerpotenz stimmt nicht.
+              Prüfe jedes Ergebnis mit einem Stützpunkt. Frage dich: Wie oft passt der Stützpunkt hinein? Kommt eine
+              unmögliche Zahl heraus, hast du dich verschätzt oder verrechnet.
   - type: section
     id: uebung
     title: Übung
     blocks:
       - type: ordering
         id: laengen-ordnen
-        text: Ordne diese Längen von der kleinsten zur größten.
+        text: Ordne diese Längen. Platz 1 ist die kleinste Länge. Nimm die Tabelle der Stützpunkte zu Hilfe.
         items:
           - Breite eines Fingers
           - Länge eines Bleistifts
           - Höhe einer Tür
           - Länge eines Schulbusses
-        explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 18 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang."
+        explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 18 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang. Rechne alles in dieselbe Einheit um, dann siehst du die Reihenfolge."
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
@@ -107,31 +109,31 @@ blocks:
           - text: Tonne (t)
             correct: false
             info: "1 t ist so schwer wie ein kleines Auto."
-        explanation: Eine Tafel Schokolade hat etwa 100 g. Gramm ist die Einheit, bei der du eine Zahl wie 100 statt 0,1 schreibst.
+        explanation: Eine Tafel Schokolade hat etwa 100 g. Mit Gramm schreibst du eine ganze Zahl, bei Kilogramm wäre es ein Bruchteil.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: true-false
-        id: wandhoehe-passt
-        text: "Mika schätzt: Die Wand im Klassenzimmer ist 30 m hoch. Eine Tür ist 2 m hoch. Passt Mikas Schätzung?"
+        id: hand-passt
+        text: "Lena schätzt: Eine Hand ist etwa 1 m breit. Der Stützpunkt für die Breite einer Hand ist 10 cm. Passt Lenas Schätzung?"
         answer: false
-        explanation: 30 m wären 15 Türen übereinander. Eine Wand im Klassenzimmer ist etwa 3 m hoch, das sind eineinhalb Türen.
+        explanation: 1 m sind 100 cm. Das wären 10 Hände nebeneinander. Eine Hand ist etwa 10 cm breit.
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
       - type: number
-        id: tafeln-masse
-        text: Eine Tafel Schokolade hat etwa 100 g. Wie viel Gramm haben 6 Tafeln ungefähr?
-        answer: 600
-        tolerance: 0
+        id: ranzen-masse
+        text: "Ein Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
+        answer: 1500
+        tolerance: 100
         unit: g
         mistakes:
-          - answer: 60
-            message: "Du hast durch 10 geteilt oder eine Null vergessen: 6 · 100 g sind 600 g."
-          - answer: 106
-            message: "Du hast addiert. Sechs Tafeln sind sechsmal so schwer wie eine, also mal 6."
-        hint: Wie oft passt der Stützpunkt 100 g in 6 Tafeln?
-        explanation: "Sechs Tafeln wiegen $6 \\cdot 100\\ \\text{g} = 600\\ \\text{g}$."
+          - answer: 150
+            message: "Das ist zehnmal zu wenig. Prüfe, wie viele Nullen du brauchst."
+          - answer: 115
+            message: "Du hast addiert. 15 Tafeln sind fünfzehnmal so schwer wie eine Tafel."
+        hint: "Eine Tafel wiegt 100 g. Du brauchst 15 davon."
+        explanation: "15 Tafeln wiegen $15 \\cdot 100\\ \\text{g} = 1500\\ \\text{g}$. Das sind $1{,}5\\ \\text{kg}$."
         links:
           - title: "Karte: Größen schätzen"
             url: "https://lernapps.net/apps/map/mathematik/c/groessenvorstellungen-schaetzen/"
@@ -143,9 +145,9 @@ blocks:
           text: "Eine Tür ist 2 m hoch. Ein Baum ist ungefähr so hoch wie {{n}} Türen übereinander. Wie hoch ist der Baum etwa? Gib die Höhe in m an."
         answer: { value: "n * 2", compare: { number: { format: integer, unit: m } } }
         mistakes:
-          - { value: "n", message: "Du hast die Höhe einer Tür vergessen. Jede Tür ist 2 m hoch, also {{n}} · 2 m." }
-          - { value: "n * 20", message: "Eine Tür ist 2 m hoch, nicht 20 m. Prüfe die Größe mit dem Stützpunkt." }
-        hint: "Eine Tür ist 2 m hoch. Wie oft passt sie in den Baum?"
+          - { value: "n", message: "Du hast nur die Türen gezählt. Jede Tür ist 2 m hoch." }
+          - { value: "n * 20", message: "Das ist zehnmal zu viel. Prüfe die Höhe mit dem Stützpunkt Tür." }
+        hint: "Der Baum ist {{n}} Türen hoch. Rechne {{n}} mal die Höhe einer Tür."
         steps:
           - 'Eine Tür ist $2\ \text{m}$ hoch.'
           - 'Der Baum ist so hoch wie {{n}} Türen: ${{n}} \cdot 2\ \text{m} = {{answer}}\ \text{m}$.'
