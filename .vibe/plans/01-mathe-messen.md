@@ -173,13 +173,13 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
 | | `messen` | messen-laenge-masse-geld-zeit | |
 | | `umrechnen` | umrechnung-groessen | |
 | `flaechen-koerper` (K2, 5-6) | `voraussetzungen` | recap: geometrie/grundfiguren-eben, geometrie/grundkoerper-quader-wuerfel | Recap („Das brauchst du für dieses Kapitel“) |
-| | `voraussetzungen-kurztest` | (Selbsttest zu beiden) | normale Seite, Titel „… Kurztest“ |
+| | (kein eigener Kurztest) | Selbsttest als Komponente `Kurztest` in der Seite `voraussetzungen` | siehe Änderung unten |
 | | `einheiten` | einheiten-flaeche-volumen | |
 | | `rechteck` | flaeche-umfang-quadrat-rechteck | |
 | | `zusammengesetzt` | zusammengesetzte-figuren | |
 | | `quader` | volumen-oberflaeche-quader-wuerfel | |
 | `zerlegen` (K3, 7-8) | `voraussetzungen` | recap: geometrie/vierecke-grundfiguren, geometrie/grundkoerper-prisma-zylinder | Recap |
-| | `voraussetzungen-kurztest` | (Selbsttest zu beiden) | normale Seite |
+| | (kein eigener Kurztest) | Komponente `Kurztest` in `voraussetzungen` | |
 | | `dreieck-viereck` | flaeche-umfang-dreieck-viereck | |
 | | `prisma` | volumen-oberflaeche-prisma | |
 
@@ -199,6 +199,8 @@ Baustein → Seite: jeder der 9 Bausteine steht auf genau einer Seite und wird d
 9. `recap-kurztest` · Voraussetzungen prüfen · normale Seite „… Kurztest“: je Baustein 1 bis 2 Kurzaufgaben (`single-choice`, `number`), Rückmeldung mit Fehlerhinweis und Verweis „Wenn nicht: <Bausteinname>, Kartenseite https://lernapps.net/apps/map/mathematik/c/<id>/“.
 
 Alle `generated` mit festem Seed im Build geprüft (Rechenprobe), `where` gegen unsinnige Größen (Maße natürliche Zahlen oder eine Dezimale, Seiten ≥ 1).
+
+**Änderung nach dem Plan (Orchestrator):** Der Recap behält `recap:`; der Selbsttest steht als Komponente `Kurztest` direkt in der Recap-Seite (Vorbild `src/components/Kurztest.*` in `lernapps/mathe-saetze-entdecken`, Branch `work`; nur diese Komponente kopieren und anpassen, Tastatur und Textalternative sind dort vorhanden). Rückfall nur wenn das nicht geht: eigene Kurztest-Seite direkt hinter dem Recap. Damit entfallen die Seiten `voraussetzungen-kurztest`; die Code-Aufgaben „Recap“ gelten entsprechend (Seite `voraussetzungen` mit Komponente). Muster 9 `recap-kurztest` ist die Komponente. Zählt unter Komponenten: `schere` und `Kurztest`.
 
 **Komponente `schere` (Orchestrator: ok):** Einzige Komponente. Sie zeigt ein Parallelogramm mit Maßen; Lernende verschieben eine senkrechte Schnittlinie mit Pfeiltasten oder Schieber, das abgeschnittene Dreieck wird per Schaltfläche „Dreieck umlegen“ auf die andere Seite gelegt, es entsteht ein Rechteck. Zweite Stufe: Dreieck wird verdoppelt zum Parallelogramm. Prüft: Lernende ergänzen die Flächenzahl (Exercise-Contract). Kann nicht: freie Figuren schneiden, Trapez nur als Bild. `nojs`-Text und `image`-Folge in 3 Schritten als statische Form; Bedienung per Tastatur, Fokus sichtbar, Textalternative nach jeder Änderung (aria-live). Begründung: kein Block zeigt eine Figur, die auf Eingabe umgebaut wird (`prefer-built-in-block`). Wenn das Werkzeug es nicht trägt, bleibt die statische Bildfolge (Fund melden).
 
