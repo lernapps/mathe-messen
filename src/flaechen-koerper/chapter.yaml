@@ -1,4 +1,4 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Flächen auslegen, Körper füllen
 summary: Du legst Flächen mit Einheitsquadraten aus, füllst Körper mit Einheitswürfeln und findest daraus die Formeln.
-pages: [voraussetzungen]
+pages: [voraussetzungen, einheiten, rechteck]
