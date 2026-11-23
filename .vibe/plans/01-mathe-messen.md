@@ -302,9 +302,9 @@ page, which a link. -->
 
 - [x] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
       decisions" why the app has none. Commit.
-- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+- [x] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
       every click only the creator can make, in one message.
-- [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
+- [x] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
 - [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
       whether it may go online. Stop and wait for the yes.
 - [ ] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
@@ -331,12 +331,22 @@ page, which a link. -->
 
 ### Phases reached
 
-<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+Explore, Plan, Code und Commit bis zum Vorschau-PR (lernapps/mathe-messen#1, nicht gemergt). Checkpoints bestanden: Recherche, Plan, Musterseite (alle vom Orchestrator in Vertretung des Menschen beantwortet). „Veröffentlichen“ ist der nächste Checkpoint; Merge und Katalogeintrag stehen aus, Pages-Einstellung und Veröffentlichung nicht geprüft (kein Zugriff auf diesen API-Pfad).
 
 ### Creator turns after the plan
 
-<!-- Number of creator messages after the confirmation, topic of each. Target: at most 3. -->
+Nachrichten des Orchestrators nach der Plan-Bestätigung: 3 (Musterseite angenommen mit Auftrag zur Nachprüfung der Zahlenaufgabe; Kurztest-Vorlage als gemeinsame Komponente, das Plan-Nachtrag war schon vorher; Rückmeldungen des Menschen, Regeln Abschnitt 9, sechs Punkte). Direkt vom Menschen: eine Nachfrage zum Stand („Und?“). Vor dem Plan: Freigabe von `npx` für Befehle von `@parent`, Start nach Planänderung.
 
 ### Where I had to guess
 
-<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
+- Nur Deutsch (Issue nennt keine zweite Sprache). (guess)
+- Keine durchgehende Geschichte; Alltagsfälle mit erfundenen Namen. (guess)
+- 1 l = 1 dm³ als eine Zeile (vom Orchestrator bestätigt, vom fachlichen Prüfer bestätigt).
+- Der Recap hat als Selbsttest die Komponente `Kurztest`; die Kurztest-Seiten des Plans entfielen auf Wunsch des Orchestrators.
+- `schere` nur als Vorgang für das Parallelogramm (Plan sprach von zwei Stufen); Dreieck, Trapez, Raute, Drachen als Bilder mit gestrichelten Linien.
+- Aufgaben mit zwei Zahlen aus `oneOf` statt Dezimalbereich; Zufallsaufgaben zum Prisma aus einer Datendatei rechtwinkliger Dreiecke.
+- Die Einstiegsaufgaben stehen vor der Erklärung und benutzen eigene Zahlen, nicht die der Bilder (Rückmeldung der Prüfer).
+- Titel „Das brauchst du für dieses Kapitel“ und „Wofür diese Seite ist“ statt „Was du hier lernst“ auf den Recap-Seiten.
+- Die Seite `dreieck-viereck` führt Fläche und Umfang von fünf Figuren; sie bleibt eine Seite, weil die Karte ein Baustein nennt (Prüfer: überladen, offen).
+- Selbsteinschätzung je Kapitel mit 2 bis 3 `generated`-Aufgaben pro Seite, ohne Raute, Drachen, Umfang und Netz (nicht abgefragt).
+- Wo Prüfer auf einem veralteten Dev-Server (Port 5173) prüften, habe ich die Prüfung auf dem aktuellen Server (5174) wiederholen lassen.
