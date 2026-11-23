@@ -273,8 +273,8 @@ page, which a link. -->
 - [x] Komponente schere (Logikmodul, Test, nojs, Tastatur, aria-live) und Seite dreieck-viereck: Parallelogramm, Dreieck, Trapez, Raute, Drachen; generated mit Höhe-Fehlern
 - [x] Seite prisma: Stapel aus Grundflächen, G · h, Oberfläche 2G + Mantel, generated; Kapitel- und App-Abschluss, Glossar vollständig, intro und sources in app.yaml
 <!-- tasks: pages (7 added): the other pages or screens, after the pattern -->
-- [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
-- [ ] Run `npx --no -- lernapps check` until it passes.
+- [x] Update the content guide so that it describes the app as built (`app-content-matches`).
+- [x] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
       Compare each with its sketch.
 - [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
