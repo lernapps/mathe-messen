@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: explore
+phase: plan
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -119,9 +119,10 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
       off), and which misconception the feedback catches.
 - [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
       elements", never a silent "1–20"), the languages.
-- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+- [x] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
       approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
       wait. Changes: change them, then ask again.
+      Creator: Orchestrator: Recherche freigegeben; Recap als Recap-Seite plus Kurztest-Seite; 1 l = 1 dm³ ja (guess); Musterseite K1 schätzen mit Stützpunkt
 
 ### Answers
 
@@ -147,25 +148,82 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
 
 ### Tasks
 
-- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+- [x] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
       "Content method".
-- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
-- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+- [x] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [x] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
       opening task, the change of activity, the reward, the story.
-- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+- [x] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
       screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
       `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
-- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+- [x] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
       learners see after each. Keep the files in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+- [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
 - [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
 
 ### Content method
 
-<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
-checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
+**Seiten und Kapitel** (Kapitel-ID · Seiten-ID · Baustein; Abschnitt-IDs überall `einstieg`, `idee`, `beispiel`, `uebung`; Titel sagen, was der Abschnitt tut):
+
+| Kapitel | Seite | Baustein | Typ |
+|---|---|---|---|
+| `groessen` (K1, 5-6) | `schaetzen` | groessenvorstellungen-schaetzen | **Musterseite** |
+| | `messen` | messen-laenge-masse-geld-zeit | |
+| | `umrechnen` | umrechnung-groessen | |
+| `flaechen-koerper` (K2, 5-6) | `voraussetzungen` | recap: geometrie/grundfiguren-eben, geometrie/grundkoerper-quader-wuerfel | Recap („Das brauchst du für dieses Kapitel“) |
+| | `voraussetzungen-kurztest` | (Selbsttest zu beiden) | normale Seite, Titel „… Kurztest“ |
+| | `einheiten` | einheiten-flaeche-volumen | |
+| | `rechteck` | flaeche-umfang-quadrat-rechteck | |
+| | `zusammengesetzt` | zusammengesetzte-figuren | |
+| | `quader` | volumen-oberflaeche-quader-wuerfel | |
+| `zerlegen` (K3, 7-8) | `voraussetzungen` | recap: geometrie/vierecke-grundfiguren, geometrie/grundkoerper-prisma-zylinder | Recap |
+| | `voraussetzungen-kurztest` | (Selbsttest zu beiden) | normale Seite |
+| | `dreieck-viereck` | flaeche-umfang-dreieck-viereck | |
+| | `prisma` | volumen-oberflaeche-prisma | |
+
+Baustein → Seite: jeder der 9 Bausteine steht auf genau einer Seite und wird dort mit mindestens 3 Aufgaben geübt (Regeln 3.1). Reihenfolge der Seiten = Reihenfolge der `requires`. Kein `ahead`.
+
+**Darstellungen (in allen Seiten gleich benannt, im Guide unter „Figures“):** *Einheitsquadrat* (1 cm × 1 cm, hellblau, Raster), *Einheitswürfel* (1 cm³, isometrisch), *Einheitentreppe* (Stufen von klein nach groß, Pfeil mit Faktor; Treppe der Länge ×10, der Fläche ×100, des Volumens ×1000, der Zeit ×60 als Gegenbeispiel), *Rechteckmodell* (Rechteck in Reihen und Spalten, Seitenlängen außen), *Stützpunkt* (Merkgröße mit Wert, z. B. „Tür ≈ 2 m“). Farbe nie allein (Beschriftung und Muster dazu). Alle Bilder eigene SVGs in `src/images/`, mit `alt` und `caption`, 360 px breit; Quelle „eigene Zeichnung“, Lizenz CC BY 4.0.
+
+**Muster (Name · Kompetenzart · Form · Beispiel):**
+1. `schaetzen-pruefen` · schätzen · `generated` mit `answer` und `compare.number.tolerance` (Schätzung gilt innerhalb des Faktors), Fehler „Zehnerpotenz daneben“ · „Wie hoch ist ein Zimmer? Gib in m an.“ Dazu `ordering` von Gegenständen nach Länge und `single-choice`: „Welche Einheit passt?“.
+2. `messen-sachaufgabe` · messen, rechnen · `generated` mit Einheit und Zeit-Fehler (1,30 h ≠ 1 h 30 min), Geld in ganzen Cent; Figur: Lineal / Uhr als `image`.
+3. `treppe-umrechnen` · umrechnen · `generated` mit `compare.number.unit`, Fehler „Faktor in falscher Richtung“, „Zeit mit 10“; Figur: Einheitentreppe (`image`), `matching` Größe ↔ Einheit.
+4. `auslegen-zaehlen` · Einheiten und Fläche · `image` (Einheitsquadrate ausgelegt) → `number` „Wie viele Einheitsquadrate?“ → `generated` Fläche und Umfang des Rechtecks, Fehler „Umfang mit Fläche verwechselt“, „Einheit m statt m²“.
+5. `zerlegen-rechnen` · zusammengesetzte Figuren · `image` der L-Figur mit gestrichelter Zerlegung, `generated` mit zwei Rechtecken (Maße aus `given`, Figur in der Aufgabe als Text beschrieben, Teilbild nur aus Gegebenem), Fehler „gemeinsame Kante im Umfang doppelt“.
+6. `stapeln-netz` · Volumen, Oberfläche · `image` Schichten, `generated` für V und O, Fehler „Flächenpaar vergessen“, „cm² statt cm³“.
+7. `zerschneiden-ergaenzen` · Dreieck, Viereck · Komponente `schere` (siehe unten) plus `image`, `generated` mit Höhe ≠ Seite, Fehler „schräge Seite statt Höhe“, „Halbieren vergessen“.
+8. `prisma-stapel` · Prisma · `image` Stapel gleicher Grundflächen, `generated` G · h und O = 2G + M, Fehler „Dreieckshöhe statt Prismenhöhe“.
+9. `recap-kurztest` · Voraussetzungen prüfen · normale Seite „… Kurztest“: je Baustein 1 bis 2 Kurzaufgaben (`single-choice`, `number`), Rückmeldung mit Fehlerhinweis und Verweis „Wenn nicht: <Bausteinname>, Kartenseite https://lernapps.net/apps/map/mathematik/c/<id>/“.
+
+Alle `generated` mit festem Seed im Build geprüft (Rechenprobe), `where` gegen unsinnige Größen (Maße natürliche Zahlen oder eine Dezimale, Seiten ≥ 1).
+
+**Komponente `schere` (Orchestrator: ok):** Einzige Komponente. Sie zeigt ein Parallelogramm mit Maßen; Lernende verschieben eine senkrechte Schnittlinie mit Pfeiltasten oder Schieber, das abgeschnittene Dreieck wird per Schaltfläche „Dreieck umlegen“ auf die andere Seite gelegt, es entsteht ein Rechteck. Zweite Stufe: Dreieck wird verdoppelt zum Parallelogramm. Prüft: Lernende ergänzen die Flächenzahl (Exercise-Contract). Kann nicht: freie Figuren schneiden, Trapez nur als Bild. `nojs`-Text und `image`-Folge in 3 Schritten als statische Form; Bedienung per Tastatur, Fokus sichtbar, Textalternative nach jeder Änderung (aria-live). Begründung: kein Block zeigt eine Figur, die auf Eingabe umgebaut wird (`prefer-built-in-block`). Wenn das Werkzeug es nicht trägt, bleibt die statische Bildfolge (Fund melden).
+
+**Engagement je Seite (Ein Zeile):** *Einstieg* = eine leichte Aufgabe oder Frage vor der Erklärung (z. B. Schätze die Tür); *Wechsel* = anschauen (Bild) → selbst tun → lesen; *Belohnung* = am Kapitelende ein „Das kannst du jetzt“; *Geschichte* = keine durchgängige (Stufe 7-8 und Sachbezug genügen; Aufgaben mit erfundenen Namen und Alltagsdingen, keine Marken) (guess); *Wiederholung nur mit Absicht* (die Einheitentreppe kehrt in neuer Form wieder).
+
+**Engagement je Seite** (Einstieg · Wechsel · Belohnung · Geschichte):
+- `schaetzen`: Frage „Wie hoch ist eure Tür?“ mit Schätzfeld vor der Erklärung · Körpermaß-Bild, dann Schätzen, dann Stützpunkt-Tabelle · „Du hast fünf Stützpunkte“ · keine Geschichte.
+- `messen`: Frage „Wie oft passt der Bleistift auf die Heftbreite?“ · Zählen am Lineal-Bild, Rechnen, Lesen · Sachaufgaben mit Geld und Zeit · keine.
+- `umrechnen`: Stellenwert-Treppe zuerst, Frage „Wie viele Meter sind 3 km?“ · Treppe ablesen, tun, Zeit als Ausnahme lesen · eigene Faustregel formuliert · keine.
+- `voraussetzungen` / `-kurztest`: Kopf „Das brauchst du für dieses Kapitel“, Checkliste am Schluss · Begriffe lesen, Kurztest tun · „Du bist bereit, wenn …“ · keine.
+- `einheiten`: Einheitsquadrat auslegen und zählen, bevor 100 genannt wird · Bild, Zählaufgabe, Treppe-Erweiterung · „Warum 100 und 1000“ selbst gesagt · keine.
+- `rechteck`: Ein Rechteck aus Einheitsquadraten, Reihen zählen · Auslegen (Bild) → Formel als Abkürzung → Umfang als Weg · Formel selbst gefunden · keine.
+- `zusammengesetzt`: Eine L-Form, die erst nicht aufgeht · Zerlegen (Bild), Rechnen, Ergänzen · beide Wege geben dieselbe Zahl · keine.
+- `quader`: Schichten stapeln, Würfel zählen · Stapel (Bild), Netz (Bild), Rechnen · V und O unterschieden · keine.
+- `dreieck-viereck`: Schere: Parallelogramm schneiden und umlegen · Schere, Dreieck als Hälfte, Merke, Rechnen · „Fläche = Grundseite · Höhe“ selbst begründet · keine.
+- `prisma`: Stapel aus Dreiecken · Stapel (Bild), G · h, Mantel auslegen · Formel als Verallgemeinerung der Quaderformel · keine.
+Eine durchgehende Geschichte gibt es nicht (guess): Der Strang ist Sachbezug; Aufgaben erzählen kleine Alltagsfälle mit erfundenen Namen.
+
+**Glossar:** `definition` für Messen, Einheit, Stützpunkt, Einheitentreppe, Flächeninhalt, Umfang, Volumen, Oberfläche, Höhe (Dreieck), Grundfläche; aus den Recaps: Fläche, Umfang, Seite, Kante, Quader, Würfel, Prisma, Parallelogramm, Raute, Trapez, Drachen, Netz. Jeder Fachbegriff aus Recaps erklärt mit Beispiel (Regeln 7.2).
+
+**Sonstiges:** 1 l = 1 dm³ als eine Zeile in `einheiten` (guess, außerhalb der Karte; der fachliche Prüfer bestätigt). Keine `links:` nach außen: wo das Werkzeug einen verlangt, die Kartenseite des Bausteins. Brüche gesetzt (`\frac`), in Rückmeldungen von `generated` `a/b` erlaubt, jede solche Stelle wird gezählt (Regeln 2). Dezimalkomma, `·` als Malzeichen, geschützte Leerzeichen vor Einheiten.
+
+**Wie ein späterer Agent ein Kapitel ergänzt:** Seite in `chapter.yaml` eintragen, Baustein-ID aus der Karte, Muster aus dieser Liste, Figuren wie oben benannt.
+
+**Baustein → Seite** siehe Tabelle. Offen nach dem Plan: Lernenden-Prüfung der Musterseite; fachlicher Prüfer bestätigt 1 l = 1 dm³ und alle Rechnungen.
 <!-- An explainer: per figure, model and component its learning action in two to four sentences
 (`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
 page, which a link. -->
@@ -193,11 +251,19 @@ page, which a link. -->
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
 - [ ] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] Musterseite K1 schaetzen (Kapitel groessen): app.yaml (strand, Titel, intro, sources), chapter.yaml, Seite mit Einstieg, Stützpunkt-Bild (SVG), Beispiel, Merke, 4+ Aufgaben (generated schätzen, ordering, single-choice, number) mit Fehlerhinweisen; Figuren-Konventionen im Guide
+<!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Seiten messen und umrechnen (Kapitel groessen): Lineal-/Uhr-Bild, Sachaufgaben mit Geld und Zeit; Einheitentreppe (SVG) mit Zeit-Gegenbeispiel, matching, generated mit Richtungsfehlern; Kapitelabschluss
+- [ ] Kapitel flaechen-koerper, Recap: Seite voraussetzungen (recap grundfiguren-eben, grundkoerper-quader-wuerfel) mit Kopf, Fachbegriffen fett mit Beispiel, Checkliste, und Seite voraussetzungen-kurztest mit Kurzaufgaben und Verweis auf die Kartenseiten
+- [ ] Seiten einheiten und rechteck: Einheitsquadrat auslegen, Treppe cm², m², cm³ (inkl. 1 l = 1 dm³ als eine Zeile), Rechteckmodell, Fläche und Umfang, generated mit Fehlertypen
+- [ ] Seiten zusammengesetzt und quader: Zerlegen und Ergänzen (SVG), Umfang ohne gemeinsame Kante; Schichten und Netz (SVG), Volumen und Oberfläche, generated mit Rechenprobe
+- [ ] Kapitel zerlegen, Recap: Seite voraussetzungen (recap vierecke-grundfiguren, grundkoerper-prisma-zylinder) und voraussetzungen-kurztest wie in Kapitel 2
+- [ ] Komponente schere (Logikmodul, Test, nojs, Tastatur, aria-live) und Seite dreieck-viereck: Parallelogramm, Dreieck, Trapez, Raute, Drachen; generated mit Höhe-Fehlern
+- [ ] Seite prisma: Stapel aus Grundflächen, G · h, Oberfläche 2G + Mantel, generated; Kapitel- und App-Abschluss, Glossar vollständig, intro und sources in app.yaml
+<!-- tasks: pages (7 added): the other pages or screens, after the pattern -->
 - [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
 - [ ] Run `npx --no -- lernapps check` until it passes.
 - [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
