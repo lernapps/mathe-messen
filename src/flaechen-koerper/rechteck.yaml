@@ -116,9 +116,12 @@ blocks:
           text: "Ein Rechteck ist {{a}} m lang und {{b}} m breit. Berechne den Umfang in m."
         answer: { value: "2 * a + 2 * b", compare: { number: { format: integer, unit: m } } }
         mistakes:
-          - { value: "a * b", message: "Das ist der Flächeninhalt. Gefragt ist der Weg um das Rechteck." }
-          - { value: "a + b", message: "Das ist erst der halbe Weg: Du läufst um alle vier Seiten." }
-        hint: "Gehe einmal um das Rechteck. Wie viele Seiten kommen vor, und wie lang sind sie?"
+          - {
+              value: "a * b",
+              message: "Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Rechtecks.",
+            }
+          - { value: "a + b", message: "Das ist erst der halbe Rand: Du musst alle vier Seiten zählen." }
+        hint: "Gehe einmal am Rand des Rechtecks entlang. Wie viele Seiten kommen vor, und wie lang sind sie?"
         steps:
           - '$u = 2 \cdot a + 2 \cdot b$'
           - '$u = 2 \cdot {{a}}\ \text{m} + 2 \cdot {{b}}\ \text{m} = {{answer}}\ \text{m}$.'
@@ -145,7 +148,7 @@ blocks:
         given:
           A: { int: [24, 150] }
           a: { int: [4, 12] }
-        where: ["decimals(A / a) == 0", "A / a != a", "A / a >= 2"]
+        where: ["decimals(A / a) == 0", "A / a != a", "A / a >= 2", "A / a <= 20"]
         task:
           text: "Ein Rechteck hat den Flächeninhalt {{A}} cm². Eine Seite ist {{a}} cm lang. Wie lang ist die andere Seite in cm?"
         answer: { value: "A / a", compare: { number: { format: integer, unit: cm } } }
@@ -171,9 +174,12 @@ blocks:
           text: "Ein Quadrat hat die Seitenlänge {{a}} cm. Berechne den Umfang in cm."
         answer: { value: "4 * a", compare: { number: { format: integer, unit: cm } } }
         mistakes:
-          - { value: "a * a", message: "Das ist der Flächeninhalt. Gefragt ist der Weg um das Quadrat." }
+          - {
+              value: "a * a",
+              message: "Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand des Quadrats.",
+            }
           - { value: "2 * a", message: "Du hast nur zwei Seiten gezählt. Ein Quadrat hat vier Seiten." }
-        hint: "Der Weg um das Quadrat führt an vier gleich langen Seiten entlang."
+        hint: "Der Rand des Quadrats führt an vier gleich langen Seiten entlang."
         steps:
           - 'Ein Quadrat hat vier gleich lange Seiten: $u = 4 \cdot a$.'
           - '$u = 4 \cdot {{a}}\ \text{cm} = {{answer}}\ \text{cm}$.'

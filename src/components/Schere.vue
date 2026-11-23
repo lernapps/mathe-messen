@@ -11,9 +11,10 @@ const props = defineProps<{
   height: number;
   /** How far the top side is shifted to the right, between 1 and base. */
   shift: number;
-  /** The labels in the figure: the base and the height with their values. */
+  /** The labels in the figure: the base and the height with their values, and the rectangle after the move. */
   baseLabel: string;
   heightLabel: string;
+  rectLabel: string;
   /** Labels of the buttons. */
   cutLabel: string;
   moveLabel: string;
@@ -69,8 +70,22 @@ async function reset() {
       <polygon v-if="sh.triangle.length" class="schere-triangle" :points="pts(sh.triangle)" />
       <polyline v-if="sh.cut.length" class="schere-cut" :points="pts(sh.cut)" />
       <line v-if="step === 0" class="schere-cut" :x1="shift * unit" :y1="0" :x2="shift * unit" :y2="height * unit" />
-      <text class="schere-label" :x="(base / 2) * unit" :y="height * unit + 0.55 * unit" text-anchor="middle">
+      <text
+        class="schere-label"
+        :x="(step === 2 ? shift + base / 2 : base / 2) * unit"
+        :y="height * unit + 0.55 * unit"
+        text-anchor="middle"
+      >
         {{ baseLabel }}
+      </text>
+      <text
+        v-if="step === 2"
+        class="schere-label"
+        :x="(shift + base * 0.38) * unit"
+        :y="(height / 2) * unit"
+        text-anchor="middle"
+      >
+        {{ rectLabel }}
       </text>
       <text v-if="step === 0" class="schere-label" :x="shift * unit + 6" :y="(height / 2) * unit">
         {{ heightLabel }}

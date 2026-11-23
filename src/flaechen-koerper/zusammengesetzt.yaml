@@ -23,7 +23,7 @@ blocks:
           - answer: 60
             message: "Du hast die Fläche des Teppichs zum Zimmer addiert. Der Teppich liegt auf dem Boden des Zimmers und gehört nicht dazu."
         hint: "Berechne die Fläche des Zimmers und die Fläche des Teppichs. Was machst du mit dem Teppich?"
-        explanation: "Das Zimmer hat $8 \\cdot 6 = 48$ m², der Teppich $4 \\cdot 3 = 12$ m². Frei bleiben $48 - 12 = 36$ m²."
+        explanation: "Das Zimmer hat $8 \\cdot 6 = 48$ m², der Teppich $4 \\cdot 3 = 12$ m². Frei bleiben $48 - 12 = 36$ m²."
   - type: section
     id: idee
     title: Zerlegen oder ergänzen
@@ -64,9 +64,9 @@ blocks:
         blocks:
           - type: text
             text: |
-              Zerlegen: Teil 1 hat $4 \cdot 3 = 12$ m², Teil 2 hat $8 \cdot 3 = 24$ m². Zusammen sind es 36 m².
-              Ergänzen: Das große Rechteck hat $8 \cdot 6 = 48$ m². Das fehlende Stück hat $4 \cdot 3 = 12$ m². Es bleiben 36 m². Beide Wege geben dieselbe Zahl.
-              Der Umfang ist $4 + 3 + 4 + 3 + 8 + 6 = 28$ m.
+              Zerlegen: Teil 1 hat $4 \cdot 3 = 12$ m², Teil 2 hat $8 \cdot 3 = 24$ m². Zusammen sind es 36 m².
+              Ergänzen: Das große Rechteck hat $8 \cdot 6 = 48$ m². Das fehlende Stück hat $4 \cdot 3 = 12$ m². Es bleiben 36 m². Beide Wege geben dieselbe Zahl.
+              Der Umfang ist $4 + 3 + 4 + 3 + 8 + 6 = 28$ m. Das ist auch $2 \cdot (8 + 6)$ m: Eine ausgeschnittene Ecke ändert den Umfang nicht.
   - type: section
     id: uebung
     title: Übung
@@ -139,8 +139,8 @@ blocks:
             }
         hint: "Berechne beide Flächen einzeln. Was machst du dann mit ihnen?"
         steps:
-          - 'Erstes Rechteck: ${{a}} \cdot {{b}}$ m².'
-          - 'Zweites Rechteck: ${{c}} \cdot {{d}}$ m². Zusammen: ${{answer}}\ \text{m}^2$.'
+          - 'Erstes Rechteck: ${{a}} \cdot {{b}}$ m².'
+          - 'Zweites Rechteck: ${{c}} \cdot {{d}}$ m². Zusammen: ${{answer}}\ \text{m}^2$.'
       - type: true-false
         id: schnittlinie-umfang
         text: "Stimmt das? Beim Umfang einer zerlegten Figur zählt auch die Schnittlinie mit."

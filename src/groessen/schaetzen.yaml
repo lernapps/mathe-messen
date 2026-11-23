@@ -17,7 +17,7 @@ blocks:
         options:
           - text: etwa 1 m
             correct: false
-            info: "1 m reicht vielen Kindern der Klasse 5 etwa bis zur Hüfte. Eine Tür ist deutlich höher."
+            info: "1 m ist nur etwa halb so hoch wie eine Tür."
           - text: etwa 2 m
             correct: true
             info: "Eine Tür ist etwas höher als ein Erwachsener, also etwa 2 m."
@@ -93,7 +93,7 @@ blocks:
         options:
           - text: Milligramm (mg)
             correct: false
-            info: "1 mg ist so leicht wie ein Staubkorn. Eine Tafel wiegt viel mehr."
+            info: "1 mg ist so leicht wie ein Staubkorn. Eine Tafel wiegt viel mehr."
           - text: Gramm (g)
             correct: true
             info: "Eine Tafel wiegt etwa 100 g."

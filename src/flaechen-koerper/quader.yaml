@@ -29,7 +29,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+          Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
           Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
       - type: figure
         image: images/quader-schicht.svg
@@ -74,7 +74,7 @@ blocks:
         blocks:
           - type: text
             text: |
-              Das Volumen hat die Einheit cm³, die Oberfläche cm². Beim Würfel mit der Kantenlänge a gilt
+              Das Volumen hat die Einheit cm³, die Oberfläche cm². Beim Würfel mit der Kantenlänge $a$ gilt
               $V = a \cdot a \cdot a$ und $O = 6 \cdot a \cdot a$.
   - type: section
     id: beispiel

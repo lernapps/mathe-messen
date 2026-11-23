@@ -50,54 +50,50 @@ blocks:
         id: test-quadrat
         component: Kurztest
         props:
-          question: Ein Viereck hat vier rechte Winkel und vier Seiten mit je 6 cm. Welche Aussage stimmt?
+          question: "Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?"
           options:
             - {
-                text: "Es ist ein Quadrat und auch ein Rechteck.",
+                text: "Nur Maria",
                 correct: true,
-                info: "Vier gleich lange Seiten machen es zum Quadrat. Ein Quadrat hat vier rechte Winkel, also ist es auch ein Rechteck.",
+                info: "Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.",
               }
+            - { text: "Nur Jan", correct: false, info: "Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat." }
             - {
-                text: "Es ist ein Quadrat, aber kein Rechteck.",
+                text: "Beide",
                 correct: false,
-                info: "Ein Quadrat ist ein besonderes Rechteck: vier rechte Winkel hat es.",
-              }
-            - {
-                text: "Es ist ein Rechteck, aber kein Quadrat.",
-                correct: false,
-                info: "Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.",
+                info: "Jan irrt sich: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Viereck hat vier rechte Winkel und vier Seiten mit je 6 cm. Antwort: Es ist ein Quadrat und auch ein Rechteck.
-          Vier gleich lange Seiten machen es zum Quadrat, und ein Quadrat hat vier rechte Winkel.
+          Kurztest: Maria sagt, jedes Quadrat ist ein Rechteck. Jan sagt, jedes Rechteck ist ein Quadrat. Wer hat recht? Antwort: nur
+          Maria. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
       - type: vue-component
         id: test-seiten
         component: Kurztest
         props:
-          question: Ein Rechteck hat eine 9 cm lange und eine 2 cm lange Seite. Wie viele seiner vier Seiten sind 2 cm lang?
+          question: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm, in dieser Reihenfolge um die Figur. Welche Seiten sind parallel?
           options:
             - {
-                text: "1",
+                text: "Nur die beiden 9 cm langen Seiten",
                 correct: false,
-                info: "Gegenüberliegende Seiten sind gleich lang. Zu der 2 cm langen Seite gehört eine zweite.",
+                info: "Auch die beiden 2 cm langen Seiten liegen einander gegenüber und sind parallel.",
               }
             - {
-                text: "2",
+                text: "Je zwei gegenüberliegende Seiten",
                 correct: true,
-                info: "Die gegenüberliegende Seite ist ebenfalls 2 cm lang. Zusammen sind es zwei Seiten.",
+                info: "Die beiden 9 cm langen Seiten sind parallel und die beiden 2 cm langen Seiten auch.",
               }
             - {
-                text: "4",
+                text: "Je zwei benachbarte Seiten",
                 correct: false,
-                info: "Dann wäre das Rechteck ein Quadrat. Hier gibt es auch eine 9 cm lange Seite.",
+                info: "Benachbarte Seiten stoßen im rechten Winkel aufeinander.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Rechteck hat eine 9 cm lange und eine 2 cm lange Seite. Wie viele seiner vier Seiten sind 2 cm lang? Antwort: 2.
-          Gegenüberliegende Seiten sind gleich lang. Bei 4 Seiten mit 2 cm wäre es ein Quadrat.
+          Kurztest: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm. Welche Seiten sind parallel? Antwort: je
+          zwei gegenüberliegende Seiten. Benachbarte Seiten stoßen im rechten Winkel aufeinander.
       - type: text
         text: |
           Wenn du unsicher bist, übe den Baustein „Ebene Grundfiguren“. Seine Kartenseite findest du hier:
@@ -169,20 +165,20 @@ blocks:
         id: test-flaechen
         component: Kurztest
         props:
-          question: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Seitenflächen sind 5 cm lang und 3 cm breit?
+          question: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
           options:
-            - { text: "1", correct: false, info: "Boden und Deckel haben dieselben Maße. Du musst beide zählen." }
-            - { text: "2", correct: true, info: "Boden und Deckel sind beide 5 cm mal 3 cm groß." }
+            - { text: "16 cm", correct: false, info: "Das sind nur vier Kanten. Ein Würfel hat zwölf." }
             - {
-                text: "4",
+                text: "32 cm",
                 correct: false,
-                info: "Die vier anderen Seitenflächen sind 5 cm mal 2 cm und 3 cm mal 2 cm groß.",
+                info: "Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.",
               }
+            - { text: "48 cm", correct: true, info: "Ein Würfel hat 12 Kanten, jede 4 cm lang: 12 · 4 cm = 48 cm." }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Seitenflächen sind 5 cm lang und 3 cm breit?
-          Antwort: 2, der Boden und der Deckel. Die vier anderen Seitenflächen haben andere Maße.
+          Kurztest: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen? Antwort: 48 cm, denn der Würfel hat
+          12 Kanten mit je 4 cm.
       - type: text
         text: |
           Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartenseite findest du hier:
