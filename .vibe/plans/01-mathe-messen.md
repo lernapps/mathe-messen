@@ -34,6 +34,7 @@ Lernende der Klassen 5-8 erfahren, dass Messen heißt zu zählen, wie oft eine E
 - Sprache nur Deutsch `[de]` (Issue nennt nichts anderes; Karte und Regeln sind deutsch). (guess)
 - Kapitel wie im Issue: 1 Größen schätzen, messen, umrechnen (5-6) · 2 Flächen auslegen, Körper füllen (5-6) · 3 Zerlegen und ergänzen (7-8).
 - Sammel-Wiederholung (`recap`) nach regeln.md Abschnitt 7 am Anfang von Kapitel 2 und Kapitel 3 (siehe Notes). Kapitel 1 braucht keine Voraussetzung von außen.
+- Kein `scope`: keine `open-task` und kein Material des Menschen; `scope` ist dann optional (structure.md).
 - Darstellungen: Messen mit Einheiten (Einheitsquadrat, Einheitswürfel, Einheitentreppe) und Rechteckmodell, in allen Seiten gleich benannt.
 
 ## Notes
@@ -247,14 +248,14 @@ page, which a link. -->
       `npx --no -- lernapps create --archetype explainer`.
 - [x] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
       no "FILL IN" left. Commit it before any content.
-- [ ] Load skill `lernapps-explainer`.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer`.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Musterseite K1 schaetzen (Kapitel groessen): app.yaml (strand, Titel, intro, sources), chapter.yaml, Seite mit Einstieg, Stützpunkt-Bild (SVG), Beispiel, Merke, 4+ Aufgaben (generated schätzen, ordering, single-choice, number) mit Fehlerhinweisen; Figuren-Konventionen im Guide
+- [x] Musterseite K1 schaetzen (Kapitel groessen): app.yaml (strand, Titel, intro, sources), chapter.yaml, Seite mit Einstieg, Stützpunkt-Bild (SVG), Beispiel, Merke, 4+ Aufgaben (generated schätzen, ordering, single-choice, number) mit Fehlerhinweisen; Figuren-Konventionen im Guide
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
 - [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
