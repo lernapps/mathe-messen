@@ -261,10 +261,11 @@ page, which a link. -->
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Musterseite K1 schaetzen (Kapitel groessen): app.yaml (strand, Titel, intro, sources), chapter.yaml, Seite mit Einstieg, Stützpunkt-Bild (SVG), Beispiel, Merke, 4+ Aufgaben (generated schätzen, ordering, single-choice, number) mit Fehlerhinweisen; Figuren-Konventionen im Guide
 <!-- tasks: pattern (1 added): the one page or screen that is the pattern for the others -->
-- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+- [x] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
       what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
       change: change the pattern first.
-- [ ] Seiten messen und umrechnen (Kapitel groessen): Lineal-/Uhr-Bild, Sachaufgaben mit Geld und Zeit; Einheitentreppe (SVG) mit Zeit-Gegenbeispiel, matching, generated mit Richtungsfehlern; Kapitelabschluss
+      Creator: Orchestrator: Musterseite angenommen, übrige Seiten nach Muster; Zahlenaufgabe vor Veröffentlichen erneut prüfen lassen
+- [x] Seiten messen und umrechnen (Kapitel groessen): Lineal-/Uhr-Bild, Sachaufgaben mit Geld und Zeit; Einheitentreppe (SVG) mit Zeit-Gegenbeispiel, matching, generated mit Richtungsfehlern; Kapitelabschluss
 - [ ] Kapitel flaechen-koerper, Recap: Seite voraussetzungen (recap grundfiguren-eben, grundkoerper-quader-wuerfel) mit Kopf, Fachbegriffen fett mit Beispiel, Checkliste, und Seite voraussetzungen-kurztest mit Kurzaufgaben und Verweis auf die Kartenseiten
 - [ ] Seiten einheiten und rechteck: Einheitsquadrat auslegen, Treppe cm², m², cm³ (inkl. 1 l = 1 dm³ als eine Zeile), Rechteckmodell, Fläche und Umfang, generated mit Fehlertypen
 - [ ] Seiten zusammengesetzt und quader: Zerlegen und Ergänzen (SVG), Umfang ohne gemeinsame Kante; Schichten und Netz (SVG), Volumen und Oberfläche, generated mit Rechenprobe

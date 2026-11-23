@@ -1,0 +1,143 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Einheiten umrechnen
+description: "Größen in andere Einheiten umrechnen: mit der Einheitentreppe, und passende Einheiten wählen."
+competencies: [umrechnung-groessen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Probier es zuerst
+    blocks:
+      - type: text
+        text: |
+          Nach dieser Seite rechnest du Größen in andere Einheiten um und wählst die passende Einheit. Du
+          kennst das schon von den Stellen unserer Zahlen.
+      - type: single-choice
+        id: km-in-m
+        text: Wie viele Meter sind 3 km?
+        options:
+          - text: 30 m
+            correct: false
+            info: "30 m sind nur ein Hundertstel von 3 km. Ein Kilometer ist viel länger als 10 m."
+          - text: 300 m
+            correct: false
+            info: "300 m sind nur ein Zehntel von 3 km. In einen Kilometer passen mehr als 100 Meter."
+          - text: 3000 m
+            correct: true
+            info: "1 km sind 1000 m, also sind 3 km dreimal so viel: 3000 m."
+          - text: 30 000 m
+            correct: false
+            info: "30 000 m wären 30 km. Das ist zehnmal zu viel."
+        explanation: Ein Kilometer hat 1000 Meter. Drei Kilometer sind dreimal so lang.
+        links:
+          - title: "Karte: Einheiten umrechnen"
+            url: "https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/"
+  - type: section
+    id: idee
+    title: Die Einheitentreppe zeigt den Faktor
+    blocks:
+      - type: text
+        text: |
+          Eine Einheit passt in die nächste Einheit eine feste Zahl von Malen hinein. Diese Zahl steht an der
+          Treppe. Gehst du nach unten zur kleineren Einheit, nimmst du mal. Gehst du nach oben zur größeren Einheit,
+          teilst du. Das ist wie bei der Stellenwerttafel: Das Komma wandert.
+      - type: figure
+        image: images/einheitentreppe-laenge.svg
+        alt: "Eine Treppe mit den Stufen mm, cm, dm, m und km von links unten nach rechts oben. Auf jeder Stufe steht, wie viele Einheiten der Stufe davor hineinpassen: 1 cm sind 10 mm, 1 dm sind 10 cm, 1 m sind 10 dm, 1 km sind 1000 m."
+        caption: Auf jeder Stufe steht, wie viele Einheiten der Stufe davor hineinpassen.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Einheitentreppe
+        explanation: "Die Einheitentreppe ordnet die Einheiten einer Größe von klein nach groß. Zwischen zwei Stufen steht, wie oft die kleinere in die größere passt."
+      - type: table
+        caption: Weitere Faktoren
+        header: [Größe, Umrechnung]
+        rowHeaders: true
+        rows:
+          - [Masse, "1 kg = 1000 g, 1 t = 1000 kg"]
+          - [Zeit, "1 h = 60 min, 1 min = 60 s"]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Bei der Zeit passt die Treppe nicht: Hier ist der Faktor 60, nicht 10. Rechne bei Zeitspannen nie mit
+              Zehnern.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Von Meter zu Zentimeter
+        blocks:
+          - type: text
+            text: |
+              Wie viele Zentimeter sind 2,5 m? Du gehst auf der Treppe von m nach cm: zwei Stufen nach unten, also
+              zweimal mal 10, das ist mal 100. Es gilt $2{,}5\ \text{m} \cdot 100 = 250\ \text{cm}$.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: einheit-waehlen
+        text: Welche Einheit passt am besten zur Länge eines Fußballfelds?
+        options:
+          - text: Zentimeter
+            correct: false
+            info: "Mit Zentimetern misst du kleine Dinge wie einen Bleistift. Ein Fußballfeld hätte dann eine sehr große Zahl."
+          - text: Meter
+            correct: true
+            info: "Ein Fußballfeld ist etwa 100 m lang. Die Zahl ist handlich."
+          - text: Kilometer
+            correct: false
+            info: "Ein Kilometer sind 1000 m, zehn Fußballfelder hintereinander. Für ein Feld wäre die Zahl sehr klein."
+        explanation: Wähle die Einheit so, dass die Zahl handlich ist. Ein Fußballfeld misst du in Metern.
+        links:
+          - title: "Karte: Einheiten umrechnen"
+            url: "https://lernapps.net/apps/map/mathematik/c/umrechnung-groessen/"
+      - type: generated
+        id: m-in-cm
+        given:
+          a: { oneOf: [0.4, 1.5, 2.5, 3.2, 4.75] }
+        task:
+          text: "Rechne in Zentimeter um: {{a}} m."
+        answer: { value: "a * 100", compare: { number: { format: decimal, unit: cm } } }
+        mistakes:
+          - {
+              value: "a / 100",
+              message: "Du hast geteilt. Von der größeren Einheit m zur kleineren cm gehst du die Treppe nach unten, also mal.",
+            }
+          - { value: "a * 10", message: "Das ist der Faktor für dm. Von m bis cm sind es zwei Stufen: mal 10 mal 10." }
+        hint: "Von m nach cm gehst du zwei Stufen nach unten. Jede Stufe ist mal 10."
+        steps:
+          - "Von m nach cm sind es zwei Stufen nach unten: mal 100."
+          - '${{a}}\ \text{m} \cdot 100 = {{answer}}\ \text{cm}$.'
+      - type: generated
+        id: kg-in-g
+        given:
+          a: { oneOf: [0.5, 1.2, 2.5, 3.75, 6] }
+        task:
+          text: "Rechne in Gramm um: {{a}} kg."
+        answer: { value: "a * 1000", compare: { number: { format: decimal, unit: g } } }
+        mistakes:
+          - { value: "a * 100", message: "Zwischen kg und g liegt der Faktor 1000, nicht 100." }
+          - { value: "a / 1000", message: "Du hast geteilt. Von kg zur kleineren Einheit g rechnest du mal." }
+        hint: "1 kg sind 1000 g. Wie viele Gramm sind {{a}} kg?"
+        steps:
+          - "1 kg sind 1000 g."
+          - '${{a}}\ \text{kg} \cdot 1000 = {{answer}}\ \text{g}$.'
+      - type: generated
+        id: zeit-in-min
+        given:
+          h: { int: [1, 5] }
+          m: { int: [5, 55], step: 5 }
+        task:
+          text: "Rechne in Minuten um: {{h}} h {{m}} min."
+        answer: { value: "h * 60 + m", compare: { number: { format: integer, unit: min } } }
+        mistakes:
+          - { value: "h * 10 + m", message: "Bei der Zeit passt die Treppe nicht: 1 h hat 60 min, nicht 10 min." }
+          - { value: "h * 100 + m", message: "1 h hat 60 min. Du hast mit 100 gerechnet." }
+        hint: "Eine Stunde hat 60 Minuten. Wie viele Minuten sind {{h}} Stunden?"
+        steps:
+          - '{{h}} h sind ${{h}} \cdot 60\ \text{min}$.'
+          - 'Dazu {{m}} min: ${{answer}}\ \text{min}$.'
