@@ -4,7 +4,7 @@
 # Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: plan
+phase: code
 # prePushFailures: failed pre-push runs, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -160,8 +160,9 @@ Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues übe
       learners see after each. Keep the files in `.vibe/sketches/`.
 - [x] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
       plain words (what learners see and do, what the app cannot do). At most 2 questions.
-- [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
+- [x] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
+      Creator: Orchestrator: Plan bestätigt; Kurztest als Komponente in der recap-Seite statt eigener Seiten; schere einzige weitere Komponente
 
 ### Content method
 
