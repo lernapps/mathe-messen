@@ -1,0 +1,257 @@
+---
+# Read by the hooks, the review, the evals. Schema: @lernapps/tooling/guidance/plan-front-matter.v1.schema.json
+# Written by `lernapps plan` and the hooks. Never change a key or a value by hand.
+# Archetype, null until chosen in Explore. Allowed values: explainer, interactive, quiz.
+archetype: explainer
+# Current phase. Allowed values: explore, plan, code, commit.
+phase: explore
+# prePushFailures: failed pre-push runs, written by the hook.
+prePushFailures: 0
+# failedChecks: failed rules and runs, written by lernapps check and the hooks.
+failedChecks: {}
+---
+
+# Plan: mathe-messen, first version
+
+<!--
+For you, the assistant. The process is in AGENTS.md; this plan holds the method.
+- `npx --no -- lernapps plan next` prints the task to do now, `plan done` ticks it and prints the next one.
+- You write only below Goal, Key decisions, Notes, Answers, Entry draft, Content method and Retrospective, in the
+  creator's language. Delete the comment of a section once the section is filled.
+- Work on the branch `work`, locally: push nothing before Commit.
+-->
+
+*Started 2026-11-23. Explore, Plan, Code, Commit.*
+
+## Goal
+
+Lernende der Klassen 5-8 erfahren, dass Messen heißt zu zählen, wie oft eine Einheit hineinpasst. Sie schätzen und rechnen Größen um, legen Flächen aus, füllen Körper und zerlegen und ergänzen Figuren, bis aus dem Zählen die Formeln werden. (Quelle: Issue lernapps/apps#398, Leitidee; der Orchestrator vertritt den Menschen.)
+
+## Key decisions
+
+- Archetyp `explainer`, Format 2: Das Issue fordert ein Explainer (Seiten mit Erklärung, Beispiel, Bild, Aufgaben). `quiz` trägt keine Herleitungen, `interactive` ist kein Spiel- oder Simulationsfall; Zerlegen und Auslegen kommen als Komponenten in den Explainer.
+- Strang `mathematik/groessen-und-messen` (Issue, Karte: `explainerFocus: strand`).
+- Sprache nur Deutsch `[de]` (Issue nennt nichts anderes; Karte und Regeln sind deutsch). (guess)
+- Kapitel wie im Issue: 1 Größen schätzen, messen, umrechnen (5-6) · 2 Flächen auslegen, Körper füllen (5-6) · 3 Zerlegen und ergänzen (7-8).
+- Sammel-Wiederholung (`recap`) nach regeln.md Abschnitt 7 am Anfang von Kapitel 2 und Kapitel 3 (siehe Notes). Kapitel 1 braucht keine Voraussetzung von außen.
+- Darstellungen: Messen mit Einheiten (Einheitsquadrat, Einheitswürfel, Einheitentreppe) und Rechteckmodell, in allen Seiten gleich benannt.
+
+## Notes
+
+**Strang:** `mathematik/groessen-und-messen` (Karte `mathematik.json`, `explainerFocus: strand`, Stand der Karte: Entwurf). Alle 9 Bausteine des Issues stehen im Strang; keiner ist Lücke der Karte. Kein Baustein fehlt.
+
+**Bausteine nach Kapitel, nach `requires` geordnet (Karte: Stufe/Schritt, öffnet):**
+
+| Kap. | Baustein (id) | Stufe/Schritt | intern vorausgesetzt | von außen vorausgesetzt |
+|---|---|---|---|---|
+| 1 | `groessenvorstellungen-schaetzen` | 5-6 / 1, öffnet 30 | – | – |
+| 1 | `messen-laenge-masse-geld-zeit` | 5-6 / 2, öffnet 18 | schaetzen | – |
+| 1 | `umrechnung-groessen` | 5-6 / 2, öffnet 19 | schaetzen | – |
+| 2 | `einheiten-flaeche-volumen` | 5-6 / 3, öffnet 15 | umrechnung | – |
+| 2 | `flaeche-umfang-quadrat-rechteck` | 5-6 / 4, öffnet 14 | einheiten-flaeche-volumen | `grundfiguren-eben` |
+| 2 | `zusammengesetzte-figuren` | 5-6 / 5, öffnet 0 | flaeche-umfang-quadrat-rechteck | – |
+| 2 | `volumen-oberflaeche-quader-wuerfel` | 5-6 / 5, öffnet 3 | flaeche-umfang-quadrat-rechteck | `grundkoerper-quader-wuerfel` |
+| 3 | `flaeche-umfang-dreieck-viereck` | 7-8 / 1, öffnet 3 | flaeche-umfang-quadrat-rechteck | `vierecke-grundfiguren` |
+| 3 | `volumen-oberflaeche-prisma` | 7-8 / 2, öffnet 2 | volumen-oberflaeche-quader-wuerfel, flaeche-umfang-dreieck-viereck | `grundkoerper-prisma-zylinder` |
+
+Die Karte gibt die Reihenfolge vor; sie stimmt mit dem Zuschnitt des Issues überein. Kapitelzuschnitt aus dem Issue unverändert. In Kapitel 3 steht „Dreieck, Viereck“ vor „Prisma“, weil das Prisma beide Vorgänger braucht.
+
+**Sammel-Wiederholung von außen (Karte, Abschnitt 7 der Regeln; ohne Blick in die Apps der anderen):**
+- Kapitel 2: `grundfiguren-eben` (Rechteck, Quadrat, Seiten, Winkel, parallel/senkrecht; die Karte nennt dort `parallel-senkrecht-abstand` als Vorgänger, das erklärt der Abschnitt mit), `grundkoerper-quader-wuerfel` (Kanten, Flächen, Ecken, Netz).
+- Kapitel 3: `vierecke-grundfiguren` (Parallelogramm, Raute, Trapez, Drachen; Höhe als senkrechter Abstand), `grundkoerper-prisma-zylinder` (Prisma: Grund- und Deckfläche, Mantel, Höhe; Zylinder nur zur Unterscheidung, gemessen wird er in #429).
+- Offen: ob der Block `recap` Fachbegriffe, Beispiel und Selbsttest kann; sonst Recap-Seite aus normalen Blöcken und Fund fürs Werkzeug melden (Regel 7.6). Wird im Plan geklärt (Skill `lernapps-explainer`, `structure.md`).
+
+**Didaktik (Richtung aus dem Issue):** Messen mit Einheiten trägt alles. Ablauf: Körpermaße und Stützpunkte → Einheitsquadrate auslegen, Einheitswürfel stapeln → Formel als Abkürzung des Zählens → in 7-8 zerlegen und ergänzen → Prisma als Stapel aus Grundflächen. Die Einheitentreppe ist die Stellenwerttafel mit Einheiten (Kap. 1), bekommt in Kap. 2 die Stufen cm², m², cm³ und zeigt, warum 100 bzw. 1000. Bei der Zeit zeigt Kapitel 1 offen, wo die Treppe nicht passt (60 statt 10).
+
+**Wie Lernende zum Baustein kommen, und welcher Fehler die Rückmeldung fängt:**
+- `groessenvorstellungen-schaetzen`: Sie sammeln Stützpunkte (Tür 2 m, Tafel Schokolade 100 g), schätzen, messen nach, prüfen den Fehler. Fehler: Zehnerpotenz daneben (Zimmer „2 km hoch“), Einheit passt nicht zur Sache.
+- `messen-laenge-masse-geld-zeit`: Sie zählen, wie oft die Einheit passt (Lineal, Waage, Uhr), rechnen in Sachaufgaben. Fehler: Zeit dezimal gerechnet (1,30 h = 1 h 30 min), Geld mit Komma falsch gerundet, Einheiten gemischt addiert.
+- `umrechnung-groessen`: Sie lesen die Umrechnung an der Einheitentreppe ab (Stellenwerttafel) und wählen die passende Einheit. Fehler: Faktor in falscher Richtung, falsch verschobenes Komma, Zeit mit 10 statt 60.
+- `einheiten-flaeche-volumen`: Sie legen 1 cm² und 1 cm³ aus und zählen: 10 · 10 = 100, 10 · 10 · 10 = 1000. Fehler: mit 10 statt 100 bzw. 1000 umgerechnet.
+- `flaeche-umfang-quadrat-rechteck`: Reihen mal Spalten aus dem Auslegen; Umfang als Weg um die Figur. Fehler: Fläche und Umfang verwechselt, Einheit m statt m², addiert statt multipliziert.
+- `zusammengesetzte-figuren`: Zerlegen in Rechtecke, Ergänzen zum Rechteck. Fehler: gemeinsame Kante doppelt im Umfang, Teilflächen vergessen, beim Ergänzen nicht abgezogen.
+- `volumen-oberflaeche-quader-wuerfel`: Schichten stapeln (Grundfläche mal Höhe), Netz auslegen (sechs Rechtecke, drei Paare). Fehler: Oberfläche mit Volumen verwechselt, ein Flächenpaar vergessen, cm² mit cm³ vertauscht.
+- `flaeche-umfang-dreieck-viereck`: Interaktive Schere: Parallelogramm wird Rechteck, Dreieck ist halbes Parallelogramm, Trapez als Mittellinie · Höhe. Fehler: schräge Seite statt Höhe benutzt, Halbieren vergessen, Umfang aus Höhe statt Seiten.
+- `volumen-oberflaeche-prisma`: Prisma als Stapel gleicher Grundflächen: G · h; Oberfläche = 2 G + Mantel. Fehler: Höhe des Prismas mit Höhe des Dreiecks verwechselt, Mantel vergessen.
+
+**Umfang (in/aus):** In: Länge, Masse, Geld, Zeit; Flächen- und Volumeneinheiten; Rechteck, Quadrat, zusammengesetzte Figuren aus Rechtecken, Quader, Würfel; Dreieck, Parallelogramm, Raute, Trapez, Drachen; gerade Prismen mit Dreieck oder Viereck als Grundfläche. Aus: Kreis, Zylinder, Kegel, Pyramide, Kugel (#429); Eigenschaften und Konstruktion der Figuren und Körper, Netze zeichnen (#397, #432). Zahlenraum: Maße mit Komma bis Tausendstel (1 dm³ = 1 l ggf. nur als Hinweis), Stufen mm … km, g … t, cm² … km² nur in der Treppe, cm³ … m³. Sprache: Deutsch.
+
+**Quellen (geöffnet):** Lernlandkarte `mathematik.json` (geöffnet, gelesen). Issue #398 (Auftrag). Nicht geöffnet und daher nicht geprüft: KMK-Bildungsstandards (2022), Hessisches Kerncurriculum Sek I; der Strang folgt der Karte, ein Lehrplan wird nach Skill nicht gebraucht. Alle Aufgaben, Herleitungen und Bilder entstehen selbst; nichts wird aus Büchern übernommen. Keine Drittinhalte, keine externen Links.
+
+**Offene Fragen an den Orchestrator:** (1) Recap als Block oder als Seite, siehe oben. (2) Sollen Volumen- und Hohlmaß-Verknüpfung (1 l = 1 dm³) als Hinweis stehen? Karte nennt es nicht; Vorschlag: ja, als eine Zeile in `einheiten-flaeche-volumen`. (guess)
+
+## Explore
+
+<!--
+- Find out what the app teaches, for whom, how much and how it looks. Ask; write no code, run no `create`.
+- An answer counts only in the creator's words under "Answers". At most 2 questions per message, one topic each.
+-->
+
+### Tasks
+
+- [x] Check the start: the folder `.agents/skills/lernapps-app` exists (else stop and tell the creator that the folder
+      was not started with `init`), and `git branch --show-current` prints `work` (else `git switch -c work`).
+- [x] Load skill `lernapps-app`. Tell the creator in two sentences what a lernapps app is and where it will live: at
+      their own address, free and public, and once listed as a copy on lernapps.net. Say that the technical part
+      (GitHub) comes at the end and that you do it.
+- [x] Interview: ask the topics "Goal" and "Learners" of "Answers".
+- [x] Load skill `lernapps-map-assignment` and read the learning map of the subject as it says. The creator brings
+      the content themselves (material, a word list, the pages): note under "Notes" which competencies of the map it
+      covers. Else write the skill's assignment, with its story; the creator's yes answers the topics Content and
+      Amount. A subject without a map: skip this task and say so.
+- [x] Load skill `lernapps-exercise-patterns` and read its reference for the subject. Note under "Notes" how learners
+      will practise what the goal names.
+- [x] Choose the archetype as skill `lernapps-app` says: read the README of each archetype in question, then tell the
+      creator in plain words what the chosen one can and cannot do. Write the archetype and its reason under "Key
+      decisions".
+- [x] Run `npx --no -- lernapps skills --archetype <name>` with the chosen archetype. It installs the archetype's
+      skills and adds the archetype's tasks to this plan.
+- [x] Load skill `lernapps-explainer-design`. An explainer has the look of the runtime: write "fixed by the
+      archetype" under the topic "Look and feel" of "Answers".
+- [x] Interview: ask every other topic of "Answers", in order. Leave out only a topic that an answer of the creator
+      already covers, and note which answer. A topic nobody answered is asked once before you write an assumption
+      with "(guess)".
+- [x] Load skill `lernapps-content-research` and research as it says. Write under "Notes": the strand or subject, the
+      competencies by chapter with their ids, the sources you opened.
+- [x] Write under "Notes" which competency goes on which page and which pages form a chapter, as "Map the content" of
+      skill `lernapps-explainer-design` says. Per page, name the prerequisites the app does not practise.
+- [x] Write under "Notes", one line per competency: how learners get there (they derive it, they do not only read it
+      off), and which misconception the feedback catches.
+- [x] Write under "Notes" the scope: what is in, what is out and why, the data range (for example "all main-group
+      elements", never a silent "1–20"), the languages.
+- [ ] **Checkpoint:** research. Show in plain words: the strand or why none, the competencies by chapter, the didactic
+      approach, the scope, every "(guess)", the sources and what is unchecked, the archetype and its reason. Stop and
+      wait. Changes: change them, then ask again.
+
+### Answers
+
+<!-- The interview: per topic the creator's answer, in their words. Keep the topics. -->
+
+- Goal: Aus dem Issue #398: „Ich verstehe, dass Messen heißt, zu zählen, wie oft eine Einheit hineinpasst, und kann Größen schätzen, umrechnen und Flächen und Volumen durch Auslegen, Zerlegen und Ergänzen bestimmen.“
+- Learners: Mathematik, Stufen 5-6 und 7-8 (Issue). Vorwissen: Bausteine von außen siehe Notes.
+- Model and focus: Issue: Darstellung „Messen mit Einheiten“ trägt das Explainer; Schwerpunkt Visualisierung und Üben (Einheitsquadrate, Einheitentreppe, Schere). Kein Spielgefühl. Vorbild-App aus dem Katalog: keine genannt.
+- Hurdles: je Baustein in Notes („welcher Fehler die Rückmeldung fängt“); Beispiele aus dem Issue: Zehnerpotenz, 60 statt 10, 100/1000 statt 10, Höhe statt schräger Seite.
+- Content: schreibt die Session aus Karte, Issue und eigenen Herleitungen; kein eigenes Material des Menschen.
+- Amount: Issue: 3 Kapitel, 9 Bausteine, mindestens 3 Aufgaben je Baustein (Regeln 3.1), plus zwei Sammel-Wiederholungen. Alles in der ersten Version.
+- Languages: Deutsch (guess, Issue nennt keine zweite Sprache).
+- Look and feel: fixed by the archetype.
+- Terms: Wörter der Karte (Namen der Bausteine); Darstellungen: Einheitsquadrat, Einheitswürfel, Einheitentreppe, Rechteckmodell, Stützpunkt (Issue, Regeln 1.5).
+- Finding the app: Messen, Längen, Flächen, Volumen, Umrechnen, Flächeninhalt, Umfang, Rauminhalt, Klasse 5 bis 8 (Entwurf, wird im Eintrag fixiert).
+
+## Plan
+
+<!--
+- Map the confirmed content onto the archetype. No new content questions: a gap in the content goes back to Explore.
+- The creator confirms the plan in one read. After the yes you work on your own.
+-->
+
+### Tasks
+
+- [ ] Map the content as "Map the content" of skill `lernapps-explainer-design` says, and write the result under
+      "Content method".
+- [ ] Choose a pattern per competency as skill `lernapps-exercise-patterns` says, and add it to "Content method".
+- [ ] Add to "Content method" one line per page, as "Engagement" of skill `lernapps-explainer-design` says: the
+      opening task, the change of activity, the reward, the story.
+- [ ] Add the tasks of Code, each one a piece of work that ends in a commit. First the pattern: one complete page or
+      screen, `npx --no -- lernapps plan add --at pattern "<task>"`. Then the others, one call each:
+      `npx --no -- lernapps plan add --at pages "<task>"`. Each task says what it builds and what it shows.
+- [ ] Draw a sketch of each screen, component or interactive exercise: a static SVG or image, or the steps with what
+      learners see after each. Keep the files in `.vibe/sketches/`.
+- [ ] Show the creator, short: goal, competencies by chapter, the Code tasks, the sketches, and the content method in
+      plain words (what learners see and do, what the app cannot do). At most 2 questions.
+- [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
+      them, then ask again.
+
+### Content method
+
+<!-- One line each: the patterns and where; the figures and how they are made; the data files; each component, what it
+checks and what it cannot; how a later agent adds a chapter. It becomes the content guide in Code. -->
+<!-- An explainer: per figure, model and component its learning action in two to four sentences
+(`explainer-representation-explained`); per page its prerequisites the app does not practise, and which get a recap
+page, which a link. -->
+
+## Code
+
+<!--
+- Build the app, locally on `work`, on your own. After each task: `plan done`, then one commit with the work and this
+  plan. The hooks check each commit; a failing check is fixed from its message, as skill `lernapps-cli` says.
+- What you cannot decide: choose, write it under "Key decisions" with "(guess)", go on.
+- The creator asks for a change: say your reading in one sentence first, then change every place it holds for
+  (`feedback-applied-everywhere`).
+-->
+
+### Tasks
+
+- [ ] Load skill `lernapps-cli`. Create the app as its section "Create" says:
+      `npx --no -- lernapps create --archetype explainer`.
+- [ ] Fill the content guide `.agents/skills/app-content/SKILL.md` from "Notes" and "Content method": every heading,
+      no "FILL IN" left. Commit it before any content.
+- [ ] Load skill `lernapps-explainer`.
+- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+      `.agents/skills/lernapps-explainer/references/blocks.md` and
+      `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
+      `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
+- [ ] Decide whether the app needs `scope`, as "`scope`" in
+      `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
+<!-- tasks: pattern: the one page or screen that is the pattern for the others -->
+- [ ] **Checkpoint:** the pattern page. Load skill `lernapps-learner-check` and do its learner check on the page. Fix
+      what it finds. Then show the creator the page and ask whether the others may follow it. Stop and wait. A
+      change: change the pattern first.
+<!-- tasks: pages: the other pages or screens, after the pattern -->
+- [ ] Update the content guide so that it describes the app as built (`app-content-matches`).
+- [ ] Run `npx --no -- lernapps check` until it passes.
+- [ ] Look at every screen and state, at 360 px and on a desktop, as "Look at the app" of skill `lernapps-cli` says.
+      Compare each with its sketch.
+- [ ] Do the whole-app check of skill `lernapps-learner-check`. Fix what it finds and write under "Notes" what you
+      fixed.
+
+## Commit
+
+<!--
+- Put the app on GitHub, publish it with the creator's yes, then list it. A push to `main` publishes.
+- Open the pull requests (to `main`, to the catalog) without asking: they publish nothing.
+- The creator asked to stop before publishing (a trial): stop here and say so.
+-->
+
+### Tasks
+
+- [ ] Load skill `lernapps-explainer-self-assessment`. Add the self-assessment as it says, or write under "Key
+      decisions" why the app has none. Commit.
+- [ ] Load skill `lernapps-github`. Set up the repository and Pages as it says. Ask for the repository's name and
+      every click only the creator can make, in one message.
+- [ ] Push `work`, open the preview pull request and see its checks to green, as skill `lernapps-github` says.
+- [ ] **Checkpoint:** publish. Show what the app does and the preview link from the comment "Vorschau der App". Ask
+      whether it may go online. Stop and wait for the yes.
+- [ ] Load skill `lernapps-commit`. Publish as skill `lernapps-github` says: `work` into `main` as one squash commit,
+      the run of `Pages` watched to its end.
+- [ ] Open the address the job `deploy` printed and confirm that the app shows. Never use a derived address.
+- [ ] Load skill `lernapps-listing`. Write the entry under "Entry draft" as it says, with the creator's answer to
+      "Finding the app".
+- [ ] Fill the retrospective.
+- [ ] Commit this plan on `main` and push it: the listing check and the review read it there.
+- [ ] **Checkpoint:** list. Open the listing pull request as skill `lernapps-listing` says, without asking first: the
+      pull request is the review. See it to "bestanden", then show the creator the pull request and its result.
+- [ ] If the plan changed since its last push, commit it on `main` and push again.
+
+### Entry draft
+
+<!-- YAML valid against the entry schema the listing skill names. Only known values, never invented. -->
+
+```yaml
+```
+
+## Retrospective
+
+<!-- At the end of Commit, before the listing pull request. Facts, short, no names. Read by review and evals. -->
+
+### Phases reached
+
+<!-- Last phase completed, checkpoints passed. E.g. "commit; confirmed, published". -->
+
+### Creator turns after the plan
+
+<!-- Number of creator messages after the confirmation, topic of each. Target: at most 3. -->
+
+### Where I had to guess
+
+<!-- Each gap in plan, skills, messages or answers, and your choice. "None" if none. -->
