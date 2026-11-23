@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
-description: "Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je einem Kurztest."
+description: "Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Kurztests."
 recap: [mathematik/grundfiguren-eben, mathematik/grundkoerper-quader-wuerfel]
 blocks:
   - type: section
@@ -41,45 +41,63 @@ blocks:
       - type: definition
         term: Parallel
         explanation: "Zwei Seiten sind parallel, wenn sie überall denselben Abstand haben. Im Rechteck sind gegenüberliegende Seiten parallel."
+      - type: example
+        title: Rechteck oder Quadrat?
+        blocks:
+          - type: text
+            text: Eine Figur hat vier rechte Winkel und vier Seiten mit je 4 cm. Sie ist ein Quadrat. Weil jedes Quadrat vier rechte Winkel hat, ist sie auch ein Rechteck.
       - type: vue-component
-        id: test-rechteck
+        id: test-quadrat
         component: Kurztest
         props:
-          question: Ein Viereck hat vier rechte Winkel. Zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Welche Figur ist das?
+          question: Ein Viereck hat vier rechte Winkel und vier Seiten mit je 6 cm. Welche Aussage stimmt?
           options:
             - {
-                text: "Quadrat",
-                correct: false,
-                info: "Ein Quadrat hat vier gleich lange Seiten, hier sind es zwei verschiedene Längen.",
-              }
-            - {
-                text: "Rechteck",
+                text: "Es ist ein Quadrat und auch ein Rechteck.",
                 correct: true,
-                info: "Vier rechte Winkel und gegenüberliegende Seiten gleich lang: so ist ein Rechteck gebaut.",
+                info: "Vier gleich lange Seiten machen es zum Quadrat. Ein Quadrat hat vier rechte Winkel, also ist es auch ein Rechteck.",
               }
-            - { text: "Dreieck", correct: false, info: "Ein Dreieck hat nur drei Seiten." }
+            - {
+                text: "Es ist ein Quadrat, aber kein Rechteck.",
+                correct: false,
+                info: "Ein Quadrat ist ein besonderes Rechteck: vier rechte Winkel hat es.",
+              }
+            - {
+                text: "Es ist ein Rechteck, aber kein Quadrat.",
+                correct: false,
+                info: "Ein Rechteck mit vier gleich langen Seiten ist ein Quadrat.",
+              }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Viereck hat vier rechte Winkel, zwei Seiten sind 3 cm lang, die beiden anderen 5 cm. Antwort: ein Rechteck.
-          Ein Quadrat hätte vier gleich lange Seiten, ein Dreieck nur drei Seiten.
+          Kurztest: Ein Viereck hat vier rechte Winkel und vier Seiten mit je 6 cm. Antwort: Es ist ein Quadrat und auch ein Rechteck.
+          Vier gleich lange Seiten machen es zum Quadrat, und ein Quadrat hat vier rechte Winkel.
       - type: vue-component
-        id: test-parallel
+        id: test-seiten
         component: Kurztest
         props:
-          question: Welche Seiten eines Rechtecks sind parallel?
+          question: Ein Rechteck hat eine 9 cm lange und eine 2 cm lange Seite. Wie viele seiner vier Seiten sind 2 cm lang?
           options:
-            - { text: "Gegenüberliegende Seiten", correct: true, info: "Sie haben überall denselben Abstand." }
             - {
-                text: "Benachbarte Seiten",
+                text: "1",
                 correct: false,
-                info: "Benachbarte Seiten stoßen in einer Ecke im rechten Winkel aufeinander.",
+                info: "Gegenüberliegende Seiten sind gleich lang. Zu der 2 cm langen Seite gehört eine zweite.",
+              }
+            - {
+                text: "2",
+                correct: true,
+                info: "Die gegenüberliegende Seite ist ebenfalls 2 cm lang. Zusammen sind es zwei Seiten.",
+              }
+            - {
+                text: "4",
+                correct: false,
+                info: "Dann wäre das Rechteck ein Quadrat. Hier gibt es auch eine 9 cm lange Seite.",
               }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Welche Seiten eines Rechtecks sind parallel? Antwort: gegenüberliegende Seiten, sie haben überall denselben Abstand.
-          Benachbarte Seiten stoßen im rechten Winkel aufeinander.
+          Kurztest: Ein Rechteck hat eine 9 cm lange und eine 2 cm lange Seite. Wie viele seiner vier Seiten sind 2 cm lang? Antwort: 2.
+          Gegenüberliegende Seiten sind gleich lang. Bei 4 Seiten mit 2 cm wäre es ein Quadrat.
       - type: text
         text: |
           Wenn du unsicher bist, übe den Baustein „Ebene Grundfiguren“. Seine Kartenseite findest du hier:
@@ -112,39 +130,59 @@ blocks:
         explanation: "Eine Ecke ist ein Punkt, an dem Kanten zusammentreffen. Ein Quader hat 8 Ecken."
       - type: definition
         term: Seitenfläche
-        explanation: "Eine Seitenfläche ist eine ebene Fläche, die den Körper begrenzt. Beim Quader ist jede Seitenfläche ein Rechteck."
-      - type: vue-component
-        id: test-seitenflaechen
-        component: Kurztest
-        props:
-          question: Wie viele Seitenflächen hat ein Quader?
-          options:
-            - {
-                text: "4",
-                correct: false,
-                info: "Vier Seitenflächen hat ein Körper wie eine Pyramide mit dreieckiger Grundfläche. Ein Quader hat oben und unten noch je eine.",
-              }
-            - { text: "6", correct: true, info: "Vorne, hinten, links, rechts, oben und unten: sechs Rechtecke." }
-            - { text: "8", correct: false, info: "Acht ist die Zahl der Ecken, nicht die der Seitenflächen." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Wie viele Seitenflächen hat ein Quader? 4, 6 oder 8. Antwort: 6. Es sind vorne, hinten, links, rechts, oben und
-          unten je ein Rechteck. Acht ist die Zahl der Ecken.
+        explanation: "Eine Seitenfläche ist eine ebene Fläche, die den Körper begrenzt. Beim Quader ist jede Seitenfläche ein Rechteck, auch Boden und Deckel."
+      - type: definition
+        term: Zusammengesetzter Körper
+        explanation: "Ein zusammengesetzter Körper besteht aus mehreren einfachen Körpern, zum Beispiel aus zwei Quadern, die aneinanderstoßen."
+      - type: example
+        title: Die Kanten eines Quaders
+        blocks:
+          - type: text
+            text: Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Er hat 4 Kanten mit 4 cm, 4 Kanten mit 3 cm und 4 Kanten mit 2 cm. Zusammen sind das 12 Kanten.
       - type: vue-component
         id: test-kanten
         component: Kurztest
         props:
-          question: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er?
+          question: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Kanten sind 3 cm lang?
           options:
-            - { text: "6", correct: false, info: "Sechs ist die Zahl der Seitenflächen." }
-            - { text: "8", correct: false, info: "Acht ist die Zahl der Ecken." }
-            - { text: "12", correct: true, info: "Vier Kanten oben, vier unten und vier senkrechte, alle 3 cm lang." }
+            - {
+                text: "2",
+                correct: false,
+                info: "Das sind zu wenige. Parallel zu einer 3 cm langen Kante liegen noch drei weitere gleich lange Kanten.",
+              }
+            - {
+                text: "4",
+                correct: true,
+                info: "Zu jedem Maß gehören vier gleich lange, parallele Kanten: 4 · 5 cm, 4 · 3 cm und 4 · 2 cm.",
+              }
+            - {
+                text: "12",
+                correct: false,
+                info: "Zwölf ist die Zahl aller Kanten. Nur ein Drittel davon ist 3 cm lang.",
+              }
           right: Richtig.
           wrong: Nicht richtig.
         nojs: |
-          Kurztest: Ein Würfel hat eine Kantenlänge von 3 cm. Wie viele Kanten hat er? 6, 8 oder 12. Antwort: 12. Vier oben, vier
-          unten und vier senkrechte. Sechs ist die Zahl der Seitenflächen, acht die der Ecken.
+          Kurztest: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Kanten sind 3 cm lang? Antwort: 4. Zu jedem Maß
+          gehören vier gleich lange Kanten. Zwölf ist die Zahl aller Kanten.
+      - type: vue-component
+        id: test-flaechen
+        component: Kurztest
+        props:
+          question: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Seitenflächen sind 5 cm lang und 3 cm breit?
+          options:
+            - { text: "1", correct: false, info: "Boden und Deckel haben dieselben Maße. Du musst beide zählen." }
+            - { text: "2", correct: true, info: "Boden und Deckel sind beide 5 cm mal 3 cm groß." }
+            - {
+                text: "4",
+                correct: false,
+                info: "Die vier anderen Seitenflächen sind 5 cm mal 2 cm und 3 cm mal 2 cm groß.",
+              }
+          right: Richtig.
+          wrong: Nicht richtig.
+        nojs: |
+          Kurztest: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Seitenflächen sind 5 cm lang und 3 cm breit?
+          Antwort: 2, der Boden und der Deckel. Die vier anderen Seitenflächen haben andere Maße.
       - type: text
         text: |
           Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartenseite findest du hier:

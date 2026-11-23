@@ -64,5 +64,5 @@ export function next(step: Step): Step {
 /** The box (x, y, width, height) in the units of the figure that holds every step. */
 export function viewBox(g: number, h: number, s: number): { x: number; y: number; w: number; h: number } {
   const pad = 0.4;
-  return { x: -0.5 - pad, y: -pad, w: g + s + 0.5 + 2 * pad, h: h + 2 * pad };
+  return { x: -0.5 - pad, y: -pad, w: g + s + 0.5 + 2 * pad, h: h + 0.5 + 2 * pad };
 }

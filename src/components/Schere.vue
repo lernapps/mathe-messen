@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // "Schere": learners cut a parallelogram along its height and move the triangle to the other side. A rectangle is
 // left, with the same area. It is no exercise: it shows the idea. Buttons work with the keyboard; every step has a text.
-import { computed, ref } from "vue";
+import { computed, nextTick, ref, useTemplateRef } from "vue";
 import { next, shapes, viewBox, type Point, type Step } from "./Schere.ts";
 
 const props = defineProps<{
@@ -11,6 +11,9 @@ const props = defineProps<{
   height: number;
   /** How far the top side is shifted to the right, between 1 and base. */
   shift: number;
+  /** The labels in the figure: the base and the height with their values. */
+  baseLabel: string;
+  heightLabel: string;
   /** Labels of the buttons. */
   cutLabel: string;
   moveLabel: string;
@@ -33,14 +36,25 @@ function pts(points: Point[]): string {
   return points.map((p) => `${p.x * unit},${p.y * unit}`).join(" ");
 }
 
-function cut() {
+const cutButton = useTemplateRef<HTMLButtonElement>("cutButton");
+const moveButton = useTemplateRef<HTMLButtonElement>("moveButton");
+const resetButton = useTemplateRef<HTMLButtonElement>("resetButton");
+
+// The pressed button is disabled afterwards: the focus moves to the button that comes next, so keyboard users keep their place.
+async function cut() {
   step.value = 1;
+  await nextTick();
+  moveButton.value?.focus();
 }
-function move() {
+async function move() {
   step.value = next(step.value);
+  await nextTick();
+  resetButton.value?.focus();
 }
-function reset() {
+async function reset() {
   step.value = 0;
+  await nextTick();
+  cutButton.value?.focus();
 }
 </script>
 
@@ -48,18 +62,24 @@ function reset() {
   <div class="schere">
     <svg
       class="schere-figure"
-      role="img"
-      :aria-label="status"
+      aria-hidden="true"
       :viewBox="`${box.x * unit} ${box.y * unit} ${box.w * unit} ${box.h * unit}`"
     >
       <polygon class="schere-body" :points="pts(sh.body)" />
       <polygon v-if="sh.triangle.length" class="schere-triangle" :points="pts(sh.triangle)" />
       <polyline v-if="sh.cut.length" class="schere-cut" :points="pts(sh.cut)" />
+      <line v-if="step === 0" class="schere-cut" :x1="shift * unit" :y1="0" :x2="shift * unit" :y2="height * unit" />
+      <text class="schere-label" :x="(base / 2) * unit" :y="height * unit + 0.55 * unit" text-anchor="middle">
+        {{ baseLabel }}
+      </text>
+      <text v-if="step === 0" class="schere-label" :x="shift * unit + 6" :y="(height / 2) * unit">
+        {{ heightLabel }}
+      </text>
     </svg>
     <div class="schere-buttons">
-      <button type="button" :disabled="step !== 0" @click="cut">{{ cutLabel }}</button>
-      <button type="button" :disabled="step !== 1" @click="move">{{ moveLabel }}</button>
-      <button type="button" :disabled="step === 0" @click="reset">{{ resetLabel }}</button>
+      <button ref="cutButton" type="button" :disabled="step !== 0" @click="cut">{{ cutLabel }}</button>
+      <button ref="moveButton" type="button" :disabled="step !== 1" @click="move">{{ moveLabel }}</button>
+      <button ref="resetButton" type="button" :disabled="step === 0" @click="reset">{{ resetLabel }}</button>
     </div>
     <p class="schere-status" aria-live="polite">{{ status }}</p>
   </div>
@@ -95,6 +115,11 @@ function reset() {
   stroke: var(--page-accent);
   stroke-width: 3;
   stroke-dasharray: 3 4;
+}
+
+.schere-label {
+  fill: var(--page-text);
+  font-size: 14px;
 }
 
 .schere-buttons {
