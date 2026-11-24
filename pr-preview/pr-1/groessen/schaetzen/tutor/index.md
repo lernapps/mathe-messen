@@ -140,7 +140,7 @@ unmögliche Zahl heraus, hast du dich verschätzt oder verrechnet.
 
 - Aufgabe: Ein leerer Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch.
 - Antwortformat: eine Zahl eintippen (g)
-- Lösung: 1.500 g (erlaubte Abweichung: 100 g)
+- Lösung: 1500 g (erlaubte Abweichung: 100 g)
 - Erklärung: 15 Tafeln wiegen $15 \cdot 100\ \text{g} = 1500\ \text{g}$. Das sind $1{,}5\ \text{kg}$.
 - Tipp der App: Eine Tafel wiegt 100 g. Du brauchst 15 davon.
 - Typische Fehler und was die App sagt:
