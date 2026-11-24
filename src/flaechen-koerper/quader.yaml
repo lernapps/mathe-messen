@@ -31,7 +31,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+          Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
           Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
       - type: figure
         image: images/quader-schicht.svg
@@ -53,6 +53,8 @@ blocks:
         explanation: "Das Volumen sagt, wie viele Einheitswürfel in einen Körper passen. Es hat Einheiten wie cm³ oder m³."
       - type: formula
         formula: 'V = a \cdot b \cdot c = G \cdot h'
+      - type: text
+        text: Dabei ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe.
       - type: text
         text: |
           Wenn du wissen willst, wie viel Papier du zum Einpacken brauchst, brauchst du die **Oberfläche**. Sie ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,

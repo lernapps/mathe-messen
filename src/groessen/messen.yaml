@@ -82,15 +82,6 @@ blocks:
     id: uebung
     title: Übung
     blocks:
-      - type: matching
-        id: messgeraet-zuordnen
-        text: Welches Messgerät passt zu welcher Größe?
-        pairs:
-          - { left: Länge, right: Lineal }
-          - { left: Masse, right: Waage }
-          - { left: Zeit, right: Uhr }
-        distractors: [Thermometer]
-        explanation: Mit dem Lineal misst du Länge, mit der Waage Masse und mit der Uhr Zeit. Ein Thermometer misst die Temperatur, die hier nicht gefragt ist.
       - type: generated
         id: mehl-wiegen
         given:
