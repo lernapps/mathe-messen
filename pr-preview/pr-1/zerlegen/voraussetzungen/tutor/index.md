@@ -20,11 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
-- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-vierecke`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-hoehe`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
-- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/zerlegen/voraussetzungen/?via=tutor#test-vierecke`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/zerlegen/voraussetzungen/?via=tutor#test-hoehe`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -51,7 +51,7 @@ frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du, ob du es kan
 ### Besondere Vierecke
 
 Ich kann besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden. Für dieses Kapitel brauchst
-du Parallelogramm, Raute, Trapez, Drachen, die Diagonale und die Höhe.
+du Parallelogramm, Raute, Trapez, Drachen, die Diagonale und die Höhe, denn auf ihnen bauen die Flächenformeln auf.
 
 Bild: Vier Vierecke mit ihren Namen unter den Figuren, von links oben nach rechts unten Parallelogramm, Raute, Trapez und Drachen. Bildunterschrift: Die vier besonderen Vierecke dieses Kapitels.
 
@@ -76,7 +76,7 @@ Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist d
 ### Prisma und Zylinder
 
 Ich kann Prisma und Zylinder erkennen und von anderen Körpern unterscheiden. Für dieses Kapitel brauchst du das
-Prisma, und das Netz kennst du vom Quader: der Körper, an den Kanten aufgeschnitten und flach hingelegt. Den Zylinder musst du nur vom Prisma unterscheiden können.
+Prisma, und das Netz kennst du vom Quader: der Körper, an den Kanten aufgeschnitten und flach hingelegt. Mantel, Netz und Prismenhöhe brauchst du später für Oberfläche und Volumen. Den Zylinder musst du nur vom Prisma unterscheiden können.
 
 Bild: Ein liegendes Prisma mit dreieckiger Grundfläche G vorne und gleich großer Deckfläche hinten. Der Mantel M besteht aus Rechtecken. Die Höhe h ist der Abstand zwischen den beiden Dreiecken. Bildunterschrift: Ein Prisma mit Dreieck als Grundfläche. Der Mantel besteht aus Rechtecken, eines ist beschriftet.
 
@@ -94,7 +94,9 @@ Ein Prisma hat ein Dreieck als Grundfläche. Das Dreieck hat drei Seiten, zu jed
 
 ### Kannst du das?
 
-- Aufgabe `test-vierecke` (unten)
+Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
+
+- Aufgabe `test-hoehe` (unten)
 
 - Aufgabe `test-prisma` (unten)
 
@@ -109,17 +111,17 @@ Wenn du unsicher bist, übe die Bausteine „Besondere Vierecke“ und „Prisma
 - Prisma und Zylinder erkennen und von anderen Körpern unterscheiden kannst, vor allem Grundfläche, Deckfläche
   und Mantel eines Prismas.
 
-### Aufgabe test-vierecke
+### Aufgabe test-hoehe
 
-- Aufgabe: Welche Aussage über Vierecke stimmt?
+- Aufgabe: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite?
 - Antwortformat: eine Antwort wählen
 - Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
-  - ✓ Jede Raute ist ein Parallelogramm. – Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang. Das ist die Eigenschaft des Parallelogramms.
-  - ✗ Jedes Parallelogramm ist eine Raute. – Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
-  - ✗ Jeder Drachen ist ein Parallelogramm. – Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.
-- Lösung: Jede Raute ist ein Parallelogramm.
-- Erklärung: Die Raute ist ein besonderes Parallelogramm mit vier gleich langen Seiten. Umgekehrt ist nicht jedes Parallelogramm eine Raute.
-- Link: [../?via=tutor#test-vierecke](../?via=tutor#test-vierecke)
+  - ✗ Sie ist genau 12 cm lang. – Die Höhe ist ein Abstand zwischen den parallelen Seiten, nicht die Länge der Grundseite.
+  - ✓ Sie ist höchstens 7 cm lang. – Die Höhe steht senkrecht, die schräge Seite liegt schief. Der senkrechte Weg ist der kürzeste.
+  - ✗ Sie ist länger als 7 cm. – Die senkrechte Strecke ist nie länger als die schräge Verbindung zwischen denselben Parallelen.
+- Lösung: Sie ist höchstens 7 cm lang.
+- Erklärung: Die Höhe ist der senkrechte Abstand der parallelen Seiten. Er ist höchstens so lang wie die schräge Seite.
+- Link: [../?via=tutor#test-hoehe](../?via=tutor#test-hoehe)
 
 ### Aufgabe test-prisma
 

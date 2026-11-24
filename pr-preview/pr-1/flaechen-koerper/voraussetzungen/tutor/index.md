@@ -95,6 +95,8 @@ Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Er hat 4 Kanten mit 4 cm
 
 ### Kannst du das?
 
+Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
+
 - Aufgabe `test-quadrat` (unten)
 
 - Aufgabe `test-wuerfelkanten` (unten)

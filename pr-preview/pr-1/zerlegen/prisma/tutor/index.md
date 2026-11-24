@@ -43,8 +43,8 @@ Volumen und Oberfläche von Prismen berechnen: ein Prisma ist ein Stapel gleiche
 
 ### Was du hier lernst
 
-Wenn du wissen willst, wie viel in einen Behälter mit dreieckigem Querschnitt passt oder wie viel Material seine
-Hülle braucht, brauchst du Volumen und Oberfläche eines Prismas. Nach dieser Seite berechnest du beides. Das Modell:
+Wenn du wissen willst, wie viel in einen Behälter mit dreieckigem Querschnitt passt oder wie viel Material nötig ist, um ihn
+ganz zu bedecken, brauchst du Volumen und Oberfläche eines Prismas. Nach dieser Seite berechnest du beides. Das Modell:
 Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.
 
 - Aufgabe `scheiben-stapel` (unten)
@@ -59,7 +59,7 @@ Bild: Vier gleich große Dreiecksscheiben liegen übereinander. Jede hat die Gru
 
 $V = G \cdot h$
 
-Wenn du wissen willst, wie viel Material die Hülle eines Prismas braucht, brauchst du die Oberfläche. Dafür legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
+Wenn du wissen willst, wie viel Material nötig ist, um ein Prisma ganz zu bedecken, brauchst du die Oberfläche. Dafür legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
 ein langes Rechteck. Seine Länge ist der Umfang $u$ der Grundfläche, seine Höhe ist die Höhe $h$ des Prismas.
 
 Bild: Das Netz eines Prismas mit rechtwinkliger Dreiecksgrundfläche: der Mantel ist ein langes Rechteck aus drei Rechtecken mit den Breiten 3 cm, 4 cm und 5 cm. Über dem mittleren Rechteck liegt die Grundfläche, darunter die Deckfläche. Bildunterschrift: Der Mantel ist so lang wie der Umfang der Grundfläche. Die Grundfläche kommt zweimal vor.
@@ -70,7 +70,7 @@ $O = 2 \cdot G + M$
 
 **Merke: Merke**
 
-Das Prisma hat zwei Höhen im Spiel: die Höhe des Dreiecks in der Grundfläche und die Höhe $h$ des
+Weil beim Prisma zwei Höhen vorkommen, verwechselt man sie leicht. Das Prisma hat zwei Höhen im Spiel: die Höhe des Dreiecks in der Grundfläche und die Höhe $h$ des
 Prismas. Für das Volumen rechnest du die Grundfläche $G$ mal die Höhe des Prismas, nicht mal die Höhe des Dreiecks.
 
 ### Beispiel
@@ -202,7 +202,7 @@ Nr. | g | d | H | Lösung | F1 | F2
 
 ### Aufgabe prisma-oberflaeche
 
-- Aufgabe: „Die Grundfläche eines Prismas ist ein rechtwinkliges Dreieck mit den Seiten {e.a} cm, {e.b} cm und {e.c} cm. Die Seiten {e.a} cm und {e.b} cm stehen im rechten Winkel zueinander. Das Prisma ist {H} cm hoch. Berechne die Oberfläche in cm².“
+- Aufgabe: „Die Grundfläche eines Prismas ist ein rechtwinkliges Dreieck mit den Seiten {e.a} cm, {e.b} cm und {e.c} cm. Die Seiten {e.a} cm und {e.b} cm stehen im rechten Winkel zueinander: Sie sind Grundseite und Höhe des Dreiecks. Das Prisma ist {H} cm hoch. Berechne die Oberfläche in cm².“
 - Antwortformat: eine Zahl eintippen (cm²)
 - Tipp der App: „Berechne die Fläche des Dreiecks und seinen Umfang. Der Mantel ist ein Rechteck aus Umfang und Höhe des Prismas.“
 - Lösungsweg:
