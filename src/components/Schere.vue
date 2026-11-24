@@ -41,7 +41,7 @@ const cutButton = useTemplateRef<HTMLButtonElement>("cutButton");
 const moveButton = useTemplateRef<HTMLButtonElement>("moveButton");
 const resetButton = useTemplateRef<HTMLButtonElement>("resetButton");
 
-// The pressed button is disabled afterwards: the focus moves to the button that comes next, so keyboard users keep their place.
+// The pressed button disappears: the focus moves to the button that comes next, so keyboard users keep their place.
 async function cut() {
   step.value = 1;
   await nextTick();
@@ -92,9 +92,11 @@ async function reset() {
       </text>
     </svg>
     <div class="schere-buttons">
-      <button ref="cutButton" type="button" :disabled="step !== 0" @click="cut">{{ cutLabel }}</button>
-      <button ref="moveButton" type="button" :disabled="step !== 1" @click="move">{{ moveLabel }}</button>
-      <button ref="resetButton" type="button" :disabled="step === 0" @click="reset">{{ resetLabel }}</button>
+      <button v-if="step === 0" ref="cutButton" type="button" @click="cut">{{ cutLabel }}</button>
+      <button v-if="step === 1" ref="moveButton" type="button" @click="move">{{ moveLabel }}</button>
+      <button v-if="step > 0" ref="resetButton" type="button" class="schere-secondary" @click="reset">
+        {{ resetLabel }}
+      </button>
     </div>
     <p class="schere-status" aria-live="polite">{{ status }}</p>
   </div>
@@ -146,19 +148,23 @@ async function reset() {
 
 .schere-buttons button {
   min-height: 44px;
-  padding: 0 1rem;
-  border: 1px solid var(--page-border);
-  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--page-accent);
+  border-radius: 0.375rem;
   background: var(--page-accent);
   color: var(--page-on-accent);
   font: inherit;
   cursor: pointer;
 }
 
-.schere-buttons button:disabled {
-  background: var(--page-surface);
-  color: var(--page-muted);
-  cursor: not-allowed;
+.schere-buttons button.schere-secondary {
+  background: var(--page-background);
+  color: var(--page-accent);
+}
+
+.schere-buttons button:focus-visible {
+  outline: 3px solid var(--page-text);
+  outline-offset: 2px;
 }
 
 .schere-status {

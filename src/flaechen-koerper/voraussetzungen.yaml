@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
-description: "Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Kurztests."
+description: "Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Aufgaben."
 recap: [mathematik/grundfiguren-eben, mathematik/grundkoerper-quader-wuerfel]
 blocks:
   - type: section
@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           In diesem Kapitel legst du Flächen aus und füllst Körper. Dafür musst du zwei Dinge schon können:
-          ebene Grundfiguren und Quader und Würfel. Hier frischst du die Begriffe auf. Mit jedem Kurztest prüfst du,
+          ebene Grundfiguren und Quader und Würfel. Hier frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du,
           ob du es kannst. Es gibt keine Punkte.
   - type: section
     id: grundfiguren
@@ -46,58 +46,6 @@ blocks:
         blocks:
           - type: text
             text: Eine Figur hat vier rechte Winkel und vier Seiten mit je 4 cm. Sie ist ein Quadrat. Weil jedes Quadrat vier rechte Winkel hat, ist sie auch ein Rechteck.
-      - type: vue-component
-        id: test-quadrat
-        component: Kurztest
-        props:
-          question: "Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?"
-          options:
-            - {
-                text: "Nur Maria",
-                correct: true,
-                info: "Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.",
-              }
-            - { text: "Nur Jan", correct: false, info: "Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat." }
-            - {
-                text: "Beide",
-                correct: false,
-                info: "Jan irrt sich: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Maria sagt, jedes Quadrat ist ein Rechteck. Jan sagt, jedes Rechteck ist ein Quadrat. Wer hat recht? Antwort: nur
-          Maria. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
-      - type: vue-component
-        id: test-seiten
-        component: Kurztest
-        props:
-          question: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm, in dieser Reihenfolge um die Figur. Welche Seiten sind parallel?
-          options:
-            - {
-                text: "Nur die beiden 9 cm langen Seiten",
-                correct: false,
-                info: "Auch die beiden 2 cm langen Seiten liegen einander gegenüber und sind parallel.",
-              }
-            - {
-                text: "Je zwei gegenüberliegende Seiten",
-                correct: true,
-                info: "Die beiden 9 cm langen Seiten sind parallel und die beiden 2 cm langen Seiten auch.",
-              }
-            - {
-                text: "Je zwei benachbarte Seiten",
-                correct: false,
-                info: "Benachbarte Seiten stoßen im rechten Winkel aufeinander.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm. Welche Seiten sind parallel? Antwort: je
-          zwei gegenüberliegende Seiten. Benachbarte Seiten stoßen im rechten Winkel aufeinander.
-      - type: text
-        text: |
-          Wenn du unsicher bist, übe den Baustein „Ebene Grundfiguren“. Seine Kartenseite findest du hier:
-          [Karte: Ebene Grundfiguren](https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/).
   - type: section
     id: quader
     title: Quader und Würfel
@@ -135,54 +83,43 @@ blocks:
         blocks:
           - type: text
             text: Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Er hat 4 Kanten mit 4 cm, 4 Kanten mit 3 cm und 4 Kanten mit 2 cm. Zusammen sind das 12 Kanten.
-      - type: vue-component
-        id: test-kanten
-        component: Kurztest
-        props:
-          question: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Kanten sind 3 cm lang?
-          options:
-            - {
-                text: "2",
-                correct: false,
-                info: "Das sind zu wenige. Parallel zu einer 3 cm langen Kante liegen noch drei weitere gleich lange Kanten.",
-              }
-            - {
-                text: "4",
-                correct: true,
-                info: "Zu jedem Maß gehören vier gleich lange, parallele Kanten: 4 · 5 cm, 4 · 3 cm und 4 · 2 cm.",
-              }
-            - {
-                text: "12",
-                correct: false,
-                info: "Zwölf ist die Zahl aller Kanten. Nur ein Drittel davon ist 3 cm lang.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Kanten sind 3 cm lang? Antwort: 4. Zu jedem Maß
-          gehören vier gleich lange Kanten. Zwölf ist die Zahl aller Kanten.
-      - type: vue-component
-        id: test-flaechen
-        component: Kurztest
-        props:
-          question: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
-          options:
-            - { text: "16 cm", correct: false, info: "Das sind nur vier Kanten. Ein Würfel hat zwölf." }
-            - {
-                text: "32 cm",
-                correct: false,
-                info: "Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.",
-              }
-            - { text: "48 cm", correct: true, info: "Ein Würfel hat 12 Kanten, jede 4 cm lang: 12 · 4 cm = 48 cm." }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen? Antwort: 48 cm, denn der Würfel hat
-          12 Kanten mit je 4 cm.
+  - type: section
+    id: test
+    title: Kannst du das?
+    blocks:
+      - type: single-choice
+        id: test-quadrat
+        text: "Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?"
+        options:
+          - text: Nur Maria
+            correct: true
+            info: Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.
+          - text: Nur Jan
+            correct: false
+            info: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+          - text: Beide
+            correct: false
+            info: Jan irrt sich. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+        explanation: Jedes Quadrat ist ein besonderes Rechteck. Umgekehrt ist nicht jedes Rechteck ein Quadrat.
+      - type: single-choice
+        id: test-wuerfelkanten
+        text: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
+        options:
+          - text: 16 cm
+            correct: false
+            info: Das sind nur vier Kanten. Ein Würfel hat zwölf.
+          - text: 32 cm
+            correct: false
+            info: Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.
+          - text: 48 cm
+            correct: true
+            info: Ein Würfel hat 12 Kanten, jede 4 cm lang, also 12 · 4 cm = 48 cm.
+        explanation: Ein Würfel hat 12 Kanten mit je 4 cm Länge. Zusammen sind das 48 cm.
       - type: text
         text: |
-          Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartenseite findest du hier:
-          [Karte: Quader und Würfel](https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/).
+          Wenn du unsicher bist, übe die Bausteine „Ebene Grundfiguren“ und „Quader und Würfel“. Ihre Kartenseiten:
+          [Ebene Grundfiguren](https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/) und
+          [Quader und Würfel](https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/).
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

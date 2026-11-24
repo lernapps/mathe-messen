@@ -9,8 +9,9 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite misst du Länge, Masse, Geld und Zeit und rechnest damit in Sachaufgaben. Bei der Seite davor
-          hast du geschätzt. Jetzt misst du genau.
+          Wenn du wissen willst, wie lang ein Stift ist, wie viel Mehl im Becher liegt oder wie lange eine Busfahrt dauert,
+          reicht Schätzen nicht: Du musst genau messen. Nach dieser Seite misst du Länge, Masse, Geld und Zeit und rechnest
+          damit in Sachaufgaben.
       - type: number
         id: bleistift-laenge
         text: "Ein Bleistift liegt am Lineal. Sein linkes Ende steht bei 2 cm, die Spitze bei 17 cm. Wie lang ist der Bleistift?"
@@ -37,7 +38,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
+          Wenn du eine Größe genau angeben willst, brauchst du etwas, womit du sie vergleichst. Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
           fünfzehnmal hinein. Für jede Größe gibt es eigene Einheiten und ein Messgerät.
       - type: definition
         term: Messen

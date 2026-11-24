@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
-description: "Wiederholung von besonderen Vierecken und von Prisma und Zylinder, mit Fachbegriffen, Beispielen und je zwei Kurztests."
+description: "Wiederholung von besonderen Vierecken und von Prisma und Zylinder, mit Fachbegriffen, Beispielen und je zwei Aufgaben."
 recap: [mathematik/vierecke-grundfiguren, mathematik/grundkoerper-prisma-zylinder]
 blocks:
   - type: section
@@ -10,7 +10,7 @@ blocks:
       - type: text
         text: |
           In diesem Kapitel zerlegst und ergänzt du Figuren. Dafür musst du besondere Vierecke und Prismen kennen. Hier
-          frischst du die Begriffe auf. Mit jedem Kurztest prüfst du, ob du es kannst. Es gibt keine Punkte.
+          frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du, ob du es kannst. Es gibt keine Punkte.
   - type: section
     id: vierecke
     title: Besondere Vierecke
@@ -54,62 +54,6 @@ blocks:
         blocks:
           - type: text
             text: Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten. Bei einem Parallelogramm ist sie nie länger als die schräge Seite, denn der senkrechte Weg ist der kürzeste.
-      - type: vue-component
-        id: test-drachen
-        component: Kurztest
-        props:
-          question: Welche Aussage über Vierecke stimmt?
-          options:
-            - {
-                text: "Jede Raute ist ein Parallelogramm.",
-                correct: true,
-                info: "Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang, das ist die Eigenschaft des Parallelogramms.",
-              }
-            - {
-                text: "Jedes Parallelogramm ist eine Raute.",
-                correct: false,
-                info: "Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.",
-              }
-            - {
-                text: "Jeder Drachen ist ein Parallelogramm.",
-                correct: false,
-                info: "Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welche Aussage über Vierecke stimmt? Jede Raute ist ein Parallelogramm. Nicht jedes Parallelogramm ist eine
-          Raute, und ein Drachen hat im Allgemeinen keine parallelen Seiten.
-      - type: vue-component
-        id: test-hoehe
-        component: Kurztest
-        props:
-          question: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite?
-          options:
-            - {
-                text: "Sie ist genau 12 cm lang.",
-                correct: false,
-                info: "Die Höhe ist ein Abstand zwischen den parallelen Seiten, nicht die Länge der Grundseite.",
-              }
-            - {
-                text: "Sie ist höchstens 7 cm lang.",
-                correct: true,
-                info: "Die Höhe steht senkrecht, die schräge Seite liegt schief. Der senkrechte Weg ist der kürzeste.",
-              }
-            - {
-                text: "Sie ist länger als 7 cm.",
-                correct: false,
-                info: "Die senkrechte Strecke ist nie länger als die schräge Verbindung zwischen denselben Parallelen.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite?
-          Antwort: Sie ist höchstens 7 cm lang, denn der senkrechte Weg ist der kürzeste.
-      - type: text
-        text: |
-          Wenn du unsicher bist, übe den Baustein „Besondere Vierecke“. Seine Kartenseite findest du hier:
-          [Karte: Besondere Vierecke](https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/).
   - type: section
     id: prisma
     title: Prisma und Zylinder
@@ -141,62 +85,43 @@ blocks:
         blocks:
           - type: text
             text: Ein Prisma hat ein Dreieck als Grundfläche. Das Dreieck hat drei Seiten, zu jeder Seite gehört ein Rechteck im Mantel. Der Mantel besteht also aus drei Rechtecken.
-      - type: vue-component
+  - type: section
+    id: test
+    title: Kannst du das?
+    blocks:
+      - type: single-choice
+        id: test-vierecke
+        text: Welche Aussage über Vierecke stimmt?
+        options:
+          - text: Jede Raute ist ein Parallelogramm.
+            correct: true
+            info: Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang. Das ist die Eigenschaft des Parallelogramms.
+          - text: Jedes Parallelogramm ist eine Raute.
+            correct: false
+            info: Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
+          - text: Jeder Drachen ist ein Parallelogramm.
+            correct: false
+            info: Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.
+        explanation: Die Raute ist ein besonderes Parallelogramm mit vier gleich langen Seiten. Umgekehrt ist nicht jedes Parallelogramm eine Raute.
+      - type: single-choice
         id: test-prisma
-        component: Kurztest
-        props:
-          question: Ein Prisma hat insgesamt 8 Flächen, die Grundfläche und die Deckfläche mitgezählt. Welche Form hat seine Grundfläche?
-          options:
-            - {
-                text: "Dreieck",
-                correct: false,
-                info: "Ein Prisma mit einem Dreieck als Grundfläche hat 3 Rechtecke im Mantel und insgesamt 5 Flächen.",
-              }
-            - {
-                text: "Sechseck",
-                correct: true,
-                info: "Acht Flächen minus Grundfläche und Deckfläche sind 6 Rechtecke im Mantel, also hat die Grundfläche 6 Seiten.",
-              }
-            - {
-                text: "Achteck",
-                correct: false,
-                info: "Ein Achteck als Grundfläche gibt 8 Rechtecke im Mantel und insgesamt 10 Flächen.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Ein Prisma hat insgesamt 8 Flächen, mit Grundfläche und Deckfläche. Welche Form hat seine Grundfläche? Antwort: ein
-          Sechseck, denn 8 minus 2 sind 6 Rechtecke im Mantel.
-      - type: vue-component
-        id: test-prisma-zylinder
-        component: Kurztest
-        props:
-          question: Welcher dieser Körper ist kein Prisma?
-          options:
-            - {
-                text: "Ein Quader",
-                correct: false,
-                info: "Der Quader hat zwei Rechtecke als Grundfläche und Deckfläche, er ist ein besonderes Prisma.",
-              }
-            - {
-                text: "Ein Zylinder",
-                correct: true,
-                info: "Seine Grundfläche ist ein Kreis, kein Vieleck. Ein Prisma hat ein Vieleck als Grundfläche.",
-              }
-            - {
-                text: "Ein Würfel",
-                correct: false,
-                info: "Der Würfel ist ein Quader mit Quadraten als Grundfläche, also ein Prisma.",
-              }
-          right: Richtig.
-          wrong: Nicht richtig.
-        nojs: |
-          Kurztest: Welcher dieser Körper ist kein Prisma? Quader, Zylinder oder Würfel. Antwort: der Zylinder, denn seine Grundfläche ist
-          ein Kreis. Quader und Würfel sind besondere Prismen.
+        text: Ein Prisma hat insgesamt 8 Flächen, die Grundfläche und die Deckfläche mitgezählt. Welche Form hat seine Grundfläche?
+        options:
+          - text: Dreieck
+            correct: false
+            info: Ein Prisma mit einem Dreieck als Grundfläche hat 3 Rechtecke im Mantel und insgesamt 5 Flächen.
+          - text: Sechseck
+            correct: true
+            info: Acht Flächen minus Grundfläche und Deckfläche sind 6 Rechtecke im Mantel, also hat die Grundfläche 6 Seiten.
+          - text: Achteck
+            correct: false
+            info: Ein Achteck als Grundfläche gibt 8 Rechtecke im Mantel und insgesamt 10 Flächen.
+        explanation: Zu jeder Seite der Grundfläche gehört ein Rechteck im Mantel. Dazu kommen Grundfläche und Deckfläche, also 6 + 2 = 8 Flächen.
       - type: text
         text: |
-          Wenn du unsicher bist, übe den Baustein „Prisma und Zylinder“. Seine Kartenseite findest du hier:
-          [Karte: Prisma und Zylinder](https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/).
+          Wenn du unsicher bist, übe die Bausteine „Besondere Vierecke“ und „Prisma und Zylinder“. Ihre Kartenseiten:
+          [Besondere Vierecke](https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/) und
+          [Prisma und Zylinder](https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/).
   - type: section
     id: bereit
     title: Du bist bereit, wenn du …

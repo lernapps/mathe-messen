@@ -9,8 +9,10 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite rechnest du Flächen- und Volumeneinheiten um und schätzt ihre Größe. Im Kapitel davor hast
-          du Längen umgerechnet. Hier kommt eine Richtung dazu. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine Fläche passen, ist ihr Maß.
+          Wenn du wissen willst, wie viel Boden ein Zimmer hat oder wie viel Wasser in ein Aquarium passt, reichen Längen nicht:
+          Du brauchst Maße für Flächen und für Volumen. Nach dieser Seite rechnest du diese Einheiten um und schätzt ihre
+          Größe. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine
+          Fläche passen, ist ihr Maß.
       - type: number
         id: quadrate-zaehlen
         text: "Ein Rechteck ist 8 cm lang und 5 cm breit. Wie viele kleine Quadrate mit 1 cm Seitenlänge passen genau hinein?"
@@ -29,7 +31,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
+          Wenn du eine Fläche oder einen Körper messen willst, brauchst du eine passende Einheit. Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
           misst du mit **Einheitswürfeln**: Ein Würfel mit 1 cm Kantenlänge hat das Volumen 1 cm³.
       - type: figure
         image: images/quadratdezimeter.svg

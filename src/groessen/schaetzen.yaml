@@ -9,7 +9,8 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite schätzt du Größen, ohne zu messen, und merkst, wenn ein Ergebnis nicht passen kann.
+          Wenn du die Höhe eines Baumes oder die Masse eines Ranzens wissen willst, aber nichts zum Messen hast, schätzt du.
+          Nach dieser Seite schätzt du Größen mit einem Vergleich und merkst, wenn ein Ergebnis nicht passen kann.
           Fang mit einer Größe an, die du aus dem Alltag kennst.
       - type: single-choice
         id: tuer-hoehe
@@ -34,7 +35,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
+          Wenn du die Höhe einer Wand wissen willst, aber kein Maßband hast, vergleichst du. Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
           Tür und eine Wand. Schau, wie oft die Türhöhe an der Wand Platz hat.
       - type: figure
         image: images/stuetzpunkt-tuer.svg

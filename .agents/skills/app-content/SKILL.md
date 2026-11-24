@@ -16,14 +16,14 @@ Hessen (Annahme der Regeln), Stufen 5-6 und 7-8, Gymnasium. Orientierung ist all
 Alle aus dem Strang `groessen-und-messen`; Satz „Ich kann …“ steht in der Karte und wird nicht umformuliert.
 
 - Kapitel `groessen` (5-6): `groessenvorstellungen-schaetzen` (Seite `schaetzen`), `messen-laenge-masse-geld-zeit` (`messen`), `umrechnung-groessen` (`umrechnen`).
-- Kapitel `flaechen-koerper` (5-6): Recap `voraussetzungen` (`recap: mathematik/grundfiguren-eben`, `mathematik/grundkoerper-quader-wuerfel`, enthält die Komponente `Kurztest`), `einheiten-flaeche-volumen` (`einheiten`), `flaeche-umfang-quadrat-rechteck` (`rechteck`), `zusammengesetzte-figuren` (`zusammengesetzt`), `volumen-oberflaeche-quader-wuerfel` (`quader`).
-- Kapitel `zerlegen` (7-8): Recap `voraussetzungen` (`recap: mathematik/vierecke-grundfiguren`, `mathematik/grundkoerper-prisma-zylinder`, `Kurztest`), `flaeche-umfang-dreieck-viereck` (`dreieck-viereck`), `volumen-oberflaeche-prisma` (`prisma`).
+- Kapitel `flaechen-koerper` (5-6): Recap `voraussetzungen` (`recap: mathematik/grundfiguren-eben`, `mathematik/grundkoerper-quader-wuerfel`, enthält im Abschnitt `test` zwei Übungen), `einheiten-flaeche-volumen` (`einheiten`), `flaeche-umfang-quadrat-rechteck` (`rechteck`), `zusammengesetzte-figuren` (`zusammengesetzt`), `volumen-oberflaeche-quader-wuerfel` (`quader`).
+- Kapitel `zerlegen` (7-8): Recap `voraussetzungen` (`recap: mathematik/vierecke-grundfiguren`, `mathematik/grundkoerper-prisma-zylinder`, zwei Übungen im Abschnitt `test`), `flaeche-umfang-dreieck-viereck` (`dreieck-viereck`), `volumen-oberflaeche-prisma` (`prisma`).
 
 Je Baustein mindestens drei Aufgaben, Ids `<seite>-<nr>` oder sprechend (`schaetzen-tuer`); die Liste „Baustein → Seite“ steht im Plan. Alle neun Seiten und beide Recap-Seiten sind gebaut; jede Seite hat 4 bis 6 Aufgaben (Ids siehe die Seitendateien).
 
 ## Content structure
 
-Abschnitt-Ids: `einstieg` (Ziel in einem Satz, leichte erste Aufgabe), `idee` (Erklärung mit Bild; auf `dreieck-viereck` zusätzlich `dreieck` und `vierecke`), `beispiel` (`example`-Kasten), `uebung`; das `Merke` ist ein `note`-Kasten in `idee`. Die letzte Seite jedes Kapitels (`umrechnen`, `quader`, `prisma`) endet mit `rueckblick` („Das kannst du jetzt“). Titel sagen, was der Abschnitt auf der Seite tut. Höchstens 350 Wörter Text, ein Bild oder eine Aufgabe in den ersten vier Blöcken. Recap-Seiten (`recap:`, Dateiname `voraussetzungen.yaml` in `flaechen-koerper` und `zerlegen`; es gibt keine Kurztest-Seiten): Kopf „Das brauchst du für dieses Kapitel“, je Baustein ein Abschnitt (Überschrift = Name des Bausteins in der Wortwahl der Karte), Fachbegriffe fett mit Beispiel, Komponente `Kurztest`, Checkliste „Du bist bereit, wenn du …“, Hinweis mit Kartenseite `https://lernapps.net/apps/map/mathematik/c/<id>/`.
+Abschnitt-Ids: `einstieg` (Ziel in einem Satz, leichte erste Aufgabe), `idee` (Erklärung mit Bild; auf `dreieck-viereck` zusätzlich `dreieck` und `vierecke`), `beispiel` (`example`-Kasten), `uebung`; das `Merke` ist ein `note`-Kasten in `idee`. Die letzte Seite jedes Kapitels (`umrechnen`, `quader`, `prisma`) endet mit `rueckblick` („Das kannst du jetzt“). Titel sagen, was der Abschnitt auf der Seite tut. Höchstens 350 Wörter Text, ein Bild oder eine Aufgabe in den ersten vier Blöcken. Recap-Seiten (`recap:`, Abschnitt `test` mit höchstens zwei Übungen, Dateiname `voraussetzungen.yaml` in `flaechen-koerper` und `zerlegen`; es gibt keine Kurztest-Seiten): Kopf „Das brauchst du für dieses Kapitel“, je Baustein ein Abschnitt (Überschrift = Name des Bausteins in der Wortwahl der Karte), Fachbegriffe fett mit Beispiel, Komponente `Kurztest`, Checkliste „Du bist bereit, wenn du …“, Hinweis mit Kartenseite `https://lernapps.net/apps/map/mathematik/c/<id>/`.
 
 ## Terminology
 
@@ -41,9 +41,9 @@ Neun Muster; Fehlertypen stehen in jedem `generated` unter `mistakes` mit Hinwei
 6. `stapeln-netz` (quader): Schichtenbild → `generated` V und O; Fehler Flächenpaar vergessen, cm² statt cm³.
 7. `zerschneiden-ergaenzen` (dreieck-viereck): Komponente `schere`, danach `generated`; Fehler schräge Seite statt Höhe, Halbieren vergessen.
 8. `prisma-stapel` (prisma): `generated` G · h und O = 2 G + M; Fehler Dreieckshöhe statt Prismenhöhe.
-9. `recap-kurztest` (Recap-Seiten): Komponente `Kurztest` (`src/components/Kurztest.*`, aus den gemeinsamen Dateien des Epics kopiert; Props `question`, `options`, `right`, `wrong`, `nojs`), 2 Kurztests je Baustein, sofortige Rückmeldung, danach der Satz mit der Kartenseite.
+9. `recap-test` (Recap-Seiten): höchstens zwei normale Übungen (`single-choice`) im Abschnitt `test` („Kannst du das?“), zusammen für die wichtigsten Voraussetzungen, sofortige Rückmeldung mit Grund in `info` und `explanation`, danach der Satz mit den Kartenseiten. Die Komponente `Kurztest` gibt es nicht mehr.
 
-Komponente `Schere` (`src/components/Schere.*`, nur auf `dreieck-viereck`): Props `base`, `height`, `shift` (Maße des Parallelogramms), Beschriftungen der drei Knöpfe und drei Statustexte; Logik und Test in `Schere.ts` und `Schere.test.ts` (Fläche bleibt in jedem Schritt gleich). Kein Übungsbaustein, sie zeigt die Idee; die Aufgaben darunter sind `generated`.
+Komponente `Schere` (`src/components/Schere.*`, nur auf `dreieck-viereck`): Props `base`, `height`, `shift` (Maße des Parallelogramms), `baseLabel`, `heightLabel`, `rectLabel`, Beschriftungen der Knöpfe und drei Statustexte; es ist immer nur der Knopf sichtbar, der den nächsten Schritt auslöst, plus „Zurück“; Knöpfe in der Gestaltung der Laufzeit (`--page-accent`, Rand und Rundung wie `.question button`); Logik und Test in `Schere.ts` und `Schere.test.ts` (Fläche bleibt in jedem Schritt gleich). Kein Übungsbaustein, sie zeigt die Idee; die Aufgaben darunter sind `generated`.
 
 Muster 2 und 3 wurden um Aufgaben zu Fläche und Volumen auf `einheiten` (`dm2-in-cm2`, `dm3-in-cm3`, `cm2-in-dm2`) erweitert; `generated` mit zwei Zahlen aus `oneOf` statt Dezimalbereich, damit Dezimalzahlen exakt bleiben.
 
@@ -59,7 +59,7 @@ Karte und Issue. Eigene Herleitungen und eigene Aufgaben. Nachschlagen ist keine
 
 ## Adding a chapter or round
 
-1. Baustein-Id und „Ich kann“ aus der Karte; Voraussetzungen von außen als Recap-Seite (`recap:`) mit Komponente `Kurztest` vor die Seiten stellen.
+1. Baustein-Id und „Ich kann“ aus der Karte; Voraussetzungen von außen als Recap-Seite (`recap:`) mit höchstens zwei Übungen vor die Seiten stellen.
 2. Seite `src/<kapitel>/<seite>.yaml` mit `competencies: [<id>]`, Abschnitte wie oben, Muster aus der Liste, mindestens drei Aufgaben steigender Schwierigkeit.
 3. Seite in `chapter.yaml` unter `pages`, Kapitel in `src/app.yaml` unter `chapters` eintragen; Glossarbegriffe als `definition`.
 4. 1 bis 3 ihrer Übungen in `selfAssessment` aufnehmen, wie Skill `lernapps-explainer-self-assessment` sagt (jede Seite mit mindestens zwei Aufgaben, bevorzugt `generated`).
@@ -67,6 +67,8 @@ Karte und Issue. Eigene Herleitungen und eigene Aufgaben. Nachschlagen ist keine
 
 ## Rules learned from mistakes
 
+- Jede Seite, jeder Abschnitt und jedes Verfahren beginnt mit dem Anlass („Wenn du wissen willst …, dann …“), erst danach kommt die Methode (Regeln Abschnitt 9, Punkt 8). Wiederholung steht nur auf Recap-Seiten, nicht als Einstiegsaufgabe einer Inhaltsseite (Punkt 7).
+- Buttons nur mit sichtbarer Wirkung, in der Gestaltung der Laufzeit; was nichts mehr bewirkt, wird ausgeblendet (Punkt 9).
 - `generated`: Keine Falschantwort darf bei irgendeinem Zufallswert die richtige sein (Fehler `mistake equals the answer`): `where` einschränken, zum Beispiel `g * h != 2 * (g + s)`.
 - Eine Formel oder Aufgabe, die bei 360 px zu breit wird (`usable-at-360px`), in Zeilen aufteilen (mehrere `formula`-Blöcke).
 - Text mit `: ` in Anführungszeichen setzen (`title`, `alt`, `text`), sonst liest YAML eine Map.

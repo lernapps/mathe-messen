@@ -9,23 +9,24 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite berechnest du Fläche und Umfang von Dreieck und besonderen Vierecken. Dafür führst du jede
-          Figur auf Rechtecke zurück, die du schon kennst: Du schneidest sie in Stücke und legst sie neu, oder du
-          teilst sie in Dreiecke. Das Modell dahinter ist dasselbe wie beim Rechteck: Fläche ist das, was in Reihen
-          von Einheitsquadraten hineinpasst.
-      - type: number
-        id: rechteck-erinnerung
-        text: "Ein Rechteck ist 6 cm lang und 4 cm hoch. Wie groß ist sein Flächeninhalt?"
-        answer: 24
-        tolerance: 0
-        unit: cm²
-        mistakes:
-          - answer: 20
-            message: "Das ist der Umfang. Gefragt ist der Flächeninhalt, also die Zahl der Einheitsquadrate."
-          - answer: 10
-            message: "Du hast die Seiten addiert. Die Einheitsquadrate liegen in Reihen, also mal."
-        hint: "Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?"
-        explanation: "Der Flächeninhalt des Rechtecks ist $6 \\cdot 4 = 24$ cm²."
+          Wenn du die Fläche eines Dreiecks oder Parallelogramms wissen willst, hast du kein Rechteck zum Auslegen. Dann
+          führst du die Figur auf Rechtecke zurück: Du schneidest sie in Stücke und legst sie neu, oder du teilst sie in
+          Dreiecke. Nach dieser Seite berechnest du Fläche und Umfang von Dreieck und besonderen Vierecken. Das Modell
+          dahinter bleibt: Fläche ist das, was in Reihen von Einheitsquadraten hineinpasst.
+      - type: single-choice
+        id: schnitt-flaeche
+        text: Du schneidest ein Stück von einer Papierfigur ab und legst es an anderer Stelle wieder an, ohne etwas wegzulassen und ohne dass sich etwas überlappt. Wie ändert sich der Flächeninhalt der Figur?
+        options:
+          - text: Er bleibt gleich.
+            correct: true
+            info: Es ist dasselbe Papier, nur anders gelegt. Es passen genauso viele Einheitsquadrate hinein.
+          - text: Er wird kleiner.
+            correct: false
+            info: Du hast nichts weggenommen. Das abgeschnittene Stück liegt ja wieder an der Figur.
+          - text: Er wird größer.
+            correct: false
+            info: Du hast nichts dazugelegt. Das Stück war schon Teil der Figur.
+        explanation: Beim Zerschneiden und Neulegen ohne Lücke und ohne Überlappung bleibt der Flächeninhalt gleich. Genau das nutzt du auf dieser Seite.
   - type: section
     id: idee
     title: Das Parallelogramm wird zum Rechteck
@@ -73,7 +74,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Eine **Diagonale** teilt ein Parallelogramm in zwei Dreiecke. Beide sind gleich groß, denn eines passt nach
+          Wenn du die Fläche eines Dreiecks wissen willst, nimmst du das Parallelogramm zu Hilfe. Eine **Diagonale** teilt ein Parallelogramm in zwei Dreiecke. Beide sind gleich groß, denn eines passt nach
           einer halben Drehung genau auf das andere.
       - type: figure
         image: images/dreieck-halb.svg
@@ -93,7 +94,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ein Trapez zerlegst du mit einer Diagonale in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
+          Wenn du die Fläche eines Trapezes wissen willst, zerlegst du es in Dreiecke. Ein Trapez zerlegst du mit einer Diagonale in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
           dieselbe Höhe $h$, denn $a$ und $c$ sind parallel.
       - type: figure
         image: images/trapez-zerlegt.svg
@@ -105,7 +106,7 @@ blocks:
         formula: 'A = \frac{a \cdot h}{2} + \frac{c \cdot h}{2} = \frac{(a + c) \cdot h}{2}'
       - type: text
         text: |
-          Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
+          Wenn du die Fläche einer Raute oder eines Drachens wissen willst, legst du ein Rechteck um sie. Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
           Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Lege dazu ein Rechteck mit den Seiten $e$ und $f$ um die Raute: Es besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
       - type: figure
         image: images/raute-diagonalen.svg

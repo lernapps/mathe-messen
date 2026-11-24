@@ -9,8 +9,10 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite berechnest du Volumen und Oberfläche von Quader und Würfel. Du nutzt Einheitswürfel und die
-          Fläche von Rechtecken. Das Modell dahinter: Du stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der Schichten.
+          Wenn du wissen willst, wie viel in eine Schachtel passt oder wie viel Papier du zum Einpacken brauchst, brauchst du
+          Volumen und Oberfläche. Nach dieser Seite berechnest du beides für Quader und Würfel. Das Modell dahinter: Du
+          stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der
+          Schichten.
       - type: number
         id: schachtel-wuerfel
         text: "Eine Schachtel ist innen 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele Würfel mit 1 cm Kantenlänge passen genau hinein?"
@@ -29,7 +31,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+          Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
           Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
       - type: figure
         image: images/quader-schicht.svg
@@ -53,7 +55,7 @@ blocks:
         formula: 'V = a \cdot b \cdot c = G \cdot h'
       - type: text
         text: |
-          Die **Oberfläche** ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
+          Wenn du wissen willst, wie viel Papier du zum Einpacken brauchst, brauchst du die **Oberfläche**. Sie ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
           immer zwei gleich große.
       - type: figure
         image: images/quader-netz.svg

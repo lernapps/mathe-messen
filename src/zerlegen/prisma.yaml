@@ -9,28 +9,29 @@ blocks:
     blocks:
       - type: text
         text: |
-          Nach dieser Seite berechnest du Volumen und Oberfläche von Prismen. Du kennst schon den Quader: Auch er ist
-          ein Prisma. Aus seiner Formel wird die Formel für jedes Prisma. Das Modell: Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.
+          Wenn du wissen willst, wie viel in einen Behälter mit dreieckigem Querschnitt passt oder wie viel Material seine
+          Hülle braucht, brauchst du Volumen und Oberfläche eines Prismas. Nach dieser Seite berechnest du beides. Das Modell:
+          Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.
       - type: number
-        id: quader-stapel
-        text: "Ein Quader hat eine Grundfläche von 15 cm² und ist 4 cm hoch. Wie groß ist sein Volumen?"
-        answer: 60
+        id: scheiben-stapel
+        text: Ein Stapel besteht aus 4 gleichen Scheiben. Jede Scheibe ist 6 cm² groß und 1 cm dick. Wie groß ist das Volumen des Stapels in cm³?
+        answer: 24
         tolerance: 0
         unit: cm³
         mistakes:
-          - answer: 19
-            message: "Du hast addiert. Die Schichten liegen übereinander: Jede Schicht hat dieselbe Zahl Würfel."
-          - answer: 15
-            message: "Das ist nur eine Schicht. Der Quader hat mehrere Schichten übereinander."
-        hint: "Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?"
-        explanation: "Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \\cdot 4 = 60$ cm³."
+          - answer: 10
+            message: Du hast addiert. Die Scheiben liegen übereinander, jede hat dasselbe Volumen.
+          - answer: 6
+            message: So groß ist nur die Fläche einer Scheibe. Der Stapel hat mehrere Scheiben.
+        hint: Wie viele cm³ hat eine Scheibe? Wie viele Scheiben liegen übereinander?
+        explanation: Eine Scheibe hat 6 cm² · 1 cm = 6 cm³. Vier Scheiben haben 4 · 6 cm³ = 24 cm³.
   - type: section
     id: idee
     title: Ein Prisma ist ein Stapel gleicher Grundflächen
     blocks:
       - type: text
         text: |
-          Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
+          Wenn du das Volumen eines Prismas wissen willst, brauchst du keine neue Methode. Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
           $G$, und die Höhe $h$ sagt, wie hoch der Stapel ist. Es kommt nicht darauf an, ob die Grundfläche ein Rechteck
           oder ein Dreieck ist.
       - type: figure
@@ -43,7 +44,7 @@ blocks:
         formula: 'V = G \cdot h'
       - type: text
         text: |
-          Für die Oberfläche legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
+          Wenn du wissen willst, wie viel Material die Hülle eines Prismas braucht, brauchst du die Oberfläche. Dafür legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
           ein langes Rechteck. Seine Länge ist der Umfang $u$ der Grundfläche, seine Höhe ist die Höhe $h$ des Prismas.
       - type: figure
         image: images/prisma-netz.svg
