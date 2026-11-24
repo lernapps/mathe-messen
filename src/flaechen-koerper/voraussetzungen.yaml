@@ -96,25 +96,25 @@ blocks:
             info: Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.
           - text: Nur Jan
             correct: false
-            info: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+            info: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
           - text: Beide
             correct: false
-            info: Jan irrt sich. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+            info: Jan irrt sich. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
         explanation: Jedes Quadrat ist ein besonderes Rechteck. Umgekehrt ist nicht jedes Rechteck ein Quadrat.
       - type: single-choice
         id: test-wuerfelkanten
-        text: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
+        text: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
         options:
-          - text: 16 cm
+          - text: 16 cm
             correct: false
             info: Das sind nur vier Kanten. Ein Würfel hat zwölf.
-          - text: 32 cm
+          - text: 32 cm
             correct: false
             info: Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.
-          - text: 48 cm
+          - text: 48 cm
             correct: true
-            info: Ein Würfel hat 12 Kanten, jede 4 cm lang, also 12 · 4 cm = 48 cm.
-        explanation: Ein Würfel hat 12 Kanten mit je 4 cm Länge. Zusammen sind das 48 cm.
+            info: Ein Würfel hat 12 Kanten, jede 4 cm lang, also 12 · 4 cm = 48 cm.
+        explanation: Ein Würfel hat 12 Kanten mit je 4 cm Länge. Zusammen sind das 48 cm.
       - type: text
         text: |
           Wenn du unsicher bist, übe die Bausteine „Ebene Grundfiguren“ und „Quader und Würfel“. Ihre Kartenseiten:

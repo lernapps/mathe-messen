@@ -98,7 +98,7 @@ blocks:
             info: Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang. Das ist die Eigenschaft des Parallelogramms.
           - text: Jedes Parallelogramm ist eine Raute.
             correct: false
-            info: Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
+            info: Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
           - text: Jeder Drachen ist ein Parallelogramm.
             correct: false
             info: Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.
