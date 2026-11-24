@@ -33,9 +33,9 @@ blocks:
     blocks:
       - type: text
         text: |
-          Ein Parallelogramm hat schräge Seiten. Du nimmst eine seiner Seiten als **Grundseite** $g$. Die
+          Wenn du die Fläche eines Parallelogramms wissen willst, kannst du ein Stück verschieben, sodass ein Rechteck entsteht. Ein Parallelogramm hat schräge Seiten. Du nimmst eine seiner Seiten als **Grundseite** $g$. Die
           **Höhe** $h$ steht senkrecht darauf. Im Bild schneidest du an der Höhe ein Dreieck ab und legst es auf der
-          anderen Seite wieder an. Die Knöpfe heißen „Dreieck abschneiden“, „Dreieck umlegen“ und „Zurück“.
+          anderen Seite wieder an. Du siehst immer den Knopf für den nächsten Schritt: erst „Dreieck abschneiden“, dann „Dreieck umlegen“, dazu „Zurück“.
       - type: definition
         term: Grundseite
         explanation: "Die Grundseite ist die Seite, auf der die Höhe senkrecht steht. Beim Parallelogramm mit 6 cm Grundseite und 4 cm Höhe ist die Fläche $6 \\cdot 4 = 24$ cm²."
@@ -94,7 +94,7 @@ blocks:
     blocks:
       - type: text
         text: |
-          Wenn du die Fläche eines Trapezes wissen willst, zerlegst du es in Dreiecke. Ein Trapez zerlegst du mit einer Diagonale in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
+          Wenn du die Fläche eines Trapezes wissen willst, zerlegst du es in Dreiecke: Eine Diagonale teilt das Trapez in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
           dieselbe Höhe $h$, denn $a$ und $c$ sind parallel.
       - type: figure
         image: images/trapez-zerlegt.svg
@@ -107,7 +107,7 @@ blocks:
       - type: text
         text: |
           Wenn du die Fläche einer Raute oder eines Drachens wissen willst, legst du ein Rechteck um sie. Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
-          Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Lege dazu ein Rechteck mit den Seiten $e$ und $f$ um die Raute: Es besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
+          Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Dieses Rechteck mit den Seiten $e$ und $f$ besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
       - type: figure
         image: images/raute-diagonalen.svg
         alt: Eine Raute mit zwei gestrichelten Diagonalen e und f, die sich in der Mitte im rechten Winkel schneiden. Um die Raute liegt ein gepunktetes Rechteck mit den Seiten e und f.
@@ -126,6 +126,15 @@ blocks:
         source: eigene Zeichnung
         licence: CC-BY-4.0
   - type: section
+    id: umfang
+    title: Der Umfang ist der Rand der Figur
+    blocks:
+      - type: text
+        text: |
+          Wenn du wissen willst, wie viel Leiste du um eine Figur brauchst, brauchst du den Umfang: Du addierst alle
+          Seiten. Beim Parallelogramm sind es zwei Seiten $g$ und zwei schräge Seiten, beim Dreieck drei Seiten, bei
+          der Raute vier gleich lange Seiten. Die Höhe und die Diagonalen gehören nicht zum Rand.
+  - type: section
     id: beispiel
     title: Beispiel
     blocks:
@@ -133,7 +142,7 @@ blocks:
         title: Ein Trapez
         blocks:
           - type: text
-            text: Ein Trapez hat die Grundseiten 7 cm und 3 cm und die Höhe 4 cm.
+            text: Wenn du die Formel ausprobieren willst, rechne ein Beispiel durch. Ein Trapez hat die Grundseiten 7 cm und 3 cm und die Höhe 4 cm.
           - type: formula
             formula: 'A = \frac{(7 + 3) \cdot 4}{2} = \frac{40}{2} = 20\ \text{cm}^2'
   - type: section

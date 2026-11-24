@@ -18,7 +18,7 @@ blocks:
       - type: text
         text: |
           Ich kann besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden. Für dieses Kapitel brauchst
-          du Parallelogramm, Raute, Trapez, Drachen, die Diagonale und die Höhe.
+          du Parallelogramm, Raute, Trapez, Drachen, die Diagonale und die Höhe, denn auf ihnen bauen die Flächenformeln auf.
       - type: figure
         image: images/viereck-arten.svg
         alt: Vier Vierecke mit ihren Namen unter den Figuren, von links oben nach rechts unten Parallelogramm, Raute, Trapez und Drachen.
@@ -61,7 +61,7 @@ blocks:
       - type: text
         text: |
           Ich kann Prisma und Zylinder erkennen und von anderen Körpern unterscheiden. Für dieses Kapitel brauchst du das
-          Prisma, und das Netz kennst du vom Quader: der Körper, an den Kanten aufgeschnitten und flach hingelegt. Den Zylinder musst du nur vom Prisma unterscheiden können.
+          Prisma, und das Netz kennst du vom Quader: der Körper, an den Kanten aufgeschnitten und flach hingelegt. Mantel, Netz und Prismenhöhe brauchst du später für Oberfläche und Volumen. Den Zylinder musst du nur vom Prisma unterscheiden können.
       - type: figure
         image: images/prisma-merkmale.svg
         alt: Ein liegendes Prisma mit dreieckiger Grundfläche G vorne und gleich großer Deckfläche hinten. Der Mantel M besteht aus Rechtecken. Die Höhe h ist der Abstand zwischen den beiden Dreiecken.
@@ -89,20 +89,22 @@ blocks:
     id: test
     title: Kannst du das?
     blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
       - type: single-choice
-        id: test-vierecke
-        text: Welche Aussage über Vierecke stimmt?
+        id: test-hoehe
+        text: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite?
         options:
-          - text: Jede Raute ist ein Parallelogramm.
+          - text: Sie ist genau 12 cm lang.
+            correct: false
+            info: Die Höhe ist ein Abstand zwischen den parallelen Seiten, nicht die Länge der Grundseite.
+          - text: Sie ist höchstens 7 cm lang.
             correct: true
-            info: Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang. Das ist die Eigenschaft des Parallelogramms.
-          - text: Jedes Parallelogramm ist eine Raute.
+            info: Die Höhe steht senkrecht, die schräge Seite liegt schief. Der senkrechte Weg ist der kürzeste.
+          - text: Sie ist länger als 7 cm.
             correct: false
-            info: Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
-          - text: Jeder Drachen ist ein Parallelogramm.
-            correct: false
-            info: Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.
-        explanation: Die Raute ist ein besonderes Parallelogramm mit vier gleich langen Seiten. Umgekehrt ist nicht jedes Parallelogramm eine Raute.
+            info: Die senkrechte Strecke ist nie länger als die schräge Verbindung zwischen denselben Parallelen.
+        explanation: Die Höhe ist der senkrechte Abstand der parallelen Seiten. Er ist höchstens so lang wie die schräge Seite.
       - type: single-choice
         id: test-prisma
         text: Ein Prisma hat insgesamt 8 Flächen, die Grundfläche und die Deckfläche mitgezählt. Welche Form hat seine Grundfläche?

@@ -87,6 +87,8 @@ blocks:
     id: test
     title: Kannst du das?
     blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
       - type: single-choice
         id: test-quadrat
         text: "Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?"
