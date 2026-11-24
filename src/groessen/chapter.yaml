@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Größen schätzen, messen und umrechnen
+summary: Du schätzt Längen, Massen, Geldbeträge und Zeitspannen, misst sie und rechnest sie in andere Einheiten um.
+pages: [schaetzen, messen, umrechnen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /groessen/schaetzen/#baumhoehe-schaetzen
+        - /groessen/schaetzen/#ranzen-masse
+        - /groessen/messen/#busfahrt-dauer
+    - exercises:
+        - /groessen/messen/#rueckgeld
+        - /groessen/umrechnen/#m-in-cm
+        - /groessen/umrechnen/#zeit-in-min

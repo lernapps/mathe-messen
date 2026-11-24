@@ -1,0 +1,6 @@
+# Rechtwinklige Dreiecke als Grundfläche eines Prismas: Katheten a und b, Hypotenuse c, Flächeninhalt fl, Umfang u.
+- { a: 3, b: 4, c: 5, fl: 6, u: 12 }
+- { a: 6, b: 8, c: 10, fl: 24, u: 24 }
+- { a: 5, b: 12, c: 13, fl: 30, u: 30 }
+- { a: 9, b: 12, c: 15, fl: 54, u: 36 }
+- { a: 8, b: 15, c: 17, fl: 60, u: 40 }

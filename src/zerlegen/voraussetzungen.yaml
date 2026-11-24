@@ -1,0 +1,136 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Wiederholung von besonderen Vierecken und von Prisma und Zylinder, mit Fachbegriffen, Beispielen und je zwei Aufgaben."
+recap: [mathematik/vierecke-grundfiguren, mathematik/grundkoerper-prisma-zylinder]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          In diesem Kapitel zerlegst und ergänzt du Figuren. Dafür musst du besondere Vierecke und Prismen kennen. Hier
+          frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du, ob du es kannst. Es gibt keine Punkte.
+  - type: section
+    id: vierecke
+    title: Besondere Vierecke
+    blocks:
+      - type: text
+        text: |
+          Ich kann besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden. Für dieses Kapitel brauchst
+          du Parallelogramm, Raute, Trapez, Drachen, die Diagonale und die Höhe, denn auf ihnen bauen die Flächenformeln auf.
+      - type: figure
+        image: images/viereck-arten.svg
+        alt: Vier Vierecke mit ihren Namen unter den Figuren, von links oben nach rechts unten Parallelogramm, Raute, Trapez und Drachen.
+        caption: Die vier besonderen Vierecke dieses Kapitels.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Parallelogramm
+        explanation: "Ein Parallelogramm ist ein Viereck, bei dem gegenüberliegende Seiten parallel und gleich lang sind, zum Beispiel 5 cm und 3 cm. Rechteck und Quadrat sind besondere Parallelogramme."
+      - type: definition
+        term: Raute
+        explanation: "Eine Raute ist ein Parallelogramm, bei dem alle vier Seiten gleich lang sind, zum Beispiel 4 cm. Die Winkel müssen keine rechten Winkel sein. Ihre Diagonalen stehen senkrecht aufeinander."
+      - type: definition
+        term: Trapez
+        explanation: "Ein Trapez ist ein Viereck mit mindestens einem Paar paralleler Seiten. Diese beiden Seiten heißen Grundseiten."
+      - type: definition
+        term: Drachen
+        explanation: "Ein Drachen ist ein Viereck mit zwei Paaren gleich langer Nachbarseiten, zum Beispiel 3 cm, 3 cm, 5 cm und 5 cm. Seine Diagonalen stehen senkrecht aufeinander."
+      - type: definition
+        term: Diagonale
+        explanation: "Eine Diagonale ist die Strecke zwischen zwei Ecken, die nicht nebeneinander liegen. Ein Viereck hat zwei Diagonalen."
+      - type: figure
+        image: images/parallelogramm-hoehe.svg
+        alt: Ein Parallelogramm mit der Grundseite g unten. Eine gestrichelte senkrechte Linie von der oberen zur unteren Seite ist mit h beschriftet.
+        caption: Die gestrichelte Linie steht senkrecht auf der Grundseite. Sie zeigt die Höhe.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Höhe
+        explanation: "Die Höhe ist ein senkrechter Abstand. Beim Parallelogramm und beim Trapez ist es der Abstand zwischen den parallelen Seiten. Beim Dreieck ist es der Abstand von der Spitze zur Grundseite. Sie ist nie länger als eine schräge Seite."
+      - type: example
+        title: Die Höhe eines Dreiecks
+        blocks:
+          - type: text
+            text: Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten. Bei einem Parallelogramm ist sie nie länger als die schräge Seite, denn der senkrechte Weg ist der kürzeste.
+  - type: section
+    id: prisma
+    title: Prisma und Zylinder
+    blocks:
+      - type: text
+        text: |
+          Ich kann Prisma und Zylinder erkennen und von anderen Körpern unterscheiden. Für dieses Kapitel brauchst du das
+          Prisma, und das Netz kennst du vom Quader: der Körper, an den Kanten aufgeschnitten und flach hingelegt. Mantel, Netz und Prismenhöhe brauchst du später für Oberfläche und Volumen. Den Zylinder musst du nur vom Prisma unterscheiden können.
+      - type: figure
+        image: images/prisma-merkmale.svg
+        alt: Ein liegendes Prisma mit dreieckiger Grundfläche G vorne und gleich großer Deckfläche hinten. Der Mantel M besteht aus Rechtecken. Die Höhe h ist der Abstand zwischen den beiden Dreiecken.
+        caption: Ein Prisma mit Dreieck als Grundfläche. Der Mantel besteht aus Rechtecken, eines ist beschriftet.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Prisma
+        explanation: "Ein Prisma hat zwei deckungsgleiche, parallele Vielecke als Grundfläche und Deckfläche. Beim geraden Prisma liegen dazwischen Rechtecke. Der Quader ist ein besonderes Prisma mit einem Rechteck als Grundfläche."
+      - type: definition
+        term: Mantel
+        explanation: "Der Mantel eines Prismas besteht aus den Rechtecken zwischen Grundfläche und Deckfläche. Bei einem Dreiecksprisma sind es drei Rechtecke."
+      - type: definition
+        term: Prismenhöhe
+        explanation: "Die Höhe des Prismas ist der Abstand zwischen Grundfläche und Deckfläche. Sie ist so lang wie die Kanten des Mantels. Sie ist nicht die Höhe des Dreiecks in der Grundfläche."
+      - type: definition
+        term: Zylinder
+        explanation: "Ein Zylinder sieht aus wie ein Prisma, hat aber Kreise als Grundfläche und Deckfläche. Du erkennst ihn an der runden Form."
+      - type: example
+        title: Der Mantel eines Prismas
+        blocks:
+          - type: text
+            text: Ein Prisma hat ein Dreieck als Grundfläche. Das Dreieck hat drei Seiten, zu jeder Seite gehört ein Rechteck im Mantel. Der Mantel besteht also aus drei Rechtecken.
+  - type: section
+    id: test
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
+      - type: single-choice
+        id: test-hoehe
+        text: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite?
+        options:
+          - text: Sie ist genau 12 cm lang.
+            correct: false
+            info: Die Höhe ist ein Abstand zwischen den parallelen Seiten, nicht die Länge der Grundseite.
+          - text: Sie ist höchstens 7 cm lang.
+            correct: true
+            info: Die Höhe steht senkrecht, die schräge Seite liegt schief. Der senkrechte Weg ist der kürzeste.
+          - text: Sie ist länger als 7 cm.
+            correct: false
+            info: Die senkrechte Strecke ist nie länger als die schräge Verbindung zwischen denselben Parallelen.
+        explanation: Die Höhe ist der senkrechte Abstand der parallelen Seiten. Er ist höchstens so lang wie die schräge Seite.
+      - type: single-choice
+        id: test-prisma
+        text: Ein Prisma hat insgesamt 8 Flächen, die Grundfläche und die Deckfläche mitgezählt. Welche Form hat seine Grundfläche?
+        options:
+          - text: Dreieck
+            correct: false
+            info: Ein Prisma mit einem Dreieck als Grundfläche hat 3 Rechtecke im Mantel und insgesamt 5 Flächen.
+          - text: Sechseck
+            correct: true
+            info: Acht Flächen minus Grundfläche und Deckfläche sind 6 Rechtecke im Mantel, also hat die Grundfläche 6 Seiten.
+          - text: Achteck
+            correct: false
+            info: Ein Achteck als Grundfläche gibt 8 Rechtecke im Mantel und insgesamt 10 Flächen.
+        explanation: Zu jeder Seite der Grundfläche gehört ein Rechteck im Mantel. Dazu kommen Grundfläche und Deckfläche, also 6 + 2 = 8 Flächen.
+      - type: text
+        text: |
+          Wenn du unsicher bist, übe die Bausteine „Besondere Vierecke“ und „Prisma und Zylinder“. Ihre Kartenseiten:
+          [Besondere Vierecke](https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/) und
+          [Prisma und Zylinder](https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/).
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - besondere Vierecke mit ihren Eigenschaften beschreiben und unterscheiden kannst, vor allem Parallelogramm,
+            Raute, Trapez und Drachen, und weißt, was Diagonale und Höhe sind,
+          - Prisma und Zylinder erkennen und von anderen Körpern unterscheiden kannst, vor allem Grundfläche, Deckfläche
+            und Mantel eines Prismas.

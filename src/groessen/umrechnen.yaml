@@ -1,0 +1,189 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Einheiten umrechnen
+description: "Größen in andere Einheiten umrechnen: mit der Einheitentreppe, und passende Einheiten wählen."
+competencies: [umrechnung-groessen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn eine Länge in Kilometern angegeben ist, du aber in Metern rechnen willst, musst du die Einheit wechseln. Nach
+          dieser Seite rechnest du Größen in andere Einheiten um und wählst die passende Einheit. Das kennst du von den Stellen
+          unserer Zahlen. Dafür benutzt du gleich eine Treppe aus Einheiten: Jede Stufe ist eine Einheit, und zwischen zwei
+          Stufen steht, wie oft die kleinere Einheit in die größere passt.
+      - type: single-choice
+        id: km-in-m
+        text: Wie viele Zentimeter sind 3 m?
+        options:
+          - text: 30 cm
+            correct: false
+            info: "30 cm sind nur ein Zehntel von 3 m. In einen Meter passen mehr als 10 Zentimeter."
+          - text: 300 cm
+            correct: true
+            info: "1 m sind 100 cm, also sind 3 m dreimal so viel: 300 cm."
+          - text: 3000 cm
+            correct: false
+            info: "3000 cm wären 30 m. Das ist zehnmal zu viel."
+          - text: 30 000 cm
+            correct: false
+            info: "30 000 cm wären 300 m. Das ist hundertmal zu viel."
+        explanation: Ein Meter hat 100 Zentimeter. Drei Meter sind dreimal so lang.
+  - type: section
+    id: idee
+    title: Die Einheitentreppe zeigt den Faktor
+    blocks:
+      - type: text
+        text: |
+          Wenn du von einer Einheit zu einer anderen willst, zum Beispiel von m zu cm, hilft dir eine feste Zahl. Eine Einheit passt in die nächste Einheit eine feste Zahl von Malen hinein. Diese Zahl steht an der
+          Treppe. Gehst du nach unten zur kleineren Einheit, nimmst du mal. Gehst du nach oben zur größeren Einheit,
+          teilst du. Das ist wie bei der Stellenwerttafel: Das Komma wandert.
+      - type: figure
+        image: images/einheitentreppe-laenge.svg
+        alt: "Eine Treppe mit den Stufen mm, cm, dm, m und km von links unten nach rechts oben. Auf jeder Stufe steht, wie viele Einheiten der Stufe links daneben hineinpassen: 1 cm sind 10 mm, 1 dm sind 10 cm, 1 m sind 10 dm, 1 km sind 1000 m."
+        caption: Auf jeder Stufe steht, wie viele Einheiten der Stufe links daneben hineinpassen.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Einheitentreppe
+        explanation: "Die Einheitentreppe ordnet die Einheiten einer Größe von klein nach groß. Zwischen zwei Stufen steht, wie oft die kleinere in die größere passt."
+      - type: table
+        caption: Weitere Faktoren
+        header: [Größe, Umrechnung]
+        rowHeaders: true
+        rows:
+          - [Masse, "1 kg = 1000 g, 1 t = 1000 kg"]
+          - [Geld, "1 € = 100 ct"]
+          - [Zeit, "1 h = 60 min, 1 min = 60 s"]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Bei der Zeit passt die Treppe nicht: Hier ist der Faktor 60, nicht 10. Rechne bei Zeitspannen nie mit
+              Zehnern.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Von Meter zu Zentimeter
+        blocks:
+          - type: text
+            text: |
+              Wie viele Zentimeter sind 2,5 m? Du startest auf der Stufe m und gehst zwei Stufen nach unten bis cm. Bei
+              jeder Stufe nimmst du mal 10, siehe die Pfeile im Bild. So kommst du von 2,5 m über 25 dm zu 250 cm.
+          - type: figure
+            image: images/einheitentreppe-weg.svg
+            alt: "Die Einheitentreppe mit den Stufen mm, cm, dm, m und km. Ein Pfeil führt von m nach dm, ein zweiter von dm nach cm. An jedem Pfeil steht mal 10. In den markierten Stufen stehen die Werte 2,5 m, 25 dm und 250 cm."
+            caption: Der Weg von m nach cm. Jeder Pfeil bedeutet eine Stufe nach unten und mal 10.
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: einheit-waehlen
+        text: Welche Einheit passt am besten zur Länge eines Fußballfelds?
+        options:
+          - text: Zentimeter
+            correct: false
+            info: "Mit Zentimetern misst du kleine Dinge wie einen Bleistift. Ein Fußballfeld hätte dann eine sehr große Zahl."
+          - text: Meter
+            correct: true
+            info: "Ein Fußballfeld ist etwa 100 m lang. Die Zahl ist handlich."
+          - text: Kilometer
+            correct: false
+            info: "Ein Kilometer sind 1000 m, zehn Fußballfelder hintereinander. Für ein Feld wäre die Zahl sehr klein."
+        explanation: Wähle die Einheit so, dass die Zahl handlich ist. Ein Fußballfeld misst du in Metern.
+      - type: generated
+        id: m-in-cm
+        given:
+          a: { oneOf: [0.4, 1.5, 2.5, 3.2, 4.75] }
+        task:
+          text: "Rechne in Zentimeter um: {{a}} m."
+        answer: { value: "a * 100", compare: { number: { format: decimal, unit: cm } } }
+        mistakes:
+          - {
+              value: "a / 100",
+              message: "Du hast geteilt. Von der größeren Einheit m zur kleineren cm gehst du die Treppe nach unten, also mal.",
+            }
+          - { value: "a * 10", message: "Das ist der Faktor für dm. Von m bis cm sind es zwei Stufen: mal 10 mal 10." }
+        hint: "Von m nach cm gehst du zwei Stufen nach unten. Jede Stufe ist mal 10."
+        steps:
+          - "Von m nach cm sind es zwei Stufen nach unten: mal 100."
+          - '${{a}}\ \text{m} \cdot 100 = {{answer}}\ \text{cm}$.'
+      - type: generated
+        id: kg-in-g
+        given:
+          a: { oneOf: [0.5, 1.2, 2.5, 3.75, 6] }
+        task:
+          text: "Rechne in Gramm um: {{a}} kg."
+        answer: { value: "a * 1000", compare: { number: { format: decimal, unit: g } } }
+        mistakes:
+          - { value: "a * 100", message: "Zwischen kg und g liegt der Faktor 1000, nicht 100." }
+          - { value: "a / 1000", message: "Du hast geteilt. Von kg zur kleineren Einheit g rechnest du mal." }
+        hint: "1 kg sind 1000 g. Wie viele Gramm sind {{a}} kg?"
+        steps:
+          - "1 kg sind 1000 g."
+          - '${{a}}\ \text{kg} \cdot 1000 = {{answer}}\ \text{g}$.'
+      - type: generated
+        id: zeit-in-min
+        given:
+          h: { int: [1, 5] }
+          m: { int: [5, 55], step: 5 }
+        task:
+          text: "Rechne in Minuten um: {{h}} h {{m}} min."
+        answer: { value: "h * 60 + m", compare: { number: { format: integer, unit: min } } }
+        mistakes:
+          - { value: "h * 10 + m", message: "Bei der Zeit passt die Treppe nicht: 1 h hat 60 min, nicht 10 min." }
+          - { value: "h * 100 + m", message: "1 h hat 60 min. Du hast mit 100 gerechnet." }
+        hint: "Eine Stunde hat 60 Minuten. Wie viele Minuten sind {{h}} Stunden?"
+        steps:
+          - '{{h}} h sind ${{h}} \cdot 60\ \text{min}$.'
+          - 'Dazu {{m}} min: ${{answer}}\ \text{min}$.'
+  - type: section
+    id: rueckblick
+    title: Das kannst du jetzt
+    blocks:
+      - type: text
+        text: |
+          - Größen mit Stützpunkten schätzen und prüfen, ob ein Ergebnis zur Sache passt,
+          - Länge, Masse, Geld und Zeit messen und damit rechnen,
+          - Einheiten mit der Einheitentreppe umrechnen und bei der Zeit den Faktor 60 nutzen.
+      - type: generated
+        id: cm-in-m
+        given:
+          a: { oneOf: [250, 40, 175, 1200, 85] }
+        task:
+          text: "Rechne in Meter um: {{a}} cm."
+        answer: { value: "a / 100", compare: { number: { format: decimal, unit: m } } }
+        mistakes:
+          - {
+              value: "a * 100",
+              message: "Du hast mal gerechnet. Von der kleineren Einheit cm zur größeren Einheit m gehst du die Treppe nach oben, also teilst du.",
+            }
+          - { value: "a / 10", message: "Das wäre dm. Von cm nach m sind es zwei Stufen nach oben." }
+        hint: "Von cm nach m gehst du zwei Stufen nach oben. Jede Stufe ist durch 10."
+        steps:
+          - "Zwei Stufen nach oben: durch 100."
+          - '${{a}}\ \text{cm} : 100 = {{answer}}\ \text{m}$.'
+      - type: generated
+        id: ct-in-euro
+        given:
+          a: { oneOf: [250, 305, 1275, 90, 4050] }
+        task:
+          text: "Rechne in Euro um: {{a}} ct."
+        answer: { value: "a / 100", compare: { number: { format: money } } }
+        mistakes:
+          - {
+              value: "a * 100",
+              message: "Du hast mal gerechnet. Ein Euro hat 100 Cent, aus Cent werden also weniger Euro.",
+            }
+          - { value: "a / 10", message: "Bei Geld ist der Faktor 100, nicht 10." }
+        hint: "1 € sind 100 ct. Wie viele Euro sind {{a}} ct?"
+        steps:
+          - "1 € sind 100 ct."
+          - '${{a}}\ \text{ct} : 100 = {{answer}}\ \text{€}$.'

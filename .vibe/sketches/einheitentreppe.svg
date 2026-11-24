@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" role="img" aria-label="Skizze Einheitentreppe: Stufen mm, cm, dm, m, km mit Faktor 10 zwischen den Stufen; daneben Fläche mit Faktor 100">
+<title>Einheitentreppe (Skizze)</title>
+<g font-family="sans-serif" font-size="13" fill="none" stroke="#333">
+<rect x="10" y="150" width="60" height="30"/><rect x="80" y="120" width="60" height="60"/><rect x="150" y="90" width="60" height="90"/><rect x="220" y="60" width="60" height="120"/><rect x="290" y="30" width="60" height="150"/>
+</g>
+<g font-family="sans-serif" font-size="13" fill="#111"><text x="28" y="170">mm</text><text x="100" y="170">cm</text><text x="170" y="170">dm</text><text x="243" y="170">m</text><text x="310" y="170">km</text>
+<text x="74" y="140">·10</text><text x="144" y="110">·10</text><text x="214" y="80">·10</text><text x="284" y="50">·1000</text></g>
+<text x="10" y="20" font-family="sans-serif" font-size="12" fill="#111">Länge: Stufen mit Faktor 10 (km: 1000). Fläche: 100. Volumen: 1000. Zeit: 60.</text>
+</svg>

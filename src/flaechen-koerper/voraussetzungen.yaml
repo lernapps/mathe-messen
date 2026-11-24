@@ -1,0 +1,134 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Aufgaben."
+recap: [mathematik/grundfiguren-eben, mathematik/grundkoerper-quader-wuerfel]
+blocks:
+  - type: section
+    id: einstieg
+    title: Wofür diese Seite ist
+    blocks:
+      - type: text
+        text: |
+          In diesem Kapitel legst du Flächen aus und füllst Körper. Dafür musst du zwei Dinge schon können:
+          ebene Grundfiguren und Quader und Würfel. Hier frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du,
+          ob du es kannst. Es gibt keine Punkte.
+  - type: section
+    id: grundfiguren
+    title: Ebene Grundfiguren
+    blocks:
+      - type: text
+        text: |
+          Ich kann ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben. Für dieses Kapitel
+          brauchst du Rechteck und Quadrat.
+      - type: figure
+        image: images/rechteck-merkmale.svg
+        alt: Ein Rechteck mit 5 cm Breite und 3 cm Höhe. An allen vier Ecken ist ein rechter Winkel eingezeichnet.
+        caption: Ein Rechteck mit zwei Seitenlängen. Die kleinen Winkelzeichen markieren rechte Winkel.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Seite
+        explanation: "Eine Seite ist eine der Strecken, die eine Figur begrenzen. Ein Rechteck hat vier Seiten, zum Beispiel 5 cm, 3 cm, 5 cm und 3 cm."
+      - type: definition
+        term: Rechter Winkel
+        explanation: "Ein rechter Winkel ist eine Ecke wie die Ecke eines Blattes Papier. Er hat 90 Grad."
+      - type: definition
+        term: Rechteck
+        explanation: "Ein Rechteck hat vier Seiten und vier rechte Winkel. Gegenüberliegende Seiten sind gleich lang, zum Beispiel 5 cm und 3 cm."
+      - type: definition
+        term: Quadrat
+        explanation: "Ein Quadrat ist ein Rechteck, bei dem alle vier Seiten gleich lang sind, zum Beispiel 4 cm."
+      - type: definition
+        term: Parallel
+        explanation: "Zwei Seiten sind parallel, wenn sie überall denselben Abstand haben. Im Rechteck sind gegenüberliegende Seiten parallel."
+      - type: example
+        title: Rechteck oder Quadrat?
+        blocks:
+          - type: text
+            text: Eine Figur hat vier rechte Winkel und vier Seiten mit je 4 cm. Sie ist ein Quadrat. Weil jedes Quadrat vier rechte Winkel hat, ist sie auch ein Rechteck.
+  - type: section
+    id: quader
+    title: Quader und Würfel
+    blocks:
+      - type: text
+        text: |
+          Ich kann Quader, Würfel und zusammengesetzte Körper erkennen und beschreiben. Für dieses Kapitel
+          brauchst du Quader und Würfel.
+      - type: figure
+        image: images/quader-merkmale.svg
+        alt: Ein Quader. Eine Ecke ist mit E markiert, eine Kante mit K, eine Seitenfläche mit F.
+        caption: Ein Quader. E ist eine Ecke, K eine Kante, F eine Seitenfläche.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Quader
+        explanation: "Ein Quader ist ein Körper aus sechs Rechtecken, wie eine Schachtel. Er hat 6 Seitenflächen, 12 Kanten und 8 Ecken."
+      - type: definition
+        term: Würfel
+        explanation: "Ein Würfel ist ein Quader, dessen Seitenflächen alle gleich große Quadrate sind. Bei einem Würfel mit 3 cm Kantenlänge sind alle 12 Kanten 3 cm lang."
+      - type: definition
+        term: Kante
+        explanation: "Eine Kante ist eine Linie, an der zwei Seitenflächen zusammenstoßen."
+      - type: definition
+        term: Ecke
+        explanation: "Eine Ecke ist ein Punkt, an dem Kanten zusammentreffen. Ein Quader hat 8 Ecken."
+      - type: definition
+        term: Seitenfläche
+        explanation: "Eine Seitenfläche ist eine ebene Fläche, die den Körper begrenzt. Beim Quader ist jede Seitenfläche ein Rechteck, auch Boden und Deckel."
+      - type: definition
+        term: Zusammengesetzter Körper
+        explanation: "Ein zusammengesetzter Körper besteht aus mehreren einfachen Körpern, zum Beispiel aus zwei Quadern, die aneinanderstoßen."
+      - type: example
+        title: Die Kanten eines Quaders
+        blocks:
+          - type: text
+            text: Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Er hat 4 Kanten mit 4 cm, 4 Kanten mit 3 cm und 4 Kanten mit 2 cm. Zusammen sind das 12 Kanten.
+  - type: section
+    id: test
+    title: Kannst du das?
+    blocks:
+      - type: text
+        text: Zwei Aufgaben zeigen dir, ob du für dieses Kapitel bereit bist. Du bekommst nach jeder Antwort eine Rückmeldung mit Grund.
+      - type: single-choice
+        id: test-quadrat
+        text: "Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?"
+        options:
+          - text: Nur Maria
+            correct: true
+            info: Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.
+          - text: Nur Jan
+            correct: false
+            info: Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+          - text: Beide
+            correct: false
+            info: Jan irrt sich. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+        explanation: Jedes Quadrat ist ein besonderes Rechteck. Umgekehrt ist nicht jedes Rechteck ein Quadrat.
+      - type: single-choice
+        id: test-wuerfelkanten
+        text: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
+        options:
+          - text: 16 cm
+            correct: false
+            info: Das sind nur vier Kanten. Ein Würfel hat zwölf.
+          - text: 32 cm
+            correct: false
+            info: Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.
+          - text: 48 cm
+            correct: true
+            info: Ein Würfel hat 12 Kanten, jede 4 cm lang, also 12 · 4 cm = 48 cm.
+        explanation: Ein Würfel hat 12 Kanten mit je 4 cm Länge. Zusammen sind das 48 cm.
+      - type: text
+        text: |
+          Wenn du unsicher bist, übe die Bausteine „Ebene Grundfiguren“ und „Quader und Würfel“. Ihre Kartenseiten:
+          [Ebene Grundfiguren](https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/) und
+          [Quader und Würfel](https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/).
+  - type: section
+    id: bereit
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: |
+          - ebene Grundfiguren erkennen, benennen und ihre Eigenschaften beschreiben kannst, vor allem Rechteck und
+            Quadrat mit Seiten, rechten Winkeln und parallelen Seiten,
+          - Quader, Würfel und zusammengesetzte Körper erkennen und beschreiben kannst, vor allem mit Seitenflächen,
+            Kanten und Ecken.

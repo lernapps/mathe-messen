@@ -1,0 +1,328 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: "Fläche und Umfang: Dreieck, Viereck"
+description: "Flächeninhalt und Umfang von Dreieck und besonderen Vierecken: zerschneiden und neu legen, bis ein Rechteck entsteht."
+competencies: [flaeche-umfang-dreieck-viereck]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Fläche eines Dreiecks oder Parallelogramms wissen willst, hast du kein Rechteck zum Auslegen. Dann
+          führst du die Figur auf Rechtecke zurück: Du schneidest sie in Stücke und legst sie neu, oder du teilst sie in
+          Dreiecke. Nach dieser Seite berechnest du Fläche und Umfang von Dreieck und besonderen Vierecken. Das Modell
+          dahinter bleibt: Fläche ist das, was in Reihen von Einheitsquadraten hineinpasst.
+      - type: single-choice
+        id: schnitt-flaeche
+        text: Du schneidest ein Stück von einer Papierfigur ab und legst es an anderer Stelle wieder an, ohne etwas wegzulassen und ohne dass sich etwas überlappt. Wie ändert sich der Flächeninhalt der Figur?
+        options:
+          - text: Er bleibt gleich.
+            correct: true
+            info: Es ist dasselbe Papier, nur anders gelegt. Es passen genauso viele Einheitsquadrate hinein.
+          - text: Er wird kleiner.
+            correct: false
+            info: Du hast nichts weggenommen. Das abgeschnittene Stück liegt ja wieder an der Figur.
+          - text: Er wird größer.
+            correct: false
+            info: Du hast nichts dazugelegt. Das Stück war schon Teil der Figur.
+        explanation: Beim Zerschneiden und Neulegen ohne Lücke und ohne Überlappung bleibt der Flächeninhalt gleich. Genau das nutzt du auf dieser Seite.
+  - type: section
+    id: idee
+    title: Das Parallelogramm wird zum Rechteck
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Fläche eines Parallelogramms wissen willst, kannst du ein Stück verschieben, sodass ein Rechteck entsteht. Ein Parallelogramm hat schräge Seiten. Du nimmst eine seiner Seiten als **Grundseite** $g$. Die
+          **Höhe** $h$ steht senkrecht darauf. Im Bild schneidest du an der Höhe ein Dreieck ab und legst es auf der
+          anderen Seite wieder an. Du siehst immer den Knopf für den nächsten Schritt: erst „Dreieck abschneiden“, dann „Dreieck umlegen“, dazu „Zurück“.
+      - type: definition
+        term: Grundseite
+        explanation: "Die Grundseite ist die Seite, auf der die Höhe senkrecht steht. Beim Parallelogramm mit 6 cm Grundseite und 4 cm Höhe ist die Fläche $6 \\cdot 4 = 24$ cm²."
+      - type: vue-component
+        id: schere-parallelogramm
+        component: Schere
+        props:
+          base: 6
+          height: 4
+          shift: 2
+          baseLabel: "Grundseite g = 6 cm"
+          heightLabel: "Höhe h = 4 cm"
+          rectLabel: "Rechteck: 6 cm · 4 cm"
+          cutLabel: Dreieck abschneiden
+          moveLabel: Dreieck umlegen
+          resetLabel: Zurück
+          statusStart: "Ein Parallelogramm mit der Grundseite 6 cm und der Höhe 4 cm. Die obere Seite ist nach rechts verschoben."
+          statusCut: "Ein Dreieck ist abgeschnitten: Der Schnitt steht senkrecht, von der oberen Ecke zur Grundseite. Das Dreieck liegt links daneben."
+          statusMove: "Das Dreieck liegt jetzt rechts. Es entsteht ein Rechteck mit der Länge 6 cm und der Höhe 4 cm. Es hat dieselbe Fläche wie das Parallelogramm."
+        nojs: |
+          Schere: Ein Parallelogramm mit Grundseite 6 cm und Höhe 4 cm wird an der Höhe von der oberen linken Ecke senkrecht zur
+          Grundseite zerschnitten. Das abgeschnittene Dreieck wird auf der rechten Seite wieder angelegt. Es entsteht ein Rechteck
+          mit 6 cm Länge und 4 cm Höhe.
+      - type: formula
+        formula: 'A = g \cdot h'
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Rechne mit der Höhe, nicht mit der schrägen Seite. Die schräge Seite ist länger als die Höhe. Für den
+              Umfang brauchst du dagegen alle vier Seiten, die Höhe gehört nicht dazu.
+  - type: section
+    id: dreieck
+    title: Das Dreieck ist ein halbes Parallelogramm
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Fläche eines Dreiecks wissen willst, nimmst du das Parallelogramm zu Hilfe. Eine **Diagonale** teilt ein Parallelogramm in zwei Dreiecke. Beide sind gleich groß, denn eines passt nach
+          einer halben Drehung genau auf das andere.
+      - type: figure
+        image: images/dreieck-halb.svg
+        alt: Ein Parallelogramm mit Grundseite g und Höhe h. Eine gestrichelte Diagonale teilt es in zwei gleich große Dreiecke.
+        caption: Die Diagonale teilt das Parallelogramm in zwei gleiche Dreiecke. Jedes Dreieck hat die Grundseite $g$ und die Höhe $h$.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: formula
+        formula: 'A = \frac{g \cdot h}{2}'
+      - type: text
+        text: |
+          Ein Dreieck hat dieselbe Grundseite und Höhe wie das Parallelogramm, aber nur die halbe Fläche. Darum teilst
+          du durch 2. Die Höhe des Dreiecks ist der Abstand von der Spitze zur Grundseite.
+  - type: section
+    id: vierecke
+    title: Trapez, Raute und Drachen
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Fläche eines Trapezes wissen willst, zerlegst du es in Dreiecke: Eine Diagonale teilt das Trapez in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
+          dieselbe Höhe $h$, denn $a$ und $c$ sind parallel.
+      - type: figure
+        image: images/trapez-zerlegt.svg
+        alt: Ein Trapez mit der Grundseite a unten, der kürzeren Grundseite c oben und der Höhe h. Eine gestrichelte Diagonale teilt es in zwei Dreiecke.
+        caption: Das Trapez besteht aus zwei Dreiecken mit den Grundseiten $a$ und $c$. Beide haben die Höhe $h$.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: formula
+        formula: 'A = \frac{a \cdot h}{2} + \frac{c \cdot h}{2} = \frac{(a + c) \cdot h}{2}'
+      - type: text
+        text: |
+          Wenn du die Fläche einer Raute oder eines Drachens wissen willst, legst du ein Rechteck um sie. Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
+          Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Dieses Rechteck mit den Seiten $e$ und $f$ besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
+      - type: figure
+        image: images/raute-diagonalen.svg
+        alt: Eine Raute mit zwei gestrichelten Diagonalen e und f, die sich in der Mitte im rechten Winkel schneiden. Um die Raute liegt ein gepunktetes Rechteck mit den Seiten e und f.
+        caption: Das gepunktete Rechteck hat die Seiten $e$ und $f$. Die Raute füllt davon vier der acht gleichen Dreiecke, also die Hälfte.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: formula
+        formula: 'A = \frac{e \cdot f}{2}'
+      - type: text
+        text: |
+          Dieselbe Formel gilt für den Drachen mit seinen beiden Diagonalen: Auch sie teilen ihn in Dreiecke, die zusammen die Hälfte des Rechtecks mit den Seiten $e$ und $f$ füllen.
+      - type: figure
+        image: images/drachen-diagonalen.svg
+        alt: Ein Drachen mit zwei gestrichelten Diagonalen e und f, die im rechten Winkel aufeinander stehen. Um den Drachen liegt ein gepunktetes Rechteck mit den Seiten e und f. Der Drachen füllt davon die Hälfte.
+        caption: Auch der Drachen füllt die Hälfte des gepunkteten Rechtecks mit den Seiten $e$ und $f$.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+  - type: section
+    id: umfang
+    title: Der Umfang ist der Rand der Figur
+    blocks:
+      - type: text
+        text: |
+          Wenn du wissen willst, wie viel Leiste du um eine Figur brauchst, brauchst du den Umfang: Du addierst alle
+          Seiten. Beim Parallelogramm sind es zwei Seiten $g$ und zwei schräge Seiten, beim Dreieck drei Seiten, bei
+          der Raute vier gleich lange Seiten. Die Höhe und die Diagonalen gehören nicht zum Rand.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Ein Trapez
+        blocks:
+          - type: text
+            text: Wenn du die Formel ausprobieren willst, rechne ein Beispiel durch. Ein Trapez hat die Grundseiten 7 cm und 3 cm und die Höhe 4 cm.
+          - type: formula
+            formula: 'A = \frac{(7 + 3) \cdot 4}{2} = \frac{40}{2} = 20\ \text{cm}^2'
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: parallelogramm-flaeche
+        given:
+          g: { int: [4, 12] }
+          h: { int: [2, 7] }
+          s: { int: [8, 14] }
+        where: ["s > h", "g != h", "g * s != g * h"]
+        task:
+          text: "Ein Parallelogramm hat die Grundseite {{g}} cm, die Höhe {{h}} cm und eine schräge Seite von {{s}} cm. Berechne den Flächeninhalt in cm²."
+        answer: { value: "g * h", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "g * s",
+              message: "Du hast mit der schrägen Seite gerechnet. Du brauchst die Höhe, sie steht senkrecht auf der Grundseite.",
+            }
+          - { value: "g + h", message: "Du hast addiert. Das Parallelogramm wird zum Rechteck, also mal." }
+        hint: "Das Parallelogramm wird zu einem Rechteck mit Grundseite und Höhe. Welche Seite ist die Höhe?"
+        steps:
+          - '$A = g \cdot h$'
+          - '$A = {{g}}\ \text{cm} \cdot {{h}}\ \text{cm} = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: dreieck-flaeche
+        given:
+          g: { int: [4, 14] }
+          h: { int: [3, 9] }
+        where: ["decimals(g * h / 2) == 0", "g != h", "g + h != g * h / 2"]
+        task:
+          text: "Ein Dreieck hat die Grundseite {{g}} cm und die Höhe {{h}} cm. Berechne den Flächeninhalt in cm²."
+        answer: { value: "g * h / 2", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "g * h",
+              message: "Du hast nicht durch 2 geteilt. Das Dreieck ist nur die Hälfte des Parallelogramms.",
+            }
+          - { value: "g + h", message: "Du hast addiert. Rechne Grundseite mal Höhe und teile durch 2." }
+        hint: "Rechne erst das Parallelogramm mit derselben Grundseite und Höhe. Das Dreieck ist ein Teil davon."
+        steps:
+          - '$A = \frac{g \cdot h}{2}$'
+          - '$A = \frac{ {{g}} \cdot {{h}} }{2} = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: trapez-flaeche
+        given:
+          a: { int: [6, 12] }
+          c: { int: [2, 5] }
+          h: { int: [2, 8] }
+        where: ["decimals((a + c) * h / 2) == 0"]
+        task:
+          text: "Ein Trapez hat die Grundseiten {{a}} cm und {{c}} cm und die Höhe {{h}} cm. Berechne den Flächeninhalt in cm²."
+        answer: { value: "(a + c) * h / 2", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - { value: "(a + c) * h", message: "Du hast nicht durch 2 geteilt. Das Trapez besteht aus zwei Dreiecken." }
+          - {
+              value: "a * h / 2",
+              message: "Du hast nur das Dreieck mit der längeren Grundseite gerechnet. Es gibt noch das zweite Dreieck mit der kürzeren Grundseite.",
+            }
+        hint: "Rechne beide Dreiecke einzeln. Beide haben die Höhe {{h}} cm."
+        steps:
+          - 'Dreieck mit a: $\frac{ {{a}} \cdot {{h}} }{2}$, Dreieck mit c: $\frac{ {{c}} \cdot {{h}} }{2}$.'
+          - '$A = \frac{({{a}} + {{c}}) \cdot {{h}}}{2} = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: raute-flaeche
+        given:
+          e: { int: [4, 14] }
+          f: { int: [3, 10] }
+        where: ["decimals(e * f / 2) == 0", "e != f", "e + f != e * f / 2"]
+        task:
+          text: "Eine Raute hat die Diagonalen {{e}} cm und {{f}} cm. Berechne den Flächeninhalt in cm²."
+        answer: { value: "e * f / 2", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "e * f",
+              message: "Du hast nicht durch 2 geteilt. Die Raute ist ein halbes Rechteck, dessen Seiten so lang sind wie die beiden Diagonalen.",
+            }
+          - {
+              value: "e + f",
+              message: "Du hast addiert. Die Diagonalen bestimmen ein Rechteck, also mal, und die Raute ist die Hälfte davon.",
+            }
+        hint: "Die Raute passt in ein Rechteck, dessen Seiten so lang sind wie die Diagonalen, und füllt die Hälfte davon."
+        steps:
+          - '$A = \frac{e \cdot f}{2}$'
+          - '$A = \frac{ {{e}} \cdot {{f}} }{2} = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: drachen-flaeche
+        given:
+          e: { int: [6, 14] }
+          f: { int: [4, 10] }
+        where: ["decimals(e * f / 2) == 0", "e != f", "e + f != e * f / 2"]
+        task:
+          text: "Ein Drachen hat die Diagonalen {{e}} cm und {{f}} cm. Berechne den Flächeninhalt in cm²."
+        answer: { value: "e * f / 2", compare: { number: { format: integer, unit: cm² } } }
+        mistakes:
+          - {
+              value: "e * f",
+              message: "Du hast nicht durch 2 geteilt. Auch der Drachen füllt nur die Hälfte des Rechtecks, dessen Seiten so lang sind wie die Diagonalen.",
+            }
+          - { value: "e + f", message: "Du hast addiert. Multipliziere die Diagonalen und teile durch 2." }
+        hint: "Für den Drachen gilt dieselbe Formel wie für die Raute."
+        steps:
+          - '$A = \frac{e \cdot f}{2}$'
+          - '$A = \frac{ {{e}} \cdot {{f}} }{2} = {{answer}}\ \text{cm}^2$.'
+      - type: generated
+        id: parallelogramm-umfang
+        given:
+          g: { int: [4, 12] }
+          s: { int: [5, 12] }
+          h: { int: [2, 4] }
+        where:
+          [
+            "g != s",
+            "g * h != 2 * (g + s)",
+            "2 * (g + h) != g * h",
+            "g + s != g * h",
+            "g + s != 2 * (g + h)",
+            "2 * g + s != g * h",
+            "2 * g + s != 2 * (g + h)",
+          ]
+        task:
+          text: "Ein Parallelogramm hat die Grundseite {{g}} cm, die schräge Seite {{s}} cm und die Höhe {{h}} cm. Berechne den Umfang in cm."
+        answer: { value: "2 * (g + s)", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - {
+              value: "2 * (g + h)",
+              message: "Du hast die Höhe statt der schrägen Seite genommen. Die Höhe liegt im Inneren und gehört nicht zum Rand.",
+            }
+          - { value: "g * h", message: "Das ist der Flächeninhalt. Gefragt ist der Umfang, also der Rand der Figur." }
+          - {
+              value: "g + s",
+              message: "Das ist erst die Hälfte des Randes. Gegenüberliegende Seiten sind gleich lang und kommen zweimal vor.",
+            }
+          - { value: "2 * g + s", message: "Du hast eine schräge Seite vergessen. Es gibt zwei schräge Seiten." }
+        hint: "Gegenüberliegende Seiten sind gleich lang. Wie viele Seiten hat der Weg um die Figur?"
+        steps:
+          - "Der Rand hat zwei Seiten der Länge {{g}} cm und zwei der Länge {{s}} cm."
+          - '$u = 2 \cdot ({{g}} + {{s}}) = {{answer}}\ \text{cm}$.'
+      - type: generated
+        id: dreieck-umfang
+        given:
+          e: { pick: 1, from: { data: dreiecke } }
+        task:
+          text: "Ein rechtwinkliges Dreieck hat die Seiten {{e.a}} cm, {{e.b}} cm und {{e.c}} cm. Berechne den Umfang in cm."
+        answer: { value: "e.u", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - { value: "e.a + e.b", message: "Du hast eine Seite vergessen. Ein Dreieck hat drei Seiten." }
+          - {
+              value: "e.c * 3",
+              message: "Du hast die längste Seite dreimal gerechnet. Die drei Seiten sind verschieden lang.",
+            }
+          - { value: "e.u * 2", message: "Du hast alle Seiten doppelt gezählt. Jede Seite gehört nur einmal zum Rand." }
+        hint: "Der Umfang ist der Weg einmal um das Dreieck. Welche Strecken gehören dazu?"
+        steps:
+          - "Die drei Seiten bilden den Rand: {{e.a}} cm, {{e.b}} cm und {{e.c}} cm."
+          - '$u = {{e.a}} + {{e.b}} + {{e.c}} = {{answer}}\ \text{cm}$.'
+      - type: generated
+        id: raute-umfang
+        given:
+          a: { int: [3, 12] }
+          e: { int: [4, 14] }
+        where: ["e < 2 * a", "a != 2 * e", "a != e", "4 * e != 3 * a"]
+        task:
+          text: "Eine Raute hat die Seitenlänge {{a}} cm und eine Diagonale von {{e}} cm. Berechne den Umfang in cm."
+        answer: { value: "4 * a", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - { value: "2 * a", message: "Du hast nur zwei Seiten gezählt. Eine Raute hat vier gleich lange Seiten." }
+          - { value: "4 * e", message: "Du hast mit der Diagonale gerechnet. Der Rand besteht aus den vier Seiten." }
+          - { value: "3 * a", message: "Du hast nur drei Seiten gezählt. Eine Raute hat vier gleich lange Seiten." }
+        hint: "Alle vier Seiten der Raute sind gleich lang. Die Diagonale liegt im Inneren."
+        steps:
+          - "Eine Raute hat vier gleich lange Seiten."
+          - '$u = 4 \cdot {{a}}\ \text{cm} = {{answer}}\ \text{cm}$.'
+  - type: section
+    id: ausblick
+    title: Wie es weitergeht
+    blocks:
+      - type: text
+        text: |
+          Du hast Figuren auf Rechtecke zurückgeführt. Auf der nächsten Seite stapelst du Flächen zu Körpern, den
+          Prismen: erst ein Rechteck, dann ein Dreieck.

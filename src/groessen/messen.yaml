@@ -1,0 +1,140 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Länge, Masse, Geld und Zeit
+description: "Länge, Masse, Geld und Zeit messen: zählen, wie oft die Einheit passt, und in Sachaufgaben rechnen."
+competencies: [messen-laenge-masse-geld-zeit]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn du wissen willst, wie lang ein Stift ist, wie viel Mehl im Becher liegt oder wie lange eine Busfahrt dauert,
+          reicht Schätzen nicht: Du musst genau messen. Nach dieser Seite misst du Länge, Masse, Geld und Zeit und rechnest
+          damit in Sachaufgaben.
+      - type: number
+        id: bleistift-laenge
+        text: "Ein Bleistift liegt am Lineal. Sein linkes Ende steht bei 2 cm, die Spitze bei 17 cm. Wie lang ist der Bleistift?"
+        material:
+          - type: figure
+            image: images/lineal-bleistift.svg
+            alt: Ein Lineal von 0 bis 20 cm. Ein Bleistift liegt darüber. Sein linkes Ende steht bei 2 cm, seine Spitze bei 17 cm.
+            caption: Der Bleistift liegt am Lineal, aber nicht bei 0.
+            source: eigene Zeichnung
+            licence: CC-BY-4.0
+        answer: 15
+        tolerance: 0
+        unit: cm
+        mistakes:
+          - answer: 17
+            message: "Du hast die Zahl an der Spitze abgelesen. Der Stift beginnt aber nicht bei 0."
+          - answer: 19
+            message: "Du hast die beiden Zahlen addiert. Die Länge ist der Abstand zwischen den Enden."
+        hint: "Zähle, wie viele Zentimeter zwischen dem linken Ende und der Spitze liegen."
+        explanation: "Du zählst die Zentimeter zwischen den Enden: von 2 cm bis 17 cm sind das 15 cm."
+  - type: section
+    id: idee
+    title: Messen heißt zählen, wie oft die Einheit passt
+    blocks:
+      - type: text
+        text: |
+          Wenn du eine Größe genau angeben willst, brauchst du etwas, womit du sie vergleichst. Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
+          fünfzehnmal hinein. Für jede Größe gibt es eigene Einheiten und ein Messgerät.
+      - type: definition
+        term: Messen
+        explanation: "Messen heißt zählen, wie oft eine Einheit in eine Größe hineinpasst. Der Bleistift ist 15 cm lang: 1 cm passt fünfzehnmal hinein."
+      - type: definition
+        term: Einheit
+        explanation: "Eine Einheit ist die Größe, die beim Messen gezählt wird, zum Beispiel 1 cm, 1 g oder 1 min. Das Ergebnis besteht aus Zahl und Einheit: 15 cm."
+      - type: table
+        caption: Größen, ihre Einheiten und wie du sie misst
+        header: [Größe, Einheiten, Womit du misst oder zählst]
+        rowHeaders: true
+        rows:
+          - [Länge, "mm, cm, dm, m, km", Lineal oder Maßband]
+          - [Masse, "mg, g, kg, t", Waage]
+          - [Geld, "ct, €", Münzen und Scheine]
+          - [Zeit, "s, min, h", Uhr]
+      - type: text
+        text: |
+          Bei **Geld** schreibst du zwei Stellen nach dem Komma: 3,60 €. Bei der **Zeit** zählst du nicht in Zehnern:
+          1 h hat 60 min.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Wie lange dauert der Film?
+        blocks:
+          - type: text
+            text: |
+              Ein Film beginnt um 14:35 Uhr und endet um 16:10 Uhr. Rechne in Schritten bis zur nächsten vollen Stunde:
+              Von 14:35 Uhr bis 15:00 Uhr sind es 25 min. Bis 16:00 Uhr kommt 1 h dazu, bis 16:10 Uhr weitere 10 min.
+              Zusammen: $25\ \text{min} + 60\ \text{min} + 10\ \text{min} = 95\ \text{min}$, das sind 1 h 35 min.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Du misst nur Gleiches mit Gleichem: Rechne Längen nur mit Längen, Minuten nur mit Minuten. Schreibe die
+              Einheit immer dazu.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: generated
+        id: mehl-wiegen
+        given:
+          a: { int: [120, 400], step: 10 }
+          b: { int: [450, 900], step: 10 }
+        task:
+          text: "Eine Waage zeigt für einen leeren Becher {{a}} g. Mit Mehl zeigt sie {{b}} g. Wie viel Gramm Mehl sind im Becher?"
+        answer: { value: "b - a", compare: { number: { format: integer, unit: g } } }
+        mistakes:
+          - {
+              value: "a + b",
+              message: "Du hast beide Werte addiert. Der Becher wiegt schon etwas und gehört nicht zum Mehl.",
+            }
+          - {
+              value: "b",
+              message: "Das ist das Gewicht von Becher und Mehl zusammen. Der Becher gehört nicht zum Mehl.",
+            }
+        hint: "Die Waage zeigt Becher und Mehl zusammen. Was musst du abziehen?"
+        steps:
+          - "Die Waage zeigt {{b}} g für Becher und Mehl."
+          - 'Der Becher wiegt {{a}} g. Mehl: ${{b}}\ \text{g} - {{a}}\ \text{g} = {{answer}}\ \text{g}$.'
+      - type: generated
+        id: rueckgeld
+        given:
+          p: { oneOf: [0.85, 1.25, 1.75, 2.45, 3.95] }
+          n: { int: [2, 5] }
+          pay: { oneOf: [10, 20] }
+        where: ["n * p < pay", "n * p * 2 != pay"]
+        task:
+          text: "Ein Heft kostet {{p}} €. Du kaufst {{n}} Hefte und bezahlst mit einem {{pay}}-€-Schein. Wie viel Rückgeld bekommst du?"
+        answer: { value: "pay - n * p", compare: { number: { format: money } } }
+        mistakes:
+          - { value: "n * p", message: "Das ist der Preis der Hefte. Gefragt ist, was vom Schein übrig bleibt." }
+          - { value: "pay - p", message: "Du hast nur ein Heft abgezogen. Du kaufst {{n}} Hefte." }
+        hint: "Rechne zuerst den Preis aller Hefte aus. Ziehe ihn dann vom Schein ab."
+        steps:
+          - 'Preis der Hefte: ${{n}} \cdot {{p}}\ \text{€}$.'
+          - 'Rückgeld: ${{pay}}\ \text{€} - {{n}} \cdot {{p}}\ \text{€} = {{answer}}\ \text{€}$.'
+      - type: generated
+        id: busfahrt-dauer
+        given:
+          a: { int: [10, 55], step: 5 }
+          b: { int: [10, 50], step: 5 }
+        task:
+          text: "Der Bus fährt um 7:{{a}} Uhr ab und kommt um 8:{{b}} Uhr an. Wie viele Minuten dauert die Fahrt?"
+        answer: { value: "60 - a + b", compare: { number: { format: integer, unit: min } } }
+        mistakes:
+          - {
+              value: "b - a",
+              message: "Du hast nur die Minuten voneinander abgezogen. Zwischen 7 Uhr und 8 Uhr liegt eine volle Stunde.",
+            }
+          - { value: "100 - a + b", message: "Du hast mit 100 gerechnet. Eine Stunde hat 60 Minuten." }
+        hint: "Rechne bis zur vollen Stunde. Dann kommen die Minuten nach 8 Uhr dazu."
+        steps:
+          - "Von 7:{{a}} Uhr bis 8:00 Uhr sind es $60 - {{a}}$ Minuten."
+          - 'Dazu kommen {{b}} Minuten: ${{answer}}\ \text{min}$.'

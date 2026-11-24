@@ -1,0 +1,147 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Größen schätzen
+description: "Größen mit Stützpunkten schätzen: eine bekannte Größe als Maßstab für eine unbekannte nutzen und prüfen, ob ein Ergebnis zur Sache passt."
+competencies: [groessenvorstellungen-schaetzen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Was du hier lernst
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Höhe eines Baumes oder die Masse eines Ranzens wissen willst, aber nichts zum Messen hast, schätzt du.
+          Nach dieser Seite schätzt du Größen mit einem Vergleich und merkst, wenn ein Ergebnis nicht passen kann.
+          Fang mit einer Größe an, die du aus dem Alltag kennst.
+      - type: single-choice
+        id: tuer-hoehe
+        text: Wie hoch ist eine Zimmertür ungefähr?
+        options:
+          - text: etwa 1 m
+            correct: false
+            info: "1 m ist nur etwa halb so hoch wie eine Tür."
+          - text: etwa 2 m
+            correct: true
+            info: "Eine Tür ist etwas höher als ein Erwachsener, also etwa 2 m."
+          - text: etwa 5 m
+            correct: false
+            info: "5 m wären zwei Türen übereinander und noch ein Stück mehr, so hoch ist ein Haus mit einem Stockwerk."
+          - text: etwa 20 m
+            correct: false
+            info: "20 m ist so hoch wie ein Haus mit sechs Stockwerken."
+        explanation: Eine Tür ist etwa 2 m hoch. Eine Größe, die du so sicher kennst, nennen wir Stützpunkt, auch Bezugsgröße. Mit ihr kannst du andere Höhen vergleichen.
+  - type: section
+    id: idee
+    title: Mit einem Stützpunkt schätzt du
+    blocks:
+      - type: text
+        text: |
+          Wenn du die Höhe einer Wand wissen willst, aber kein Maßband hast, vergleichst du. Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
+          Tür und eine Wand. Schau, wie oft die Türhöhe an der Wand Platz hat.
+      - type: figure
+        image: images/stuetzpunkt-tuer.svg
+        alt: Links eine Tür mit der Höhe 2 m. Rechts eine Wand, die so hoch ist wie anderthalb Türen.
+        caption: Die gestrichelte Linie zeigt eine Türhöhe an der Wand. Darüber passt noch eine halbe Türhöhe.
+        source: eigene Zeichnung
+        licence: CC-BY-4.0
+      - type: definition
+        term: Größe
+        explanation: "Eine Größe ist eine Eigenschaft, die du messen kannst, zum Beispiel Länge, Masse, Geld oder Zeit. Eine Tür hat die Größe Länge, eine Tafel Schokolade die Größe Masse."
+      - type: definition
+        term: Stützpunkt
+        explanation: "Ein Stützpunkt ist eine Größe, die du sicher kennst, zum Beispiel eine Tür mit 2 m Höhe. Du vergleichst eine unbekannte Größe mit ihr: Wie oft passt der Stützpunkt hinein?"
+      - type: table
+        caption: Stützpunkte, die du dir merken kannst
+        header: [Sache, Größe]
+        rowHeaders: true
+        rows:
+          - [Breite eines Fingers, etwa 1 cm]
+          - [Breite einer Hand, etwa 10 cm]
+          - [Länge eines Bleistifts, etwa 15 cm]
+          - [Höhe einer Tür, etwa 2 m]
+          - [Länge eines Schulbusses, etwa 12 m]
+          - [Masse einer Tafel Schokolade, etwa 100 g]
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: Wie hoch ist die Wand?
+        blocks:
+          - type: text
+            text: |
+              Die Wand ist so hoch wie eine Tür und noch die Hälfte davon. Die Tür ist 2 m hoch, die Hälfte davon 1 m.
+              Die Wand ist also etwa $2\ \text{m} + 1\ \text{m} = 3\ \text{m}$ hoch.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: |
+              Prüfe jedes Ergebnis mit einem Stützpunkt. Frage dich: Wie oft passt der Stützpunkt hinein? Kommt eine
+              unmögliche Zahl heraus, hast du dich verschätzt oder verrechnet.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: ordering
+        id: laengen-ordnen
+        text: Ordne diese Längen. Platz 1 ist die kleinste Länge. Nimm die Tabelle der Stützpunkte zu Hilfe.
+        items:
+          - Breite eines Fingers
+          - Länge eines Bleistifts
+          - Höhe einer Tür
+          - Länge eines Schulbusses
+        explanation: "Ein Finger ist etwa 1 cm breit, ein Bleistift etwa 15 cm lang, eine Tür etwa 2 m hoch und ein Schulbus etwa 12 m lang. Rechne alles in dieselbe Einheit um, dann siehst du die Reihenfolge."
+      - type: single-choice
+        id: einheit-schokolade
+        text: Welche Einheit passt zur Masse einer Tafel Schokolade?
+        options:
+          - text: Milligramm (mg)
+            correct: false
+            info: "1 mg ist so leicht wie ein Staubkorn. Eine Tafel wiegt viel mehr."
+          - text: Gramm (g)
+            correct: true
+            info: "Eine Tafel wiegt etwa 100 g."
+          - text: Kilogramm (kg)
+            correct: false
+            info: "1 kg ist so schwer wie zehn Tafeln. Für eine einzelne Tafel ist kg zu groß."
+          - text: Tonne (t)
+            correct: false
+            info: "1 t ist so schwer wie ein kleines Auto."
+        explanation: Eine Tafel Schokolade hat etwa 100 g. Mit Gramm schreibst du eine ganze Zahl, bei Kilogramm wäre es ein Bruchteil.
+      - type: true-false
+        id: hand-passt
+        text: "Lena schätzt: Eine Hand ist etwa 1 m breit. Der Stützpunkt für die Breite einer Hand ist 10 cm. Passt Lenas Schätzung?"
+        answer: false
+        explanation: 1 m sind 100 cm. Das wären 10 Hände nebeneinander. Eine Hand ist etwa 10 cm breit.
+      - type: number
+        id: ranzen-masse
+        text: "Ein leerer Schulranzen wiegt ungefähr so viel wie 15 Tafeln Schokolade. Eine Tafel hat etwa 100 g. Wie viel Gramm wiegt der Ranzen ungefähr? Gib die Zahl in g an, ohne Einheit. Eine Abweichung bis 100 g zählt noch."
+        answer: 1500
+        tolerance: 100
+        unit: g
+        mistakes:
+          - answer: 150
+            message: "Das ist zehnmal zu wenig. Prüfe, wie viele Nullen du brauchst."
+          - answer: 115
+            message: "Du hast addiert. 15 Tafeln sind fünfzehnmal so schwer wie eine Tafel."
+        hint: "Eine Tafel wiegt 100 g. Du brauchst 15 davon."
+        explanation: "15 Tafeln wiegen $15 \\cdot 100\\ \\text{g} = 1500\\ \\text{g}$. Das sind $1{,}5\\ \\text{kg}$."
+      - type: generated
+        id: baumhoehe-schaetzen
+        given:
+          n: { int: [3, 9] }
+        task:
+          text: "Eine Tür ist 2 m hoch. Ein Baum ist ungefähr so hoch wie {{n}} Türen übereinander. Wie hoch ist der Baum etwa? Gib die Höhe in m an."
+        answer: { value: "n * 2", compare: { number: { format: integer, unit: m } } }
+        mistakes:
+          - { value: "n", message: "Du hast nur die Türen gezählt. Jede Tür ist 2 m hoch." }
+          - { value: "n * 20", message: "Das ist zehnmal zu viel. Prüfe die Höhe mit dem Stützpunkt Tür." }
+        hint: "Der Baum ist {{n}} Türen hoch. Rechne {{n}} mal die Höhe einer Tür."
+        steps:
+          - 'Eine Tür ist $2\ \text{m}$ hoch.'
+          - 'Der Baum ist so hoch wie {{n}} Türen: ${{n}} \cdot 2\ \text{m} = {{answer}}\ \text{m}$.'
+      - type: true-false
+        id: kind-passt
+        text: "Nele misst ihre Körpergröße mit einem Maßband und schreibt 15 m auf. Eine Tür ist 2 m hoch. Kann das stimmen?"
+        answer: false
+        explanation: "15 m wären mehr als sieben Türen übereinander. Nele hat sich verschätzt oder die Einheit verwechselt: Gemeint sind etwa 150 cm."
