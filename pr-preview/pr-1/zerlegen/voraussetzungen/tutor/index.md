@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-vierecke`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/zerlegen/voraussetzungen/?via=tutor#test-vierecke`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -39,12 +41,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/, https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/
 
-Wiederholung von besonderen Vierecken und von Prisma und Zylinder, mit Fachbegriffen, Beispielen und je zwei Kurztests.
+Wiederholung von besonderen Vierecken und von Prisma und Zylinder, mit Fachbegriffen, Beispielen und je zwei Aufgaben.
 
 ### Wofür diese Seite ist
 
 In diesem Kapitel zerlegst und ergänzt du Figuren. Dafür musst du besondere Vierecke und Prismen kennen. Hier
-frischst du die Begriffe auf. Mit jedem Kurztest prüfst du, ob du es kannst. Es gibt keine Punkte.
+frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du, ob du es kannst. Es gibt keine Punkte.
 
 ### Besondere Vierecke
 
@@ -71,13 +73,6 @@ Bild: Ein Parallelogramm mit der Grundseite g unten. Eine gestrichelte senkrecht
 
 Ein Dreieck steht mit der Grundseite von 10 cm auf dem Tisch. Seine Höhe ist der senkrechte Abstand der Spitze von der Grundseite, zum Beispiel 6 cm. Sie kann kürzer sein als jede der beiden anderen Seiten. Bei einem Parallelogramm ist sie nie länger als die schräge Seite, denn der senkrechte Weg ist der kürzeste.
 
-Interaktiv: Kurztest: Welche Aussage über Vierecke stimmt? Jede Raute ist ein Parallelogramm. Nicht jedes Parallelogramm ist eine Raute, und ein Drachen hat im Allgemeinen keine parallelen Seiten.
-
-Interaktiv: Kurztest: In einem Parallelogramm ist die Grundseite 12 cm lang, die schräge Seite 7 cm. Was gilt für die Höhe zur Grundseite? Antwort: Sie ist höchstens 7 cm lang, denn der senkrechte Weg ist der kürzeste.
-
-Wenn du unsicher bist, übe den Baustein „Besondere Vierecke“. Seine Kartenseite findest du hier:
-[Karte: Besondere Vierecke](https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/).
-
 ### Prisma und Zylinder
 
 Ich kann Prisma und Zylinder erkennen und von anderen Körpern unterscheiden. Für dieses Kapitel brauchst du das
@@ -97,12 +92,15 @@ Bild: Ein liegendes Prisma mit dreieckiger Grundfläche G vorne und gleich groß
 
 Ein Prisma hat ein Dreieck als Grundfläche. Das Dreieck hat drei Seiten, zu jeder Seite gehört ein Rechteck im Mantel. Der Mantel besteht also aus drei Rechtecken.
 
-Interaktiv: Kurztest: Ein Prisma hat insgesamt 8 Flächen, mit Grundfläche und Deckfläche. Welche Form hat seine Grundfläche? Antwort: ein Sechseck, denn 8 minus 2 sind 6 Rechtecke im Mantel.
+### Kannst du das?
 
-Interaktiv: Kurztest: Welcher dieser Körper ist kein Prisma? Quader, Zylinder oder Würfel. Antwort: der Zylinder, denn seine Grundfläche ist ein Kreis. Quader und Würfel sind besondere Prismen.
+- Aufgabe `test-vierecke` (unten)
 
-Wenn du unsicher bist, übe den Baustein „Prisma und Zylinder“. Seine Kartenseite findest du hier:
-[Karte: Prisma und Zylinder](https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/).
+- Aufgabe `test-prisma` (unten)
+
+Wenn du unsicher bist, übe die Bausteine „Besondere Vierecke“ und „Prisma und Zylinder“. Ihre Kartenseiten:
+[Besondere Vierecke](https://lernapps.net/apps/map/mathematik/c/vierecke-grundfiguren/) und
+[Prisma und Zylinder](https://lernapps.net/apps/map/mathematik/c/grundkoerper-prisma-zylinder/).
 
 ### Du bist bereit, wenn du …
 
@@ -110,3 +108,27 @@ Wenn du unsicher bist, übe den Baustein „Prisma und Zylinder“. Seine Karten
   Raute, Trapez und Drachen, und weißt, was Diagonale und Höhe sind,
 - Prisma und Zylinder erkennen und von anderen Körpern unterscheiden kannst, vor allem Grundfläche, Deckfläche
   und Mantel eines Prismas.
+
+### Aufgabe test-vierecke
+
+- Aufgabe: Welche Aussage über Vierecke stimmt?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Jede Raute ist ein Parallelogramm. – Bei der Raute sind gegenüberliegende Seiten parallel und gleich lang. Das ist die Eigenschaft des Parallelogramms.
+  - ✗ Jedes Parallelogramm ist eine Raute. – Ein Parallelogramm mit den Seiten 5 cm und 3 cm hat keine vier gleich langen Seiten.
+  - ✗ Jeder Drachen ist ein Parallelogramm. – Im Drachen sind Nachbarseiten gleich lang, aber gegenüberliegende Seiten sind im Allgemeinen nicht parallel.
+- Lösung: Jede Raute ist ein Parallelogramm.
+- Erklärung: Die Raute ist ein besonderes Parallelogramm mit vier gleich langen Seiten. Umgekehrt ist nicht jedes Parallelogramm eine Raute.
+- Link: [../?via=tutor#test-vierecke](../?via=tutor#test-vierecke)
+
+### Aufgabe test-prisma
+
+- Aufgabe: Ein Prisma hat insgesamt 8 Flächen, die Grundfläche und die Deckfläche mitgezählt. Welche Form hat seine Grundfläche?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ Dreieck – Ein Prisma mit einem Dreieck als Grundfläche hat 3 Rechtecke im Mantel und insgesamt 5 Flächen.
+  - ✓ Sechseck – Acht Flächen minus Grundfläche und Deckfläche sind 6 Rechtecke im Mantel, also hat die Grundfläche 6 Seiten.
+  - ✗ Achteck – Ein Achteck als Grundfläche gibt 8 Rechtecke im Mantel und insgesamt 10 Flächen.
+- Lösung: Sechseck
+- Erklärung: Zu jeder Seite der Grundfläche gehört ein Rechteck im Mantel. Dazu kommen Grundfläche und Deckfläche, also 6 + 2 = 8 Flächen.
+- Link: [../?via=tutor#test-prisma](../?via=tutor#test-prisma)

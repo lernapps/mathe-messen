@@ -43,14 +43,14 @@ Fläche und Umfang zusammengesetzter Figuren berechnen: in Rechtecke zerlegen od
 
 ### Was du hier lernst
 
-Nach dieser Seite berechnest du Fläche und Umfang von Figuren, die keine Rechtecke sind, aber aus Rechtecken
-bestehen. Du nutzt, was du über Rechtecke weißt.
+Wenn ein Zimmer oder eine Terrasse nicht rechteckig ist, zum Beispiel L-förmig, hilft die Formel für das Rechteck
+nicht sofort. Nach dieser Seite berechnest du Fläche und Umfang von Figuren, die aus Rechtecken bestehen.
 
 - Aufgabe `schrank-flaeche` (unten)
 
 ### Zerlegen oder ergänzen
 
-Eine Figur, die nicht rechteckig ist, bringst du auf Rechtecke zurück. Du hast zwei Wege. Du **zerlegst** sie
+Wenn du die Fläche einer L-Form wissen willst, hast du zwei Wege. Eine Figur, die nicht rechteckig ist, bringst du auf Rechtecke zurück. Du hast zwei Wege. Du **zerlegst** sie
 in Rechtecke und addierst die Flächen. Oder du **ergänzt** sie zu einem großen Rechteck und ziehst das
 Ergänzte ab.
 

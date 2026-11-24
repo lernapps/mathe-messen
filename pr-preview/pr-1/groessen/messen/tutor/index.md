@@ -43,14 +43,15 @@ Länge, Masse, Geld und Zeit messen: zählen, wie oft die Einheit passt, und in 
 
 ### Was du hier lernst
 
-Nach dieser Seite misst du Länge, Masse, Geld und Zeit und rechnest damit in Sachaufgaben. Bei der Seite davor
-hast du geschätzt. Jetzt misst du genau.
+Wenn du wissen willst, wie lang ein Stift ist, wie viel Mehl im Becher liegt oder wie lange eine Busfahrt dauert,
+reicht Schätzen nicht: Du musst genau messen. Nach dieser Seite misst du Länge, Masse, Geld und Zeit und rechnest
+damit in Sachaufgaben.
 
 - Aufgabe `bleistift-laenge` (unten)
 
 ### Messen heißt zählen, wie oft die Einheit passt
 
-Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
+Wenn du eine Größe genau angeben willst, brauchst du etwas, womit du sie vergleichst. Beim Messen legst du eine **Einheit** an und zählst, wie oft sie hineinpasst. Beim Bleistift passt 1 cm
 fünfzehnmal hinein. Für jede Größe gibt es eigene Einheiten und ein Messgerät.
 
 - **Messen**: Messen heißt zählen, wie oft eine Einheit in eine Größe hineinpasst. Der Bleistift ist 15 cm lang: 1 cm passt fünfzehnmal hinein.

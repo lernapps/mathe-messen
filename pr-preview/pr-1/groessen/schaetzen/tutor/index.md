@@ -43,14 +43,15 @@ Größen mit Stützpunkten schätzen: eine bekannte Größe als Maßstab für ei
 
 ### Was du hier lernst
 
-Nach dieser Seite schätzt du Größen, ohne zu messen, und merkst, wenn ein Ergebnis nicht passen kann.
+Wenn du die Höhe eines Baumes oder die Masse eines Ranzens wissen willst, aber nichts zum Messen hast, schätzt du.
+Nach dieser Seite schätzt du Größen mit einem Vergleich und merkst, wenn ein Ergebnis nicht passen kann.
 Fang mit einer Größe an, die du aus dem Alltag kennst.
 
 - Aufgabe `tuer-hoehe` (unten)
 
 ### Mit einem Stützpunkt schätzt du
 
-Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
+Wenn du die Höhe einer Wand wissen willst, aber kein Maßband hast, vergleichst du. Du schätzt eine Höhe, indem du sie mit einer Größe vergleichst, die du kennst: mit der Tür. Das Bild zeigt eine
 Tür und eine Wand. Schau, wie oft die Türhöhe an der Wand Platz hat.
 
 Bild: Links eine Tür mit der Höhe 2 m. Rechts eine Wand, die so hoch ist wie anderthalb Türen. Bildunterschrift: Die gestrichelte Linie zeigt eine Türhöhe an der Wand. Darüber passt noch eine halbe Türhöhe.

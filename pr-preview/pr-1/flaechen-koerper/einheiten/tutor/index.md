@@ -43,14 +43,16 @@ Flächen- und Volumeneinheiten umrechnen: mit Einheitsquadraten und Einheitswür
 
 ### Was du hier lernst
 
-Nach dieser Seite rechnest du Flächen- und Volumeneinheiten um und schätzt ihre Größe. Im Kapitel davor hast
-du Längen umgerechnet. Hier kommt eine Richtung dazu. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine Fläche passen, ist ihr Maß.
+Wenn du wissen willst, wie viel Boden ein Zimmer hat oder wie viel Wasser in ein Aquarium passt, reichen Längen nicht:
+Du brauchst Maße für Flächen und für Volumen. Nach dieser Seite rechnest du diese Einheiten um und schätzt ihre
+Größe. Eine Fläche misst du mit Quadraten von 1 cm Seitenlänge, den Einheitsquadraten. Wie viele davon in eine
+Fläche passen, ist ihr Maß.
 
 - Aufgabe `quadrate-zaehlen` (unten)
 
 ### Einheitsquadrat und Einheitswürfel
 
-Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
+Wenn du eine Fläche oder einen Körper messen willst, brauchst du eine passende Einheit. Flächen misst du mit **Einheitsquadraten**: Ein Quadrat mit 1 cm Seitenlänge hat die Fläche 1 cm². Körper
 misst du mit **Einheitswürfeln**: Ein Würfel mit 1 cm Kantenlänge hat das Volumen 1 cm³.
 
 Bild: Ein Quadrat von 10 cm mal 10 cm, aufgeteilt in 100 kleine Quadrate von 1 cm mal 1 cm. Ein kleines Quadrat oben links ist markiert und mit 1 cm² beschriftet. Bildunterschrift: Ein Quadrat mit 10 cm Seitenlänge ist 1 dm² groß. Das markierte Einheitsquadrat ist 1 cm².

@@ -28,45 +28,46 @@
 </details>
 <p class="explainer-tutor-bar" hidden><button type="button" class="explainer-tutor-go"></button></p>
 <p class="explainer-tutor-status" role="status" aria-live="polite"></p>
-<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧zerlegen/prisma/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-messen","page":{"id":"prisma","title":"Volumen und Oberfläche: Prisma","exercises":[{"id":"quader-stapel","section":"einstieg","numbered":false},{"id":"prisma-volumen","section":"uebung","numbered":true},{"id":"prisma-oberflaeche","section":"uebung","numbered":true},{"id":"prisma-hoehe-gesucht","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","rueckblick"]},"tutor":"zerlegen/prisma/tutor/","markdown":"zerlegen/prisma/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
+<script type="application/json" class="explainer-tutor-prompt">{"start":"Lade ⟦base⟧zerlegen/prisma/tutor/⟦query⟧ und sei mein Tutor.","base":"⟦base⟧","query":"⟦query⟧","root":"../../","storage":"mathe-messen","page":{"id":"prisma","title":"Volumen und Oberfläche: Prisma","exercises":[{"id":"scheiben-stapel","section":"einstieg","numbered":false},{"id":"prisma-volumen","section":"uebung","numbered":true},{"id":"prisma-oberflaeche","section":"uebung","numbered":true},{"id":"prisma-hoehe-gesucht","section":"uebung","numbered":true}],"sections":["einstieg","idee","beispiel","uebung","rueckblick"]},"tutor":"zerlegen/prisma/tutor/","markdown":"zerlegen/prisma/tutor/index.md","ways":[{"name":"Claude","url":"https://claude.ai/new?q={prompt}"},{"name":"ChatGPT","url":"https://chatgpt.com/?q={prompt}"},{"name":"Mistral Vibe","url":"https://chat.mistral.ai/chat?q={prompt}","paste":true}],"placeholder":"Ich brauche Hilfe bei einer Lern-Einheit. Ich schreibe Dir gleich, worum es geht.","go":"Mit {name} lernen","done":"✓ Kopiert – jetzt in {name} einfügen","copy":"Text kopieren","copied":"Der Prompt ist kopiert. Füg ihn in den Chat deines KI-Assistenten ein.","failed":"Kopieren ging nicht. Versuch es noch einmal."}</script>
 </div>
 </div>
 <nav class="explainer-toc" aria-label="Auf dieser Seite"><p class="explainer-toc-title">Auf dieser Seite</p><ol><li><a href="#einstieg">Was du hier lernst</a></li><li><a href="#idee">Ein Prisma ist ein Stapel gleicher Grundflächen</a></li><li><a href="#beispiel">Beispiel</a></li><li><a href="#uebung">Übung</a></li><li><a href="#rueckblick">Das kannst du jetzt</a></li></ol></nav>
 <section class="explainer-section">
 <h2 id="einstieg">Was du hier lernst</h2>
-<div class="explainer-block" data-block="einstieg/1" data-block-id="a21748d4" data-block-type="text" data-block-order="1">
-<div class="block-text"><p>Nach dieser Seite berechnest du Volumen und Oberfläche von Prismen. Du kennst schon den Quader: Auch er ist
-ein Prisma. Aus seiner Formel wird die Formel für jedes Prisma. Das Modell: Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.</p></div>
+<div class="explainer-block" data-block="einstieg/1" data-block-id="30f5b24e" data-block-type="text" data-block-order="1">
+<div class="block-text"><p>Wenn du wissen willst, wie viel in einen Behälter mit dreieckigem Querschnitt passt oder wie viel Material seine
+Hülle braucht, brauchst du Volumen und Oberfläche eines Prismas. Nach dieser Seite berechnest du beides. Das Modell:
+Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.</p></div>
 </div>
-<div class="explainer-block" data-block="einstieg/2" data-block-id="b070906d" data-block-type="number" data-block-order="2">
-<div class="explainer-exercise explainer-question" id="quader-stapel">
+<div class="explainer-block" data-block="einstieg/2" data-block-id="e26aba4f" data-block-type="number" data-block-order="2">
+<div class="explainer-exercise explainer-question" id="scheiben-stapel">
 <p class="explainer-exercise-label">Aufgabe</p>
-<div class="question" id="frage-quader-stapel" data-id="quader-stapel" data-type="number">
+<div class="question" id="frage-scheiben-stapel" data-id="scheiben-stapel" data-type="number">
 <form class="question-form" novalidate>
 <fieldset>
-<legend class="question-text">Ein Quader hat eine Grundfläche von 15 cm² und ist 4 cm hoch. Wie groß ist sein Volumen?</legend>
-<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-quader-stapel" aria-describedby="frage-quader-stapel-unit"> <span id="frage-quader-stapel-unit">cm³</span> </label>
+<legend class="question-text">Ein Stapel besteht aus 4 gleichen Scheiben. Jede Scheibe ist 6 cm² groß und 1 cm dick. Wie groß ist das Volumen des Stapels in cm³?</legend>
+<label class="question-number">Deine Antwort <input type="text" inputmode="decimal" autocomplete="off" name="frage-scheiben-stapel" aria-describedby="frage-scheiben-stapel-unit"> <span id="frage-scheiben-stapel-unit">cm³</span> </label>
 </fieldset>
 <div class="question-feedback-row"><div class="question-feedback" role="status"></div></div>
 <div class="question-reveal" hidden>
-<p><strong>Richtige Antwort:</strong> 60 cm³</p>
-<p class="question-explanation">Eine Schicht hat 15 Würfel, es gibt 4 Schichten: <math><mrow><mn>15</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>60</mn></mrow></math> cm³.</p>
+<p><strong>Richtige Antwort:</strong> 24 cm³</p>
+<p class="question-explanation">Eine Scheibe hat 6 cm² · 1 cm = 6 cm³. Vier Scheiben haben 4 · 6 cm³ = 24 cm³.</p>
 </div>
 <p class="question-actions" hidden><button type="submit" class="question-check">Prüfen</button></p>
 </form>
 </div>
 <details class="explainer-solution"><summary>Lösung</summary>
-<p><strong>Richtige Antwort:</strong> 60 cm³</p>
-<p class="question-explanation">Eine Schicht hat 15 Würfel, es gibt 4 Schichten: <math><mrow><mn>15</mn><mo>⋅</mo><mn>4</mn><mo>=</mo><mn>60</mn></mrow></math> cm³.</p>
+<p><strong>Richtige Antwort:</strong> 24 cm³</p>
+<p class="question-explanation">Eine Scheibe hat 6 cm² · 1 cm = 6 cm³. Vier Scheiben haben 4 · 6 cm³ = 24 cm³.</p>
 </details>
-<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"quader-stapel","text":"Ein Quader hat eine Grundfläche von 15 cm² und ist 4 cm hoch. Wie groß ist sein Volumen?","explanation":"Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \\cdot 4 = 60$ cm³.","links":[],"hint":"Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?","type":"number","answer":60,"tolerance":0,"unit":"cm³","mistakes":[{"answer":19,"message":"Du hast addiert. Die Schichten liegen übereinander: Jede Schicht hat dieselbe Zahl Würfel."},{"answer":15,"message":"Das ist nur eine Schicht. Der Quader hat mehrere Schichten übereinander."}]},"rendered":{"Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \\cdot 4 = 60$ cm³.":"Eine Schicht hat 15 Würfel, es gibt 4 Schichten: \u003cmath>\u003cmrow>\u003cmn>15\u003c/mn>\u003cmo>⋅\u003c/mo>\u003cmn>4\u003c/mn>\u003cmo>=\u003c/mo>\u003cmn>60\u003c/mn>\u003c/mrow>\u003c/math> cm³."}}</script>
+<script type="application/json" class="explainer-exercise-data">{"kind":"question","lang":"de","question":{"id":"scheiben-stapel","text":"Ein Stapel besteht aus 4 gleichen Scheiben. Jede Scheibe ist 6 cm² groß und 1 cm dick. Wie groß ist das Volumen des Stapels in cm³?","explanation":"Eine Scheibe hat 6 cm² · 1 cm = 6 cm³. Vier Scheiben haben 4 · 6 cm³ = 24 cm³.","links":[],"hint":"Wie viele cm³ hat eine Scheibe? Wie viele Scheiben liegen übereinander?","type":"number","answer":24,"tolerance":0,"unit":"cm³","mistakes":[{"answer":10,"message":"Du hast addiert. Die Scheiben liegen übereinander, jede hat dasselbe Volumen."},{"answer":6,"message":"So groß ist nur die Fläche einer Scheibe. Der Stapel hat mehrere Scheiben."}]},"rendered":{}}</script>
 </div>
 </div>
 </section>
 <section class="explainer-section">
 <h2 id="idee">Ein Prisma ist ein Stapel gleicher Grundflächen</h2>
-<div class="explainer-block" data-block="idee/1" data-block-id="8627e9e0" data-block-type="text" data-block-order="3">
-<div class="block-text"><p>Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
+<div class="explainer-block" data-block="idee/1" data-block-id="c21c0a7d" data-block-type="text" data-block-order="3">
+<div class="block-text"><p>Wenn du das Volumen eines Prismas wissen willst, brauchst du keine neue Methode. Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
 <math><mi>G</mi></math>, und die Höhe <math><mi>h</mi></math> sagt, wie hoch der Stapel ist. Es kommt nicht darauf an, ob die Grundfläche ein Rechteck
 oder ein Dreieck ist.</p></div>
 </div>
@@ -76,8 +77,8 @@ oder ein Dreieck ist.</p></div>
 <div class="explainer-block" data-block="idee/3" data-block-id="ccab30f2" data-block-type="formula" data-block-order="5">
 <div class="block-formula"><math display="block" class="tml-display" style="display:block math;"><mrow><mi>V</mi><mo>=</mo><mi>G</mi><mo>⋅</mo><mi>h</mi></mrow></math></div>
 </div>
-<div class="explainer-block" data-block="idee/4" data-block-id="92370ef7" data-block-type="text" data-block-order="6">
-<div class="block-text"><p>Für die Oberfläche legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den <strong>Mantel</strong>. Der Mantel ist
+<div class="explainer-block" data-block="idee/4" data-block-id="bafb6581" data-block-type="text" data-block-order="6">
+<div class="block-text"><p>Wenn du wissen willst, wie viel Material die Hülle eines Prismas braucht, brauchst du die Oberfläche. Dafür legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den <strong>Mantel</strong>. Der Mantel ist
 ein langes Rechteck. Seine Länge ist der Umfang <math><mi>u</mi></math> der Grundfläche, seine Höhe ist die Höhe <math><mi>h</mi></math> des Prismas.</p></div>
 </div>
 <div class="explainer-block" data-block="idee/5" data-block-id="acd33d64" data-block-type="figure" data-block-order="7">
@@ -209,7 +210,7 @@ Prismas. Für das Volumen rechnest du die Grundfläche <math><mi>G</mi></math> m
 <span class="explainer-feedback-local">Nur in diesem Browser gespeichert</span>
 <button type="button" class="explainer-feedback-off">Beenden</button>
 </div>
-<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-messen","app":"Messen: Längen, Flächen, Volumen","root":"../../","repository":"lernapps/mathe-messen","revision":"d014e55","page":{"title":"Volumen und Oberfläche: Prisma","order":10}}</script>
+<script type="application/json" class="explainer-feedback-data">{"storage":"mathe-messen","app":"Messen: Längen, Flächen, Volumen","root":"../../","repository":"lernapps/mathe-messen","revision":"204114d","page":{"title":"Volumen und Oberfläche: Prisma","order":10}}</script>
 </aside>
 </template>
 <nav class="explainer-pager" aria-label="Weiterblättern"><a rel="prev" href="../../zerlegen/dreieck-viereck/">Zurück: Fläche und Umfang: Dreieck, Viereck</a></nav>

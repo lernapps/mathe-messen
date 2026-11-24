@@ -43,14 +43,16 @@ Größen in andere Einheiten umrechnen: mit der Einheitentreppe, und passende Ei
 
 ### Was du hier lernst
 
-Nach dieser Seite rechnest du Größen in andere Einheiten um und wählst die passende Einheit. Du
-kennst das schon von den Stellen unserer Zahlen. Gleich benutzt du dafür eine Treppe aus Einheiten: Jede Stufe ist eine Einheit, und zwischen zwei Stufen steht, wie oft die kleinere Einheit in die größere passt.
+Wenn eine Länge in Kilometern angegeben ist, du aber in Metern rechnen willst, musst du die Einheit wechseln. Nach
+dieser Seite rechnest du Größen in andere Einheiten um und wählst die passende Einheit. Das kennst du von den Stellen
+unserer Zahlen. Dafür benutzt du gleich eine Treppe aus Einheiten: Jede Stufe ist eine Einheit, und zwischen zwei
+Stufen steht, wie oft die kleinere Einheit in die größere passt.
 
 - Aufgabe `km-in-m` (unten)
 
 ### Die Einheitentreppe zeigt den Faktor
 
-Eine Einheit passt in die nächste Einheit eine feste Zahl von Malen hinein. Diese Zahl steht an der
+Wenn du von einer Einheit zu einer anderen willst, zum Beispiel von m zu cm, hilft dir eine feste Zahl. Eine Einheit passt in die nächste Einheit eine feste Zahl von Malen hinein. Diese Zahl steht an der
 Treppe. Gehst du nach unten zur kleineren Einheit, nimmst du mal. Gehst du nach oben zur größeren Einheit,
 teilst du. Das ist wie bei der Stellenwerttafel: Das Komma wandert.
 

@@ -20,9 +20,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=test-quadrat`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/flaechen-koerper/voraussetzungen/?via=tutor#test-quadrat`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -39,12 +41,12 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/, https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/
 
-Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Kurztests.
+Wiederholung von ebenen Grundfiguren und von Quader und Würfel, mit Fachbegriffen, Beispielen und je zwei Aufgaben.
 
 ### Wofür diese Seite ist
 
 In diesem Kapitel legst du Flächen aus und füllst Körper. Dafür musst du zwei Dinge schon können:
-ebene Grundfiguren und Quader und Würfel. Hier frischst du die Begriffe auf. Mit jedem Kurztest prüfst du,
+ebene Grundfiguren und Quader und Würfel. Hier frischst du die Begriffe auf. Mit zwei Aufgaben am Ende prüfst du,
 ob du es kannst. Es gibt keine Punkte.
 
 ### Ebene Grundfiguren
@@ -67,13 +69,6 @@ Bild: Ein Rechteck mit 5 cm Breite und 3 cm Höhe. An allen vier Ecken ist ein r
 **Beispiel: Rechteck oder Quadrat?**
 
 Eine Figur hat vier rechte Winkel und vier Seiten mit je 4 cm. Sie ist ein Quadrat. Weil jedes Quadrat vier rechte Winkel hat, ist sie auch ein Rechteck.
-
-Interaktiv: Kurztest: Maria sagt, jedes Quadrat ist ein Rechteck. Jan sagt, jedes Rechteck ist ein Quadrat. Wer hat recht? Antwort: nur Maria. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
-
-Interaktiv: Kurztest: Ein Viereck hat vier rechte Winkel und die Seiten 9 cm, 2 cm, 9 cm und 2 cm. Welche Seiten sind parallel? Antwort: je zwei gegenüberliegende Seiten. Benachbarte Seiten stoßen im rechten Winkel aufeinander.
-
-Wenn du unsicher bist, übe den Baustein „Ebene Grundfiguren“. Seine Kartenseite findest du hier:
-[Karte: Ebene Grundfiguren](https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/).
 
 ### Quader und Würfel
 
@@ -98,12 +93,15 @@ Bild: Ein Quader. Eine Ecke ist mit E markiert, eine Kante mit K, eine Seitenfl�
 
 Ein Quader ist 4 cm lang, 3 cm breit und 2 cm hoch. Er hat 4 Kanten mit 4 cm, 4 Kanten mit 3 cm und 4 Kanten mit 2 cm. Zusammen sind das 12 Kanten.
 
-Interaktiv: Kurztest: Ein Quader ist 5 cm lang, 3 cm breit und 2 cm hoch. Wie viele seiner Kanten sind 3 cm lang? Antwort: 4. Zu jedem Maß gehören vier gleich lange Kanten. Zwölf ist die Zahl aller Kanten.
+### Kannst du das?
 
-Interaktiv: Kurztest: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen? Antwort: 48 cm, denn der Würfel hat 12 Kanten mit je 4 cm.
+- Aufgabe `test-quadrat` (unten)
 
-Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartenseite findest du hier:
-[Karte: Quader und Würfel](https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/).
+- Aufgabe `test-wuerfelkanten` (unten)
+
+Wenn du unsicher bist, übe die Bausteine „Ebene Grundfiguren“ und „Quader und Würfel“. Ihre Kartenseiten:
+[Ebene Grundfiguren](https://lernapps.net/apps/map/mathematik/c/grundfiguren-eben/) und
+[Quader und Würfel](https://lernapps.net/apps/map/mathematik/c/grundkoerper-quader-wuerfel/).
 
 ### Du bist bereit, wenn du …
 
@@ -111,3 +109,27 @@ Wenn du unsicher bist, übe den Baustein „Quader und Würfel“. Seine Kartens
   Quadrat mit Seiten, rechten Winkeln und parallelen Seiten,
 - Quader, Würfel und zusammengesetzte Körper erkennen und beschreiben kannst, vor allem mit Seitenflächen,
   Kanten und Ecken.
+
+### Aufgabe test-quadrat
+
+- Aufgabe: Maria sagt: Jedes Quadrat ist ein Rechteck. Jan sagt: Jedes Rechteck ist ein Quadrat. Wer hat recht?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Nur Maria – Ein Quadrat hat vier rechte Winkel, ist also ein Rechteck. Ein Rechteck mit zwei verschiedenen Seitenlängen ist kein Quadrat.
+  - ✗ Nur Jan – Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+  - ✗ Beide – Jan irrt sich. Ein Rechteck mit den Seiten 5 cm und 3 cm ist kein Quadrat.
+- Lösung: Nur Maria
+- Erklärung: Jedes Quadrat ist ein besonderes Rechteck. Umgekehrt ist nicht jedes Rechteck ein Quadrat.
+- Link: [../?via=tutor#test-quadrat](../?via=tutor#test-quadrat)
+
+### Aufgabe test-wuerfelkanten
+
+- Aufgabe: Ein Würfel hat eine Kantenlänge von 4 cm. Wie lang sind alle seine Kanten zusammen?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✗ 16 cm – Das sind nur vier Kanten. Ein Würfel hat zwölf.
+  - ✗ 32 cm – Das sind acht Kanten, so viele wie Ecken. Ein Würfel hat zwölf Kanten.
+  - ✓ 48 cm – Ein Würfel hat 12 Kanten, jede 4 cm lang, also 12 · 4 cm = 48 cm.
+- Lösung: 48 cm
+- Erklärung: Ein Würfel hat 12 Kanten mit je 4 cm Länge. Zusammen sind das 48 cm.
+- Link: [../?via=tutor#test-wuerfelkanten](../?via=tutor#test-wuerfelkanten)

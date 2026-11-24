@@ -43,14 +43,16 @@ Volumen und Oberfläche von Quader und Würfel berechnen: Würfel in Schichten s
 
 ### Was du hier lernst
 
-Nach dieser Seite berechnest du Volumen und Oberfläche von Quader und Würfel. Du nutzt Einheitswürfel und die
-Fläche von Rechtecken. Das Modell dahinter: Du stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der Schichten.
+Wenn du wissen willst, wie viel in eine Schachtel passt oder wie viel Papier du zum Einpacken brauchst, brauchst du
+Volumen und Oberfläche. Nach dieser Seite berechnest du beides für Quader und Würfel. Das Modell dahinter: Du
+stapelst Würfel in Schichten. Die Zahl der Würfel ist die Zahl der Würfel in einer Schicht mal die Zahl der
+Schichten.
 
 - Aufgabe `schachtel-wuerfel` (unten)
 
 ### Schichten stapeln, Netz auslegen
 
-Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
 Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
 
 Bild: Eine Schicht aus Einheitswürfeln, 4 Würfel lang und 3 Würfel breit, nur 1 Würfel hoch. Bildunterschrift: Eine Schicht: 4 mal 3 Würfel. Das ist die Grundfläche, mit Würfeln belegt.
@@ -63,7 +65,7 @@ Bild: Ein Quader aus Einheitswürfeln, 4 Würfel lang, 3 Würfel breit und 2 Sch
 
 $V = a \cdot b \cdot c = G \cdot h$
 
-Die **Oberfläche** ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
+Wenn du wissen willst, wie viel Papier du zum Einpacken brauchst, brauchst du die **Oberfläche**. Sie ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
 immer zwei gleich große.
 
 Bild: Das Netz eines Quaders mit 4 cm Länge, 3 cm Breite und 2 cm Höhe: sechs Rechtecke in Kreuzform. Maße in cm. Bildunterschrift: Das Netz hat drei Paare gleich großer Rechtecke: Boden und Deckel, vorne und hinten, links und rechts.

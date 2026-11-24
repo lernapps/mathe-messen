@@ -43,14 +43,15 @@ Volumen und Oberfläche von Prismen berechnen: ein Prisma ist ein Stapel gleiche
 
 ### Was du hier lernst
 
-Nach dieser Seite berechnest du Volumen und Oberfläche von Prismen. Du kennst schon den Quader: Auch er ist
-ein Prisma. Aus seiner Formel wird die Formel für jedes Prisma. Das Modell: Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.
+Wenn du wissen willst, wie viel in einen Behälter mit dreieckigem Querschnitt passt oder wie viel Material seine
+Hülle braucht, brauchst du Volumen und Oberfläche eines Prismas. Nach dieser Seite berechnest du beides. Das Modell:
+Ein Prisma ist ein Stapel gleicher Grundflächen. Das Volumen ist die Grundfläche mal die Höhe des Stapels.
 
-- Aufgabe `quader-stapel` (unten)
+- Aufgabe `scheiben-stapel` (unten)
 
 ### Ein Prisma ist ein Stapel gleicher Grundflächen
 
-Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
+Wenn du das Volumen eines Prismas wissen willst, brauchst du keine neue Methode. Beim Quader hast du Schichten gestapelt. Beim Prisma ist es genauso: Jede Schicht hat die Form der Grundfläche
 $G$, und die Höhe $h$ sagt, wie hoch der Stapel ist. Es kommt nicht darauf an, ob die Grundfläche ein Rechteck
 oder ein Dreieck ist.
 
@@ -58,7 +59,7 @@ Bild: Vier gleich große Dreiecksscheiben liegen übereinander. Jede hat die Gru
 
 $V = G \cdot h$
 
-Für die Oberfläche legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
+Wenn du wissen willst, wie viel Material die Hülle eines Prismas braucht, brauchst du die Oberfläche. Dafür legst du das Netz aus, wie beim Quader. Es hat zwei gleiche Grundflächen und den **Mantel**. Der Mantel ist
 ein langes Rechteck. Seine Länge ist der Umfang $u$ der Grundfläche, seine Höhe ist die Höhe $h$ des Prismas.
 
 Bild: Das Netz eines Prismas mit rechtwinkliger Dreiecksgrundfläche: der Mantel ist ein langes Rechteck aus drei Rechtecken mit den Breiten 3 cm, 4 cm und 5 cm. Über dem mittleren Rechteck liegt die Grundfläche, darunter die Deckfläche. Bildunterschrift: Der Mantel ist so lang wie der Umfang der Grundfläche. Die Grundfläche kommt zweimal vor.
@@ -102,17 +103,17 @@ $O = 2 \cdot 6 + 120 = 132\ \text{cm}^2$
 - das Volumen eines Prismas als Stapel gleicher Grundflächen berechnen,
 - die Oberfläche eines Prismas aus zwei Grundflächen und dem Mantel berechnen.
 
-### Aufgabe quader-stapel
+### Aufgabe scheiben-stapel
 
-- Aufgabe: Ein Quader hat eine Grundfläche von 15 cm² und ist 4 cm hoch. Wie groß ist sein Volumen?
+- Aufgabe: Ein Stapel besteht aus 4 gleichen Scheiben. Jede Scheibe ist 6 cm² groß und 1 cm dick. Wie groß ist das Volumen des Stapels in cm³?
 - Antwortformat: eine Zahl eintippen (cm³)
-- Lösung: 60 cm³
-- Erklärung: Eine Schicht hat 15 Würfel, es gibt 4 Schichten: $15 \cdot 4 = 60$ cm³.
-- Tipp der App: Wie viele Würfel liegen in einer Schicht? Wie viele Schichten gibt es?
+- Lösung: 24 cm³
+- Erklärung: Eine Scheibe hat 6 cm² · 1 cm = 6 cm³. Vier Scheiben haben 4 · 6 cm³ = 24 cm³.
+- Tipp der App: Wie viele cm³ hat eine Scheibe? Wie viele Scheiben liegen übereinander?
 - Typische Fehler und was die App sagt:
-  - 19: Du hast addiert. Die Schichten liegen übereinander: Jede Schicht hat dieselbe Zahl Würfel.
-  - 15: Das ist nur eine Schicht. Der Quader hat mehrere Schichten übereinander.
-- Link: [../?via=tutor#quader-stapel](../?via=tutor#quader-stapel)
+  - 10: Du hast addiert. Die Scheiben liegen übereinander, jede hat dasselbe Volumen.
+  - 6: So groß ist nur die Fläche einer Scheibe. Der Stapel hat mehrere Scheiben.
+- Link: [../?via=tutor#scheiben-stapel](../?via=tutor#scheiben-stapel)
 
 ### Aufgabe prisma-volumen
 

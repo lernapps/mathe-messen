@@ -43,12 +43,12 @@ Flächeninhalt und Umfang von Dreieck und besonderen Vierecken: zerschneiden und
 
 ### Was du hier lernst
 
-Nach dieser Seite berechnest du Fläche und Umfang von Dreieck und besonderen Vierecken. Dafür führst du jede
-Figur auf Rechtecke zurück, die du schon kennst: Du schneidest sie in Stücke und legst sie neu, oder du
-teilst sie in Dreiecke. Das Modell dahinter ist dasselbe wie beim Rechteck: Fläche ist das, was in Reihen
-von Einheitsquadraten hineinpasst.
+Wenn du die Fläche eines Dreiecks oder Parallelogramms wissen willst, hast du kein Rechteck zum Auslegen. Dann
+führst du die Figur auf Rechtecke zurück: Du schneidest sie in Stücke und legst sie neu, oder du teilst sie in
+Dreiecke. Nach dieser Seite berechnest du Fläche und Umfang von Dreieck und besonderen Vierecken. Das Modell
+dahinter bleibt: Fläche ist das, was in Reihen von Einheitsquadraten hineinpasst.
 
-- Aufgabe `rechteck-erinnerung` (unten)
+- Aufgabe `schnitt-flaeche` (unten)
 
 ### Das Parallelogramm wird zum Rechteck
 
@@ -69,7 +69,7 @@ Umfang brauchst du dagegen alle vier Seiten, die Höhe gehört nicht dazu.
 
 ### Das Dreieck ist ein halbes Parallelogramm
 
-Eine **Diagonale** teilt ein Parallelogramm in zwei Dreiecke. Beide sind gleich groß, denn eines passt nach
+Wenn du die Fläche eines Dreiecks wissen willst, nimmst du das Parallelogramm zu Hilfe. Eine **Diagonale** teilt ein Parallelogramm in zwei Dreiecke. Beide sind gleich groß, denn eines passt nach
 einer halben Drehung genau auf das andere.
 
 Bild: Ein Parallelogramm mit Grundseite g und Höhe h. Eine gestrichelte Diagonale teilt es in zwei gleich große Dreiecke. Bildunterschrift: Die Diagonale teilt das Parallelogramm in zwei gleiche Dreiecke. Jedes Dreieck hat die Grundseite $g$ und die Höhe $h$.
@@ -81,14 +81,14 @@ du durch 2. Die Höhe des Dreiecks ist der Abstand von der Spitze zur Grundseite
 
 ### Trapez, Raute und Drachen
 
-Ein Trapez zerlegst du mit einer Diagonale in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
+Wenn du die Fläche eines Trapezes wissen willst, zerlegst du es in Dreiecke. Ein Trapez zerlegst du mit einer Diagonale in zwei Dreiecke. Sie haben die Grundseiten $a$ und $c$ und
 dieselbe Höhe $h$, denn $a$ und $c$ sind parallel.
 
 Bild: Ein Trapez mit der Grundseite a unten, der kürzeren Grundseite c oben und der Höhe h. Eine gestrichelte Diagonale teilt es in zwei Dreiecke. Bildunterschrift: Das Trapez besteht aus zwei Dreiecken mit den Grundseiten $a$ und $c$. Beide haben die Höhe $h$.
 
 $A = \frac{a \cdot h}{2} + \frac{c \cdot h}{2} = \frac{(a + c) \cdot h}{2}$
 
-Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
+Wenn du die Fläche einer Raute oder eines Drachens wissen willst, legst du ein Rechteck um sie. Bei Raute und Drachen stehen die beiden Diagonalen $e$ und $f$ senkrecht aufeinander. Sie teilen die Figur in
 Dreiecke, die zusammen ein halbes Rechteck mit den Seiten $e$ und $f$ füllen. Lege dazu ein Rechteck mit den Seiten $e$ und $f$ um die Raute: Es besteht aus acht gleichen Dreiecken, und die Raute füllt vier davon.
 
 Bild: Eine Raute mit zwei gestrichelten Diagonalen e und f, die sich in der Mitte im rechten Winkel schneiden. Um die Raute liegt ein gepunktetes Rechteck mit den Seiten e und f. Bildunterschrift: Das gepunktete Rechteck hat die Seiten $e$ und $f$. Die Raute füllt davon vier der acht gleichen Dreiecke, also die Hälfte.
@@ -130,17 +130,17 @@ $A = \frac{(7 + 3) \cdot 4}{2} = \frac{40}{2} = 20\ \text{cm}^2$
 Du hast Figuren auf Rechtecke zurückgeführt. Auf der nächsten Seite stapelst du Flächen zu Körpern, den
 Prismen: erst ein Rechteck, dann ein Dreieck.
 
-### Aufgabe rechteck-erinnerung
+### Aufgabe schnitt-flaeche
 
-- Aufgabe: Ein Rechteck ist 6 cm lang und 4 cm hoch. Wie groß ist sein Flächeninhalt?
-- Antwortformat: eine Zahl eintippen (cm²)
-- Lösung: 24 cm²
-- Erklärung: Der Flächeninhalt des Rechtecks ist $6 \cdot 4 = 24$ cm².
-- Tipp der App: Wie viele Quadrate liegen in einer Reihe, und wie viele Reihen gibt es?
-- Typische Fehler und was die App sagt:
-  - 20: Das ist der Umfang. Gefragt ist der Flächeninhalt, also die Zahl der Einheitsquadrate.
-  - 10: Du hast die Seiten addiert. Die Einheitsquadrate liegen in Reihen, also mal.
-- Link: [../?via=tutor#rechteck-erinnerung](../?via=tutor#rechteck-erinnerung)
+- Aufgabe: Du schneidest ein Stück von einer Papierfigur ab und legst es an anderer Stelle wieder an, ohne etwas wegzulassen und ohne dass sich etwas überlappt. Wie ändert sich der Flächeninhalt der Figur?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ Er bleibt gleich. – Es ist dasselbe Papier, nur anders gelegt. Es passen genauso viele Einheitsquadrate hinein.
+  - ✗ Er wird kleiner. – Du hast nichts weggenommen. Das abgeschnittene Stück liegt ja wieder an der Figur.
+  - ✗ Er wird größer. – Du hast nichts dazugelegt. Das Stück war schon Teil der Figur.
+- Lösung: Er bleibt gleich.
+- Erklärung: Beim Zerschneiden und Neulegen ohne Lücke und ohne Überlappung bleibt der Flächeninhalt gleich. Genau das nutzt du auf dieser Seite.
+- Link: [../?via=tutor#schnitt-flaeche](../?via=tutor#schnitt-flaeche)
 
 ### Aufgabe parallelogramm-flaeche
 

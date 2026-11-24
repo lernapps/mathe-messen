@@ -43,14 +43,16 @@ Flächeninhalt und Umfang von Rechteck und Quadrat berechnen: aus dem Auslegen m
 
 ### Was du hier lernst
 
-Nach dieser Seite berechnest du Flächeninhalt und Umfang von Rechteck und Quadrat. Auf der Seite davor hast du
-Einheitsquadrate gezählt. Jetzt zählst du ohne Auslegen. Das Modell dahinter: Ein Rechteck legst du in Reihen aus. Die Zahl der Quadrate ist die Zahl der Reihen mal die Zahl der Quadrate je Reihe.
+Wenn du wissen willst, wie viel Rasen ein Beet braucht oder wie viel Zaun darum herum, zählst du nicht jedes
+Quadrat einzeln. Nach dieser Seite berechnest du Flächeninhalt und Umfang von Rechteck und Quadrat. Das Modell
+dahinter: Ein Rechteck legst du in Reihen aus. Die Zahl der Quadrate ist die Zahl der Reihen mal die Zahl der
+Quadrate je Reihe.
 
 - Aufgabe `reihen-zaehlen` (unten)
 
 ### Reihen mal Quadrate je Reihe
 
-Im **Rechteckmodell** liegen Einheitsquadrate in Reihen. Jede Reihe hat so viele Quadrate, wie die Seite $a$
+Wenn du die Quadrate nicht einzeln zählen willst, hilft dir das Rechteckmodell. Im **Rechteckmodell** liegen Einheitsquadrate in Reihen. Jede Reihe hat so viele Quadrate, wie die Seite $a$
 lang ist, und es gibt so viele Reihen, wie die Seite $b$ lang ist. Das Auslegen kürzt du mit Mal ab.
 
 Bild: Ein Rechteck aus Einheitsquadraten, 6 Quadrate in jeder Reihe und 4 Reihen. Die waagerechte Seite heißt a, die senkrechte Seite heißt b. Bildunterschrift: Seite $a$ sagt, wie viele Quadrate in einer Reihe liegen. Seite $b$ sagt, wie viele Reihen es sind.
