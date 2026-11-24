@@ -52,7 +52,7 @@ Schichten.
 
 ### Schichten stapeln, Netz auslegen
 
-Hier ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe. Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
+Wenn du wissen willst, wie viel in eine Schachtel passt, zählst du Würfel in Schichten. Das **Volumen** sagt, wie viele Einheitswürfel in einen Körper passen. Du zählst Schicht für Schicht: Eine
 Schicht hat so viele Würfel wie die Grundfläche Einheitsquadrate hat. Die Zahl der Schichten ist die Höhe. Erst siehst du eine Schicht, dann den ganzen Stapel.
 
 Bild: Eine Schicht aus Einheitswürfeln, 4 Würfel lang und 3 Würfel breit, nur 1 Würfel hoch. Bildunterschrift: Eine Schicht: 4 mal 3 Würfel. Das ist die Grundfläche, mit Würfeln belegt.
@@ -64,6 +64,8 @@ Bild: Ein Quader aus Einheitswürfeln, 4 Würfel lang, 3 Würfel breit und 2 Sch
 - **Volumen**: Das Volumen sagt, wie viele Einheitswürfel in einen Körper passen. Es hat Einheiten wie cm³ oder m³.
 
 $V = a \cdot b \cdot c = G \cdot h$
+
+Dabei ist $a$ die Länge, $b$ die Breite und $c$ die Höhe des Quaders, $G$ die Grundfläche und $h$ die Höhe.
 
 Wenn du wissen willst, wie viel Papier du zum Einpacken brauchst, brauchst du die **Oberfläche**. Sie ist die Fläche aller Seitenflächen zusammen. Du legst sie als Netz aus: sechs Rechtecke,
 immer zwei gleich große.

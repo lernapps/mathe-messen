@@ -83,8 +83,6 @@ Einheit immer dazu.
 
 ### Übung
 
-- Aufgabe `messgeraet-zuordnen` (unten)
-
 - Aufgabe `mehl-wiegen` (unten)
 
 - Aufgabe `rueckgeld` (unten)
@@ -102,14 +100,6 @@ Einheit immer dazu.
   - 17: Du hast die Zahl an der Spitze abgelesen. Der Stift beginnt aber nicht bei 0.
   - 19: Du hast die beiden Zahlen addiert. Die Länge ist der Abstand zwischen den Enden.
 - Link: [../?via=tutor#bleistift-laenge](../?via=tutor#bleistift-laenge)
-
-### Aufgabe messgeraet-zuordnen
-
-- Aufgabe: Welches Messgerät passt zu welcher Größe?
-- Antwortformat: jedem Eintrag links den passenden rechts zuordnen
-- Lösung: Länge – Lineal; Masse – Waage; Zeit – Uhr
-- Erklärung: Mit dem Lineal misst du Länge, mit der Waage Masse und mit der Uhr Zeit. Ein Thermometer misst die Temperatur, die hier nicht gefragt ist.
-- Link: [../?via=tutor#messgeraet-zuordnen](../?via=tutor#messgeraet-zuordnen)
 
 ### Aufgabe mehl-wiegen
 
