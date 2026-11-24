@@ -50,7 +50,7 @@ nicht sofort. Nach dieser Seite berechnest du Fläche und Umfang von Figuren, di
 
 ### Zerlegen oder ergänzen
 
-Wenn du die Fläche einer L-Form wissen willst, hast du zwei Wege. Eine Figur, die nicht rechteckig ist, bringst du auf Rechtecke zurück. Du hast zwei Wege. Du **zerlegst** sie
+Wenn du die Fläche einer L-Form wissen willst, bringst du die Figur auf Rechtecke zurück. Du hast zwei Wege. Du **zerlegst** sie
 in Rechtecke und addierst die Flächen. Oder du **ergänzt** sie zu einem großen Rechteck und ziehst das
 Ergänzte ab.
 
